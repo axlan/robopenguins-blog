@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-permalink: /about
+permalink: /about.html
 ---
 
 <div class="row justify-content-between">

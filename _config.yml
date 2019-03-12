@@ -19,7 +19,7 @@ authors:
     display_name: Jonathan
     gravatar: 89f0dac8b097e473f515d5217c0ac989
     description: "Author of Robopenguins"
-    web: 'about'
+    web: 'about.html'
 
 # Plugins
 plugins: 

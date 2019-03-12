@@ -15,7 +15,7 @@ NOTE to test with project image set you need to copy down the images from S3
 
 Deployed with:
 `jekyll build`
-`aws s3 sync _site/ s3://www.robopenguins.com/ --delete --exclude="assets/wp-content/*`
+`aws s3 sync _site/ s3://www.robopenguins.com/ --delete --exclude="assets/wp-content/*"`
 if images were added
 `aws s3 sync _site/assets/wp-content/ s3://www.robopenguins.com/assets/wp-content/`
 
