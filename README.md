@@ -1,24 +1,24 @@
-# Mediumish - Jekyll Theme
+# Robopenguins Project Archive
 
-![mediumish](assets/images/mediumish-jekyll-template.png)
+This is used to document the various projects that I've worked on.
 
-### Details
+It was imported from my previous Wordpress site.
 
-[Live Demo](https://wowthemesnet.github.io/mediumish-theme-jekyll/) &nbsp; | &nbsp; [Download](https://github.com/wowthemesnet/mediumish-theme-jekyll/archive/master.zip) &nbsp; | &nbsp; [Features](https://wowthemesnet.github.io/mediumish-theme-jekyll/about#features) &nbsp; |  &nbsp; [Documentation](https://wowthemesnet.github.io/mediumish-theme-jekyll/about#usingmediumish) &nbsp; | &nbsp; [Buy me a coffee](https://www.wowthemes.net/donate/)
+Project images aren't checked into version control and are found at:
+`http://www.robopenguins.com.s3-website-us-west-1.amazonaws.com/assets/wp-content/uploads/`
 
-### Copyright
+Local Debug:
+`bundle exec jekyll serve --host localhost`
 
-Copyright (C) 2019 Sal, https://www.wowthemes.net
+NOTE to test with project image set you need to copy down the images from S3
+`aws s3 sync s3://www.robopenguins.com/assets/wp-content/ assets/wp-content/`
 
-**Mediumish for Jekyll** is designed and developed by [Sal](https://www.wowthemes.net) and it is *free* under MIT license. 
+Deployed with:
+`jekyll build`
+`aws s3 sync _site/ s3://www.robopenguins.com/ --delete --exclude="assets/wp-content/*`
+if images were added
+`aws s3 sync _site/assets/wp-content/ s3://www.robopenguins.com/assets/wp-content/`
 
-<a href="https://www.wowthemes.net/donate/" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
 
-### Contribute
-
-1. [Fork the repo](https://github.com/wowthemesnet/mediumish-theme-jekyll).
-2. Clone a copy of your fork on your local
-3. Create a branch off of master and give it a meaningful name (e.g. my-new-mediumish-feature).
-4. Make necessary changes, commit, push and open a pull request on GitHub.
-
-Thank you!
+Template from:
+https://github.com/wowthemesnet/mediumish-theme-jekyll
