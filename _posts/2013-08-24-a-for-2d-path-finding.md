@@ -1,20 +1,17 @@
 ---
-id: 227
 title: 'A* for 2D path finding'
 date: 2013-08-24T23:36:56+00:00
-author: jdiamond
+author: jon
 layout: post
-guid: http://robopenguins.com/wordpress/?p=227
-permalink: /2013/08/24/a-for-2d-path-finding/
 categories:
   - Personal
   - Software
-  - Uncategorized
+image: 2013/08/astar-300x150.png
 ---
 I wrote this almost a year ago, but never posted it since I didn&#8217;t get a chance to fully comment the code. Since I probably won&#8217;t get around to it any time soon, I&#8217;m posting it now. I even shoddily converted it into a java applet!
 
-[<img class="size-medium wp-image-405 alignnone" alt="astar" src="http://robopenguins.com/wp-content/uploads/2013/08/astar-300x150.png" width="300" height="150" />  
-](http://robopenguins.com/wp-content/uploads/2013/08/astar.png) 
+[<img class="size-medium wp-image-405 alignnone" alt="astar" src="{{ site.image_host }}/2013/08/astar-300x150.png" width="300" height="150" />  
+]({{ site.image_host }}/2013/08/astar.png) 
 
 &nbsp;
 
@@ -30,7 +27,7 @@ I&#8217;ve spent a bit of time brushing up on some algorithms and data structure
 
 When I was first learning to code I made some simple top down 2D games. I would often have had to solve the problem of finding the shortest path from point A to point B while navigating obstacles as shown crudely below:
 
-[<img class="alignleft size-medium wp-image-230" title="atob" alt="" src="http://robopenguins.com/wp-content/uploads/2012/10/atob-300x221.png" width="300" height="221" />](http://robopenguins.com/wp-content/uploads/2012/10/atob.png)
+[<img class="alignleft size-medium wp-image-230" title="atob" alt="" src="{{ site.image_host }}/2012/10/atob-300x221.png" width="300" height="221" />]({{ site.image_host }}/2012/10/atob.png)
 
 &nbsp;
 
@@ -83,7 +80,7 @@ For me the easiest way to think about this algorithm relates back to the rule th
 
 To put this into terms of the 2D path problem, the cost is going to be shortest distance from a given point to the target point. For my simple demo I&#8217;m going to make the world out of tiles that can be traversed by going up, down, left or right. Some tiles will be treated as impassible walls. In the absence of any walls the distance from point A to B is abs(A.x-B.x) + abs(A.y-B.y) . This provides a perfect heuristic for the A* search, since the presence of walls can only increase the minimum path.<figure id="attachment_235" aria-describedby="caption-attachment-235" style="width: 263px" class="wp-caption alignleft">
 
-[<img class="size-full wp-image-235" title="worldmove" alt="" src="http://robopenguins.com/wp-content/uploads/2012/10/worldmove.png" width="263" height="243" />](http://robopenguins.com/wp-content/uploads/2012/10/worldmove.png)<figcaption id="caption-attachment-235" class="wp-caption-text">Possible Movements</figcaption></figure> <figure id="attachment_234" aria-describedby="caption-attachment-234" style="width: 300px" class="wp-caption alignleft">[<img class="size-medium wp-image-234" title="cost" alt="" src="http://robopenguins.com/wp-content/uploads/2012/10/cost-300x207.png" width="300" height="207" />](http://robopenguins.com/wp-content/uploads/2012/10/cost.png)<figcaption id="caption-attachment-234" class="wp-caption-text">The heuristic predicted cost for this example is 3. Due to the obstacle the actual cost is 7.</figcaption></figure> 
+[<img class="size-full wp-image-235" title="worldmove" alt="" src="{{ site.image_host }}/2012/10/worldmove.png" width="263" height="243" />]({{ site.image_host }}/2012/10/worldmove.png)<figcaption id="caption-attachment-235" class="wp-caption-text">Possible Movements</figcaption></figure> <figure id="attachment_234" aria-describedby="caption-attachment-234" style="width: 300px" class="wp-caption alignleft">[<img class="size-medium wp-image-234" title="cost" alt="" src="{{ site.image_host }}/2012/10/cost-300x207.png" width="300" height="207" />]({{ site.image_host }}/2012/10/cost.png)<figcaption id="caption-attachment-234" class="wp-caption-text">The heuristic predicted cost for this example is 3. Due to the obstacle the actual cost is 7.</figcaption></figure> 
 
 &nbsp;
 

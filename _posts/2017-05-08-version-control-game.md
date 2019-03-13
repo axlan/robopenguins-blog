@@ -1,20 +1,19 @@
 ---
-id: 541
 title: Version Control Game
 date: 2017-05-08T02:14:20+00:00
-author: jdiamond
+author: jon
 layout: post
-guid: http://robopenguins.com/?p=541
-permalink: /2017/05/08/version-control-game/
 categories:
   - Personal
   - Software
+image: 2017/05/start-1-300x230.png
 ---
-[<img class="aligncenter size-medium wp-image-543" src="http://robopenguins.com/wp-content/uploads/2017/05/start-1-300x230.png" alt="" width="300" height="230" srcset="http://localhost/wp-content/uploads/2017/05/start-1-300x230.png 300w, http://localhost/wp-content/uploads/2017/05/start-1-768x589.png 768w, http://localhost/wp-content/uploads/2017/05/start-1-1024x786.png 1024w, http://localhost/wp-content/uploads/2017/05/start-1.png 1031w" sizes="(max-width: 300px) 100vw, 300px" />](http://robopenguins.com/wp-content/uploads/2017/05/start-1.png)
 
 I often get ideas to make games, but rarely have the time needed. I had an idea for a game mechanic based on version control, and thought it would be a good candidate for a small demo.
 
 Source code here: <https://github.com/axlan/VersionControlGame>
+
+[<img class="aligncenter size-medium wp-image-543" src="{{ site.image_host }}/2017/05/start-1-300x230.png" alt="" width="300" height="230" srcset="{{ site.image_host }}/2017/05/start-1-300x230.png 300w, {{ site.image_host }}/2017/05/start-1-768x589.png 768w, {{ site.image_host }}/2017/05/start-1-1024x786.png 1024w, {{ site.image_host }}/2017/05/start-1.png 1031w" sizes="(max-width: 300px) 100vw, 300px" />]({{ site.image_host }}/2017/05/start-1.png)
 
 <!--more-->
 

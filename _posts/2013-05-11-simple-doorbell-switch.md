@@ -1,15 +1,12 @@
 ---
-id: 364
 title: Simple Doorbell Switch
 date: 2013-05-11T14:42:46+00:00
-author: jdiamond
+author: jon
 layout: post
-guid: http://robopenguins.com/wordpress/?p=364
-permalink: /2013/05/11/simple-doorbell-switch/
 categories:
   - Hardware
   - Personal
-  - Uncategorized
+image: 2013/05/2013-05-11-11.06.07-300x225.jpg
 ---
 <div>
   Here&#8217;s a quick hack I through together to prevent jerks from ringing my doorbell late at night.
@@ -19,7 +16,7 @@ categories:
 </div>
 
 <div>
-  <a href="http://robopenguins.com/wp-content/uploads/2013/05/2013-05-11-11.06.07.jpg"><img class="alignleft size-medium wp-image-365" alt="Doorbell Switch" src="http://robopenguins.com/wp-content/uploads/2013/05/2013-05-11-11.06.07-300x225.jpg" width="300" height="225" /></a>
+  <a href="{{ site.image_host }}/2013/05/2013-05-11-11.06.07.jpg"><img class="alignleft size-medium wp-image-365" alt="Doorbell Switch" src="{{ site.image_host }}/2013/05/2013-05-11-11.06.07-300x225.jpg" width="300" height="225" /></a>
 </div>
 
 <div>

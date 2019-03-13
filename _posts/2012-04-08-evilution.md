@@ -1,21 +1,16 @@
 ---
-id: 218
 title: Evilution
 date: 2012-04-08T21:33:33+00:00
-author: jdiamond
+author: jon
 layout: post
-guid: http://robopenguins.com/wordpress/?p=218
-permalink: /2012/04/08/evilution/
 categories:
   - Personal
   - Software
-  - Uncategorized
+image: 2012/04/evilution.jpg
 ---
-[<img src="http://robopenguins.com/wp-content/uploads/2012/04/evilution.jpg" alt="" title="evilution" width="274" height="233" class="alignleft size-full wp-image-219" />](http://robopenguins.com/wp-content/uploads/2012/04/evilution.jpg)
-
 This is a very simple evolution simulator.  
-<!--more-->
 
+[<img src="{{ site.image_host }}/2012/04/evilution.jpg" alt="" title="evilution" width="274" height="233" class="alignleft size-full wp-image-219" />]({{ site.image_host }}/2012/04/evilution.jpg)
   
 Selecting a type (plant or animal) you can place creatures on the board by clicking on the white area.  
 They will try to survive and reproduce with their genes represented by their color. Time can be sped or slowed by changing the time speed value.  

@@ -1,15 +1,11 @@
 ---
-id: 414
 title: Time Tagger App (Part 1)
 date: 2014-04-13T20:52:07+00:00
-author: jdiamond
+author: jon
 layout: post
-guid: http://robopenguins.com/wordpress/?p=414
-permalink: /2014/04/13/time-tagger-app-part-1/
 categories:
   - Personal
   - Software
-  - Uncategorized
 ---
 I’ve wanted to document my work from start to finish on a project for a while, so I decided to try a screen capture program. I’ve used a bunch of different programs in the past, but I found that I had good luck with one called “[Open Broadcaster Software](https://obsproject.com/)”. It took a little playing with to get the settings reasonable, but I eventually got it working pretty well, and recorded myself setting up the environment and creating a very simple Pebble app:
 

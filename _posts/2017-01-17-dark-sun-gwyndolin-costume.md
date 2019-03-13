@@ -3,16 +3,16 @@ layout: post
 title:  "Gwyndolin Costume"
 author: jon
 categories: [ Costumes ]
-image: http://www.robopenguins.com.s3-website-us-west-1.amazonaws.com/assets/wp-content/uploads/2017/01/IMG_20161023_230604.jpg"
-description: "My 2016 Halloween costume. I made the mask, and Maria made the dress!"
+image: "2017/01/IMG_20161023_230604-thumb.jpg"
 featured: true
 ---
-
 My 2016 Halloween costume. I made the mask, and Maria made the dress! Almost everything was handmade except for one layer of the skirt, the white wig, and one of the necklaces we got from a super fancy thrift store.  
+
+[<img class="alignnone wp-image-45 size-medium" src="{{ site.image_host }}/2017/01/IMG_20161023_230604-150x150.jpg" srcset="{{ site.image_host }}/2017/01/IMG_20161023_230604-150x150.jpg 150w, {{ site.image_host }}/2017/01/IMG_20161023_230604-768x1024.jpg 768w" sizes="(max-width: 768px) 150px, 600px" />]({{ site.image_host }}/2017/01/IMG_20161023_230604.jpg)
 
 The mask was made from gym mat foam covered in Warbla.
 
-[<img class="alignnone wp-image-45 size-medium" src="{{ site.image_host }}/2017/01/IMG_20160803_225701-300x224.jpg" width="300" height="224" srcset="{{ site.image_host }}/2017/01/IMG_20160803_225701-300x224.jpg 300w, {{ site.image_host }}/2017/01/IMG_20160803_225701-768x574.jpg 768w, {{ site.image_host }}/2017/01/IMG_20160803_225701-1024x766.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" />]({{ site.image_host }}/2017/01/IMG_20160803_225701.jpg)  
+[<img class="alignnone wp-image-45 size-medium" src="{{ site.image_host }}/2017/01/IMG_20160803_225701-300x224.jpg" width="300" height="224" srcset="{{ site.image_host }}/2017/01/IMG_20160803_225701-300x224.jpg 300w, {{ site.image_host }}/2017/01/IMG_20160803_225701-768x574.jpg 768w, {{ site.image_host }}/2017/01/IMG_20160803_225701-1024x766.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" />]({{ site.image_host }}/2017/01/IMG_20160803_225701.jpg)
 [<img class="alignnone size-medium wp-image-46" src="{{ site.image_host }}/2017/01/IMG_20160811_100335-300x225.jpg" alt="" width="300" height="225" srcset="{{ site.image_host }}/2017/01/IMG_20160811_100335-300x225.jpg 300w, {{ site.image_host }}/2017/01/IMG_20160811_100335-768x576.jpg 768w, {{ site.image_host }}/2017/01/IMG_20160811_100335-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" />]({{ site.image_host }}/2017/01/IMG_20160811_100335.jpg)  
 [<img class="alignnone size-medium wp-image-47" src="{{ site.image_host }}/2017/01/IMG_20160812_232541-300x224.jpg" alt="" width="300" height="224" srcset="{{ site.image_host }}/2017/01/IMG_20160812_232541-300x224.jpg 300w, {{ site.image_host }}/2017/01/IMG_20160812_232541-768x574.jpg 768w, {{ site.image_host }}/2017/01/IMG_20160812_232541-1024x766.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" />]({{ site.image_host }}/2017/01/IMG_20160812_232541.jpg)  
 [<img class="alignnone size-medium wp-image-50" src="{{ site.image_host }}/2017/01/IMG_20160914_220702-225x300.jpg" alt="" width="225" height="300" srcset="{{ site.image_host }}/2017/01/IMG_20160914_220702-225x300.jpg 225w, {{ site.image_host }}/2017/01/IMG_20160914_220702-768x1024.jpg 768w" sizes="(max-width: 225px) 100vw, 225px" />]({{ site.image_host }}/2017/01/IMG_20160914_220702.jpg)  

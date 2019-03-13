@@ -1,6 +1,5 @@
 ---
 layout: default
-disqus: false
 archive: false
 post_class: post-template
 ---
@@ -33,10 +32,6 @@ post_class: post-template
 				<h1 class="posttitle">{{ page.title }}</h1> 
                 
 			</div>
-
-			<!-- Post Featured Image -->
-			{% if page.image %}<img class="featured-image img-fluid" src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ page.image | absolute_url }}{% endif %}" alt="{{ page.title }}">{% endif %}
-			<!-- End Featured Image -->
 
 			<!-- Post Content -->
 			<div class="article-post">

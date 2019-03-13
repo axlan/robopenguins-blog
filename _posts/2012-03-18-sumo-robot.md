@@ -1,28 +1,23 @@
 ---
-id: 35
 title: Sumo Robot
 date: 2012-03-18T21:44:58+00:00
-author: jdiamond
+author: jon
 layout: post
-guid: http://robopenguins.com/wordpress/?p=35
-permalink: /2012/03/18/sumo-robot/
 categories:
   - Academic
   - Hardware
-  - Uncategorized
+image: 2012/03/image001.jpg
 ---
-[<img class="alignleft size-medium wp-image-145" title="image001" src="http://robopenguins.com/wp-content/uploads/2012/03/image001-300x225.jpg" alt="" width="300" height="225" />](http://robopenguins.com/wp-content/uploads/2012/03/image001.jpg)  
 Final project for mechatronics. Ended up winning first prize in the sumo robot competition.
 
-<!--more-->
+[<img class="alignleft size-medium wp-image-145" title="image001" src="{{ site.image_host }}/2012/03/image001-300x225.jpg" alt="" width="300" height="225" />]({{ site.image_host }}/2012/03/image001.jpg)
 
-  
-<br style="clear: both;" />  
 Here are some videos of its bouts:
 
+<iframe width="1583" height="620" src="https://www.youtube.com/embed/-G5rCU1jkqQ?list=PLE3AAF20AC4030DD8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 This is a state diagram of the AI:
 
-[<img class="alignleft size-full wp-image-141" title="robot AI" src="http://robopenguins.com/wp-content/uploads/2012/03/robot-AI.jpg" alt="" width="651" height="549" />](http://robopenguins.com/wp-content/uploads/2012/03/robot-AI.jpg)  
+[<img class="alignleft size-full wp-image-141" title="robot AI" src="{{ site.image_host }}/2012/03/robot-AI.jpg" alt="" width="651" height="549" />]({{ site.image_host }}/2012/03/robot-AI.jpg)  
 <br style="clear: both;" />

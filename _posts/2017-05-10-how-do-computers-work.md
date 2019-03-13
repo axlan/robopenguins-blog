@@ -1,17 +1,13 @@
 ---
-id: 545
 title: How do computers work?
 date: 2017-05-10T05:11:35+00:00
-author: jdiamond
+author: jon
 layout: post
-guid: http://robopenguins.com/?p=545
-permalink: /2017/05/10/how-do-computers-work/
 categories:
   - Personal
+image: http://gria.org/wp-content/uploads/2017/09/silicon-chip.jpg
 ---
 Awhile back my great aunt asked me for some resources on learning about computers. I&#8217;d thought I&#8217;d upload the conversation to save it for posterity.
-
-![_386CHIP.GIF](http://cf.ydcdn.net/1.0.1.69/images/computer/_386CHIP.GIF) 
 
 <!--more-->
 

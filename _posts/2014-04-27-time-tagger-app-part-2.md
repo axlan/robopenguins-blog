@@ -1,19 +1,15 @@
 ---
-id: 422
 title: Time Tagger App (Part 2)
 date: 2014-04-27T15:17:53+00:00
-author: jdiamond
+author: jon
 layout: post
-guid: http://robopenguins.com/wordpress/?p=422
-permalink: /2014/04/27/time-tagger-app-part-2/
 categories:
   - Personal
   - Software
-  - Uncategorized
 ---
 After getting the most basic functionality working I realized I had hit a bit of a dead end. SQLJet was severely limited in how it could manipulate the data. I decided to take what I learned and start over. This time I decided to focus on the UI first, and then fill in the backend.
 
-[<img class="aligncenter wp-image-423 size-full" src="http://robopenguins.com/wp-content/uploads/2014/04/timetaggernewui.png" alt="timetaggernewui" width="476" height="428" />](http://robopenguins.com/wp-content/uploads/2014/04/timetaggernewui.png)
+[<img class="aligncenter wp-image-423 size-full" src="{{ site.image_host }}/2014/04/timetaggernewui.png" alt="timetaggernewui" width="476" height="428" />]({{ site.image_host }}/2014/04/timetaggernewui.png)
 
 <!--more-->
 

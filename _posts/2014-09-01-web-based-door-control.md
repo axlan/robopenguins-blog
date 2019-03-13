@@ -1,19 +1,16 @@
 ---
-id: 451
 title: Web Based Door Control
 date: 2014-09-01T04:26:47+00:00
-author: jdiamond
+author: jon
 layout: post
-guid: http://www.robopenguins.com/?p=451
-permalink: /2014/09/01/web-based-door-control/
 categories:
   - Hardware
   - Personal
-  - Uncategorized
+image: 2014/09/2014-08-31-17.43.30-224x300.jpg
 ---
 After have locked myself out of my apartment one too many times, I decided that running to make a keyless entry system. I&#8217;ve been looking for a project to use a Raspberry Pi in for awhile, and this seemed like a good fit.
 
-[<img class="aligncenter size-medium wp-image-452" src="http://www.robopenguins.com/wp-content/uploads/2014/09/2014-08-31-17.43.30-224x300.jpg" alt="2014-08-31 17.43.30" width="224" height="300" />](http://www.robopenguins.com/wp-content/uploads/2014/09/2014-08-31-17.43.30.jpg)
+[<img class="aligncenter size-medium wp-image-452" src="{{ site.image_host }}/2014/09/2014-08-31-17.43.30-224x300.jpg" alt="2014-08-31 17.43.30" width="224" height="300" />]({{ site.image_host }}/2014/09/2014-08-31-17.43.30.jpg)
 
 <!--more-->
 
@@ -21,7 +18,7 @@ The basic set up was pretty straight forward. My apartment had a buzzer, so I wa
 
 Since the buzzer is medium voltage AC, I decided to use a relay as the switch. I went with a g5le-1-g dc5 . The important stats were that it supported the voltage and current my buzzer used, and that the coil was 5V and draws about 80 mA. Unfortunately, the GPIO pins on the Raspberry Pi are 3.3V and can only output a max of about 16mA. This meant that I needed to use a transistor to drive the relay. I had a bunch of 2N4401 lying around, so that&#8217;s what I used. I used this circuit:
 
-<img class="aligncenter size-full wp-image-453" src="http://www.robopenguins.com/wp-content/uploads/2014/09/transistorcircuits_1234707497.jpg" alt="transistorcircuits_1234707497" width="268" height="212" /> 
+<img class="aligncenter size-full wp-image-453" src="{{ site.image_host }}/2014/09/transistorcircuits_1234707497.jpg" alt="transistorcircuits_1234707497" width="268" height="212" /> 
 
 Details on this circuit can be found here [http://pcbheaven.com/wikipages/Transistor_Circuits/](http://pcbheaven.com/wikipages/Transistor_Circuits/ "http://pcbheaven.com/wikipages/Transistor_Circuits/")
 
@@ -33,7 +30,7 @@ Initially I tested this out on a breadboard and confirmed that the relay closed 
 
 I then soldered the circuit together onto a protoboard
 
-[<img class="aligncenter size-medium wp-image-454" src="http://www.robopenguins.com/wp-content/uploads/2014/09/2014-08-31-17.04.35-300x202.jpg" alt="2014-08-31 17.04.35" width="300" height="202" />](http://www.robopenguins.com/wp-content/uploads/2014/09/2014-08-31-17.04.35.jpg)
+[<img class="aligncenter size-medium wp-image-454" src="{{ site.image_host }}/2014/09/2014-08-31-17.04.35-300x202.jpg" alt="2014-08-31 17.04.35" width="300" height="202" />]({{ site.image_host }}/2014/09/2014-08-31-17.04.35.jpg)
 
 I happened to have some nice jumper cables that I used to connect this board to the Raspberry Pi.
 
@@ -45,11 +42,11 @@ At this point we were able to confirm that the Raspberry Pi was able to control 
 
 To do this I added some extra wires to the buzzer and connected them to the relay.
 
-[<img class="aligncenter size-medium wp-image-455" src="http://www.robopenguins.com/wp-content/uploads/2014/09/2014-08-31-17.22.16-180x300.jpg" alt="2014-08-31 17.22.16" width="180" height="300" />](http://www.robopenguins.com/wp-content/uploads/2014/09/2014-08-31-17.22.16.jpg)
+[<img class="aligncenter size-medium wp-image-455" src="{{ site.image_host }}/2014/09/2014-08-31-17.22.16-180x300.jpg" alt="2014-08-31 17.22.16" width="180" height="300" />]({{ site.image_host }}/2014/09/2014-08-31-17.22.16.jpg)
 
 I had bought a 10ft USB micro connector to power the Raspberry Pi, and was able to test the the whole system was working. I hit a minor snag since I didn&#8217;t have a good way to mount the boards, so you can see that the whole thing is hanging on the wall by a nail.
 
-[<img class="aligncenter wp-image-456 size-full" src="http://www.robopenguins.com/wp-content/uploads/2014/09/2014-08-31-18.01.25.jpg" alt="2014-08-31 18.01.25" width="619" height="826" />](http://www.robopenguins.com/wp-content/uploads/2014/09/2014-08-31-18.01.25.jpg)
+[<img class="aligncenter wp-image-456 size-full" src="{{ site.image_host }}/2014/09/2014-08-31-18.01.25.jpg" alt="2014-08-31 18.01.25" width="619" height="826" />]({{ site.image_host }}/2014/09/2014-08-31-18.01.25.jpg)
 
 Lastly my friend worked on setting up the relay to be able to be controlled through the LAN. I had purchased a small WiFi dongle for the board, so it was already connected to my network. He set up apache and wrote a simple perl script to trigger the relay.
 
@@ -90,12 +87,12 @@ Future features:
 
 I ended up simplifying this a bit by switching from a rasb Pi to an ESP2866:
 
-[<img class="size-large wp-image-477 aligncenter" src="http://robopenguins.com/wp-content/uploads/2014/09/2016-04-26-22.05.23-766x1024.jpg" alt="" width="525" height="702" srcset="http://localhost/wp-content/uploads/2014/09/2016-04-26-22.05.23-766x1024.jpg 766w, http://localhost/wp-content/uploads/2014/09/2016-04-26-22.05.23-224x300.jpg 224w, http://localhost/wp-content/uploads/2014/09/2016-04-26-22.05.23-768x1027.jpg 768w" sizes="(max-width: 525px) 100vw, 525px" />](http://robopenguins.com/wp-content/uploads/2014/09/2016-04-26-22.05.23.jpg)I got a breakout board for the ESP2866 and the relay off amazon and used the ESP2866 arduino bootloader and libraries. Cheaper, simpler, and lower power.
+[<img class="size-large wp-image-477 aligncenter" src="{{ site.image_host }}/2014/09/2016-04-26-22.05.23-766x1024.jpg" alt="" width="525" height="702" srcset="{{ site.image_host }}/2014/09/2016-04-26-22.05.23-766x1024.jpg 766w, {{ site.image_host }}/2014/09/2016-04-26-22.05.23-224x300.jpg 224w, {{ site.image_host }}/2014/09/2016-04-26-22.05.23-768x1027.jpg 768w" sizes="(max-width: 525px) 100vw, 525px" />]({{ site.image_host }}/2014/09/2016-04-26-22.05.23.jpg)I got a breakout board for the ESP2866 and the relay off amazon and used the ESP2866 arduino bootloader and libraries. Cheaper, simpler, and lower power.
 
 Later Maria made a 3D printed enclosure:
 
-[<img class="aligncenter size-medium wp-image-554" src="http://robopenguins.com/wp-content/uploads/2014/09/2017-05-08-18.43.39-186x300.jpg" alt="" width="186" height="300" srcset="http://localhost/wp-content/uploads/2014/09/2017-05-08-18.43.39-186x300.jpg 186w, http://localhost/wp-content/uploads/2014/09/2017-05-08-18.43.39-768x1238.jpg 768w, http://localhost/wp-content/uploads/2014/09/2017-05-08-18.43.39-635x1024.jpg 635w, http://localhost/wp-content/uploads/2014/09/2017-05-08-18.43.39.jpg 1529w" sizes="(max-width: 186px) 100vw, 186px" />](http://robopenguins.com/wp-content/uploads/2014/09/2017-05-08-18.43.39.jpg)
+[<img class="aligncenter size-medium wp-image-554" src="{{ site.image_host }}/2014/09/2017-05-08-18.43.39-186x300.jpg" alt="" width="186" height="300" srcset="{{ site.image_host }}/2014/09/2017-05-08-18.43.39-186x300.jpg 186w, {{ site.image_host }}/2014/09/2017-05-08-18.43.39-768x1238.jpg 768w, {{ site.image_host }}/2014/09/2017-05-08-18.43.39-635x1024.jpg 635w, {{ site.image_host }}/2014/09/2017-05-08-18.43.39.jpg 1529w" sizes="(max-width: 186px) 100vw, 186px" />]({{ site.image_host }}/2014/09/2017-05-08-18.43.39.jpg)
 
 and further decorated it with some clay
 
-[<img class="aligncenter size-medium wp-image-558" src="http://robopenguins.com/wp-content/uploads/2014/09/IMG_20170518_220024-300x225.jpg" alt="" width="300" height="225" srcset="http://localhost/wp-content/uploads/2014/09/IMG_20170518_220024-300x225.jpg 300w, http://localhost/wp-content/uploads/2014/09/IMG_20170518_220024-768x576.jpg 768w, http://localhost/wp-content/uploads/2014/09/IMG_20170518_220024-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" />](http://robopenguins.com/wp-content/uploads/2014/09/IMG_20170518_220024.jpg) [<img class="aligncenter size-medium wp-image-559" src="http://robopenguins.com/wp-content/uploads/2014/09/2017-05-22-10.27.22-225x300.jpg" alt="" width="225" height="300" srcset="http://localhost/wp-content/uploads/2014/09/2017-05-22-10.27.22-225x300.jpg 225w, http://localhost/wp-content/uploads/2014/09/2017-05-22-10.27.22-768x1024.jpg 768w" sizes="(max-width: 225px) 100vw, 225px" />](http://robopenguins.com/wp-content/uploads/2014/09/2017-05-22-10.27.22.jpg) [<img class="aligncenter size-medium wp-image-560" src="http://robopenguins.com/wp-content/uploads/2014/09/2017-05-22-10.27.29-225x300.jpg" alt="" width="225" height="300" srcset="http://localhost/wp-content/uploads/2014/09/2017-05-22-10.27.29-225x300.jpg 225w, http://localhost/wp-content/uploads/2014/09/2017-05-22-10.27.29-768x1024.jpg 768w" sizes="(max-width: 225px) 100vw, 225px" />](http://robopenguins.com/wp-content/uploads/2014/09/2017-05-22-10.27.29.jpg)
+[<img class="aligncenter size-medium wp-image-558" src="{{ site.image_host }}/2014/09/IMG_20170518_220024-300x225.jpg" alt="" width="300" height="225" srcset="{{ site.image_host }}/2014/09/IMG_20170518_220024-300x225.jpg 300w, {{ site.image_host }}/2014/09/IMG_20170518_220024-768x576.jpg 768w, {{ site.image_host }}/2014/09/IMG_20170518_220024-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" />]({{ site.image_host }}/2014/09/IMG_20170518_220024.jpg) [<img class="aligncenter size-medium wp-image-559" src="{{ site.image_host }}/2014/09/2017-05-22-10.27.22-225x300.jpg" alt="" width="225" height="300" srcset="{{ site.image_host }}/2014/09/2017-05-22-10.27.22-225x300.jpg 225w, {{ site.image_host }}/2014/09/2017-05-22-10.27.22-768x1024.jpg 768w" sizes="(max-width: 225px) 100vw, 225px" />]({{ site.image_host }}/2014/09/2017-05-22-10.27.22.jpg) [<img class="aligncenter size-medium wp-image-560" src="{{ site.image_host }}/2014/09/2017-05-22-10.27.29-225x300.jpg" alt="" width="225" height="300" srcset="{{ site.image_host }}/2014/09/2017-05-22-10.27.29-225x300.jpg 225w, {{ site.image_host }}/2014/09/2017-05-22-10.27.29-768x1024.jpg 768w" sizes="(max-width: 225px) 100vw, 225px" />]({{ site.image_host }}/2014/09/2017-05-22-10.27.29.jpg)

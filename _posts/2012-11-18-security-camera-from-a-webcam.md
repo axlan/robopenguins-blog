@@ -1,15 +1,11 @@
 ---
-id: 257
 title: Security Camera From a Webcam
 date: 2012-11-18T23:54:32+00:00
-author: jdiamond
+author: jon
 layout: post
-guid: http://robopenguins.com/wordpress/?p=257
-permalink: /2012/11/18/security-camera-from-a-webcam/
 categories:
   - Personal
   - Software
-  - Uncategorized
 ---
 Here&#8217;s a quick project that came together the evening before a long vacation. In order to get a little piece of mind I wanted to set up a simple security camera on a network accessible storage (NAS) server that I had recently set up. What I wanted was a program that could connect to a USB webcam and send me an email with a photo of any motion that occurred.
 

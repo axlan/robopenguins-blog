@@ -1,19 +1,13 @@
 ---
-id: 277
 title: Scraping Google Maps for Traffic Data
 date: 2012-11-19T11:26:53+00:00
-author: jdiamond
+author: jon
 layout: post
-guid: http://robopenguins.com/wordpress/?p=277
-permalink: /2012/11/19/scraping-google-maps-for-traffic-data/
 categories:
   - Personal
   - Software
-  - Uncategorized
 ---
 I have a daily commute that I drive down the US 101 highway. The length of the drive can vary immensely with traffic, and I&#8217;ve always been curious what the optimal departure times are. I decided to gather data to solve this empirically, and went on an adventure in finding the right tool for the job.
-
-<!--more-->
 
 I thought about timing my drive, but that would only gather data about my current commute times. I decided that the easiest way to get a rough sense of the best drive time, and how much it mattered would be to get the traffic estimates from a web service. Unfortunately, I was unable to find any site that offered traffic estimates for any time besides the present. If I wanted to gather information about how the estimates changed over time I would have to collect the data myself.
 

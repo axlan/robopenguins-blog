@@ -1,13 +1,9 @@
 ---
-id: 294
 title: A GPS Spoofing Work Project
 date: 2012-12-14T08:27:04+00:00
-author: jdiamond
+author: jon
 layout: post
-guid: http://robopenguins.com/wordpress/?p=294
-permalink: /2012/12/14/a-gps-spoofing-work-project/
 categories:
-  - Uncategorized
   - Work
 ---
 One of my work projects from awhile back popped up on Ars Technica.<figure style="width: 640px" class="wp-caption alignnone">
