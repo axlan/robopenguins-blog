@@ -20,3 +20,9 @@ Here are some more pictures
 <img src="{{ site.image_host }}/2012/CIMG0107.jpg" />
 
 <img src="{{ site.image_host }}/2012/CIMG0108.jpg" />
+
+<img src="{{ site.image_host }}/2019/DSCN1311.jpg" />
+
+<img src="{{ site.image_host }}/2019/DSCN1312.jpg" />
+
+<img src="{{ site.image_host }}/2019/DSCN1315.jpg" />
