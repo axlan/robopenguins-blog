@@ -9,9 +9,7 @@ categories:
 ---
 I’ve wanted to document my work from start to finish on a project for a while, so I decided to try a screen capture program. I’ve used a bunch of different programs in the past, but I found that I had good luck with one called “[Open Broadcaster Software](https://obsproject.com/)”. It took a little playing with to get the settings reasonable, but I eventually got it working pretty well, and recorded myself setting up the environment and creating a very simple Pebble app:
 
-
-
-<!--more-->
+<iframe width="524" height="315" src="https://www.youtube.com/embed/MfjH1_98GBY?list=PL9wcCpA0sWryxZYWOKbGSKEL4gREna-5Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 The sound quality started off pretty poor before I realized that having my microphone go through a KVM was affecting the sound quality.
 

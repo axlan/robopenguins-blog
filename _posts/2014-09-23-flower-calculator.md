@@ -52,7 +52,7 @@ One thing I haven&#8217;t mentioned was that the OV in the simulation seemed to 
 
 I then went and tested this circuit out:
 
-
+<iframe width="524" height="315" src="https://www.youtube.com/embed/J4hmLY6CJ1c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 I demonstrate that removing the capacitor causes the controlled to repeatedly reset due to the pulsing from the digit driver.
 

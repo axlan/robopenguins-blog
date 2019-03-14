@@ -6,6 +6,7 @@ layout: post
 categories:
   - Personal
   - Software
+image: 2014/04/timetaggernewui.png
 ---
 After getting the most basic functionality working I realized I had hit a bit of a dead end. SQLJet was severely limited in how it could manipulate the data. I decided to take what I learned and start over. This time I decided to focus on the UI first, and then fill in the backend.
 
