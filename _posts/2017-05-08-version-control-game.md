@@ -38,3 +38,5 @@ I decided to use Cocos2d-x as the engine since it has multi-platform support and
 It seems like the Android SDK had changed some of the command line tools and Cocos2d-x was still adjusting. In the end I managed to get things to build for the android simulator and my phone, but I didn&#8217;t go through the effort of getting everything to sensibly fit on the smaller screens.
 
 See the video below for a short demo on how branching and merging can be used to get to an end goal
+
+<iframe width="524" height="394" src="https://www.youtube.com/embed/9jiFsQVs9tk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

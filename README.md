@@ -7,6 +7,9 @@ It was imported from my previous Wordpress site.
 Project images aren't checked into version control and are found at:
 `http://www.robopenguins.com.s3-website-us-west-1.amazonaws.com/assets/wp-content/uploads/`
 
+First time
+`bundle install`
+
 Local Debug:
 `bundle exec jekyll serve --host localhost`
 

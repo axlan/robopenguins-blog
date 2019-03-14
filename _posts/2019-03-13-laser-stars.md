@@ -1,6 +1,5 @@
 ---
 title: Laser Stars
-date: 2019-03-13T01:21:43+00:00
 author: jon
 layout: post
 categories:
@@ -10,4 +9,6 @@ categories:
 image: 
 ---
 
-Placeholder
+
+
+This is a bit of a weird one. I'm not sure what drew me to this project.

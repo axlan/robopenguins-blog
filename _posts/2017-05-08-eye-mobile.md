@@ -5,7 +5,7 @@ author: jon
 layout: post
 categories:
   - Personal
-image: 2017/05/mobile-84x300.jpg
+image: 2017/05/2017-05-07-14.15.50-225x300.jpg
 ---
 As a decorative project for the apartment, Maria and I made a mobile of eyeballs.
 
