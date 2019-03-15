@@ -82,7 +82,7 @@ I then set up a framework that would let me load a configuration set from a JSON
 
 Initially I was hoping to just calibrate the servos and draw without any sort of feedback loop. However, I realized I wasn't going to have enough stars to make this look particularly good, and getting everything lined up would be very tedious. 
 
-I ended up using [OpenCV](https://opencv.org/) to both track the laser, and localize the camera view. For localizing the camera view, I didn't wanted to go with something simple, so I taped QR codes measured out to bound the part of the ceiling I would be drawing on.
+I ended up using [OpenCV](https://opencv.org/) to both track the laser, and localize the camera view. For localizing the camera view, I didn't wanted to go with something simple, so I taped QR codes measured out to bound the part of the ceiling I would be drawing on. All the OpenCV work was based on other [projects](#reference-projects).
 
 [<img class="aligncenter size-large" src="{{ site.image_host }}/2019/IMG_20190221_150733.jpg" height="50%" width="50%" alt="" />]({{ site.image_host }}/2019/IMG_20190221_150733.jpg)
 
@@ -90,16 +90,15 @@ Once these were up, I was able to add an analysis module that would superimpose 
 
 The stand alone webcam I had actually didn't have a wide enough field of view, so I ended up using my phone as an IP webcam using this app [IP Webcam](https://play.google.com/store/apps/details?id=com.pas.webcam&hl=en_US). I was very happy to find how seamlessly OpenCV could deal with attached cameras, video files, or IP cameras without needing any real change to the underlying code.
 
-All the OpenCV work was based on other [projects](#reference-projects).
+What I ended up with, was using the combination of QR code localization and laser tracking to do an initial calibration at startup. This could be save to avoid rerunning it every time. However even though this worked pretty well, there was enough error in the motors movements, that a single calibration at startup wasn't enough.
 
 Here's a video of the laser in action:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/u_CxDkxoL6A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-And a recording from the perspective of the control software. Note that the QR codes let the view snap and scale to the target area.
+And a recording from the perspective of the control software. The controller was trying to run across each of the rows of stars. Note that the QR codes let the view snap and scale to the target area.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/PgRpncgw72k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 
 # Future improvements
 
