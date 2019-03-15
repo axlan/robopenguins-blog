@@ -6,7 +6,7 @@ meta_description: "Project archive."
 logo: 'assets/images/pebguin.png'
 favicon: 'assets/images/pebguin.png'
 host: www.robopenguins.com
-google_analytics: 'UA-46278016-1'
+google_analytics: 'UA-12862194-1'
 include: ["_pages"]
 permalink: /:title/
 
