@@ -5,7 +5,7 @@ This is used to document the various projects that I've worked on.
 It was imported from my previous Wordpress site.
 
 Project images aren't checked into version control and are found at:
-`http://www.robopenguins.com.s3-website-us-west-1.amazonaws.com/assets/wp-content/uploads/`
+`http://www.robopenguins.com/assets/wp-content/uploads/`
 
 First time
 `bundle install`

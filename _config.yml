@@ -5,12 +5,12 @@ description: "Project Archive"
 meta_description: "Project archive."
 logo: 'assets/images/pebguin.png'
 favicon: 'assets/images/pebguin.png'
-host: www.robopenguins.com.s3-website-us-west-1.amazonaws.com
+host: www.robopenguins.com
 google_analytics: 'UA-46278016-1'
 include: ["_pages"]
 permalink: /:title/
 
-image_host: 'http://www.robopenguins.com.s3-website-us-west-1.amazonaws.com/assets/wp-content/uploads'
+image_host: 'http://www.robopenguins.com/assets/wp-content/uploads'
 
 # Authors
 authors:
@@ -19,7 +19,7 @@ authors:
     display_name: Jonathan
     gravatar: 89f0dac8b097e473f515d5217c0ac989
     description: "Author of Robopenguins"
-    web: 'http://www.robopenguins.com.s3-website-us-west-1.amazonaws.com/about.html'
+    web: 'http://www.robopenguins.com/about.html'
 
 # Plugins
 plugins: 
