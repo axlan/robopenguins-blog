@@ -8,9 +8,6 @@ categories:
   - Software
 image: 2019/MVIMG_20190314_222936-thumb.jpg
 ---
-
-# Idea
-
 This is a bit of a weird one. I'm not sure what drew me to this project, but I decided to do a project to use a laser to draw "constellations" on some glow in the dark stars on a ceiling. I wasn't sure how complex the control software would need to be, so I ended up biting off a bigger project then I initially intended. In the end this was less about result, and more about the challenges that this system posed.
 
 [<img class="aligncenter size-large" src="{{ site.image_host }}/2019/MVIMG_20190314_222936.jpg" height="50%" width="50%" alt="" />]({{ site.image_host }}/2019/MVIMG_20190314_222936.jpg)
