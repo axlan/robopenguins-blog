@@ -5,7 +5,7 @@ layout: post
 categories:
   - Hardware
   - Personal
-image: 2020/Frame-00131_thumb.jpg
+image: 2020/Frame-00131.png
 ---
 
 During some time off, I decided to rewrite the laser_stars code using the ROS framework. During the original project I ended up creating a lot of the configuration / diagnostics / reconfigurability that you'd get for free in ROS. It's not a perfect fit since ROS is focused on robots, but I treated the laser point on the ceiling like a robot. The only library that seemed similar to what I wanted was <http://wiki.ros.org/visp_auto_tracker> . However, I think what I was doing was different enough that it didn't make a good base for development.
