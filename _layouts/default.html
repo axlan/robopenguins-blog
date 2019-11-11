@@ -78,8 +78,12 @@ ga('send', 'pageview');
                 {% endif %}
                 <a class="nav-link" href="{{ site.baseurl }}/about.html">About</a>
                 </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="{{ site.baseurl }}/feed.xml">RSS Feed</a>
+                </li>
                 
-                {% include search-lunr.html %}
+                <li> Search: {% include search-lunr.html %} </li>
                 
             </ul>		
         
