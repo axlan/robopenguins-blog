@@ -12,9 +12,9 @@ I made a framework for testing AI's made to play the card game "Sushi Go". Sourc
 
 # Background
 
-I just got back from an extended vaction travelling the world. One thing we learned while travelling for months is that sometimes we needed some downtime to recover. Other times we would be stuck on transit for hours, or need to wait for some other reason. Eventually, with all this free time, I got the itch to do some programming.
+I just got back from an extended vacation travelling the world. One thing we learned while travelling for months is that sometimes we needed some downtime to recover. Other times we would be stuck on transit for hours, or need to wait for some other reason. Eventually, with all this free time, I got the itch to do some programming.
 
-Initially, I had some lofty aspirations to study some math or CS concept, but the time that I had was in bursts and wasn't necesarily conducive to studying. This project was a short achievable programming excercise to scratch an itch to make something.
+Initially, I had some lofty aspirations to study some math or CS concept, but the time that I had was in bursts and wasn't necessarily conducive to studying. This project was a short achievable programming exercise to scratch an itch to make something.
 
 The basic idea for building an arena like this came from this Youtube video about testing weird chess AI <https://www.youtube.com/watch?v=DpXy041BIlA>
 
