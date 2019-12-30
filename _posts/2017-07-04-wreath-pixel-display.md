@@ -7,7 +7,6 @@ featured: true
 categories:
   - Electronic Art
   - Hardware
-  - Personal
   - Software
 image: 2017/07/2017-07-02-14.47.49-267x300.jpg
 ---

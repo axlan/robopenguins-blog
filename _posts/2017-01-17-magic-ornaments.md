@@ -5,6 +5,7 @@ author: jon
 layout: post
 categories:
   - Electronic Art
+  - Personal
 image: 2017/01/2016-12-17-16.36.38-e1484681119453-184x300.jpg
 ---
 

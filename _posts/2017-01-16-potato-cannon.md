@@ -5,6 +5,7 @@ author: jon
 layout: post
 categories:
   - Hardware
+  - Personal
 image: 2017/01/CIMG0159-300x225.jpg
 ---
 Another classic, I actually modified this one over the course of a couple years making a super sketchy cordless phone controlled version.

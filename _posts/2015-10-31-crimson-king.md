@@ -4,6 +4,7 @@ author: jon
 layout: post
 categories:
   - Costumes
+  - Personal
 image: 2019/2015-10-18 16.55.07-thumb.jpg
 ---
 

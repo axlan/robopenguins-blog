@@ -2,7 +2,7 @@
 layout: post
 title:  "Gwyndolin Costume"
 author: jon
-categories: [ Costumes ]
+categories: [ Costumes, Personal]
 image: "2017/01/IMG_20161023_230604-thumb.jpg"
 featured: true
 ---

@@ -1,0 +1,50 @@
+---
+layout: default
+---
+
+<div class="blog list">
+    <h1>Write ups for some of my past projects</h1>
+        
+    <!-- Posts Index
+    ================================================== -->
+    <section class="recent-posts">
+        <div class="section-title">
+            <h2><span>Work Projects</span></h2>
+        </div>
+        <div class="row listrecent">
+            {% for post in site.posts %}
+                {% if post.categories contains "Work" %}
+                    {% include postbox.html %}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </section>
+    <section class="recent-posts">
+        <div class="section-title">
+            <h2><span>Academic Projects</span></h2>
+        </div>
+        <div class="row listrecent">
+            {% for post in site.posts %}
+                {% if post.categories contains "Academic" %}
+                    {% include postbox.html %}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="recent-posts">
+        <div class="section-title">
+            <h2><span>All Projects</span></h2>
+        </div>
+        <div class="row listrecent">
+            {% for post in site.posts %}
+                {% unless post.categories contains "Personal" or post.categories contains "Work" or post.categories contains "Academic"%}
+                    {% include postbox.html %}
+                {% endunless %}
+            {% endfor %}
+        </div>
+    </section>
+
+
+
+</div>

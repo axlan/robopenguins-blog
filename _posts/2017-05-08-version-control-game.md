@@ -4,7 +4,6 @@ date: 2017-05-08T02:14:20+00:00
 author: jon
 layout: post
 categories:
-  - Personal
   - Software
 image: 2017/05/start-1-300x230.png
 ---

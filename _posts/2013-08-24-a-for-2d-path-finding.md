@@ -4,7 +4,6 @@ date: 2013-08-24T23:36:56+00:00
 author: jon
 layout: post
 categories:
-  - Personal
   - Software
 image: 2013/08/astar-300x150.png
 ---

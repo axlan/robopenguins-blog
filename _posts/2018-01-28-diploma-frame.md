@@ -3,7 +3,7 @@ title: Diploma Frame
 date: 2018-01-28T20:10:42+00:00
 author: jon
 layout: post
-categories: [Electronic Art]
+categories: [Electronic Art, Personal]
 image: 2018/01/IMG_20180128_115916034-300x235.jpg
 ---
 Finally got around to framing and hanging my undergraduate diploma. I originally wanted to do something a little more elaborate, but after so many years of gathering dust, I decided to just make a border of boards that I worked on (mostly college stuff).

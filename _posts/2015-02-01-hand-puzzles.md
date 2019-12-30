@@ -4,6 +4,7 @@ author: jon
 layout: post
 categories:
   - Hardware
+  - Personal
 image: 2019/2014-12-27 18.28.48-thumb.jpg
 ---
 

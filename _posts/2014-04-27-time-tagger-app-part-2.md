@@ -4,7 +4,6 @@ date: 2014-04-27T15:17:53+00:00
 author: jon
 layout: post
 categories:
-  - Personal
   - Software
 image: 2014/04/timetaggernewui.png
 ---

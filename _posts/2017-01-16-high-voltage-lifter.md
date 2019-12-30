@@ -5,6 +5,7 @@ author: jon
 layout: post
 categories:
   - Hardware
+  - Personal
 image: 2017/01/CIMG0137-300x225.jpg
 ---
 One more high voltage project from highschool. This is a really simple ion thruster setup called a &#8220;lifter&#8221;

@@ -7,6 +7,7 @@ categories:
   - Hardware
   - Food
   - Costumes
+  - Personal
 image: 2019/2015-05-30 17.42.12-thumb.jpg
 ---
 

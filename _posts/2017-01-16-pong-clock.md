@@ -7,6 +7,7 @@ categories:
   - Electronic Art
   - Hardware
   - Software
+  - Personal
 image: 2017/01/DSCN0632-300x225.jpg
 ---
 Wow this is an old one. I&#8217;ve decided to go back and write up some of the first projects I did.

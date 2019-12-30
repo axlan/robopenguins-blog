@@ -4,7 +4,6 @@ author: jon
 layout: post
 categories:
   - Software
-  - Personal
 image: 2019/sushi_go_gui.png
 ---
 

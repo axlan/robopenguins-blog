@@ -4,7 +4,6 @@ author: jon
 layout: post
 categories:
   - Software
-  - Personal
 image: https://mystery.knightlab.com/174092-clue-illustration.png
 ---
 
@@ -51,6 +50,8 @@ and out of curiosity checked the size of the table:
 | 1228     |
 {:.mbtablestyle}
 
+This sort of investigative query was pretty common as I went through the rest of the puzzle, but won't be included here.
+
 From that I made the query:
 
 `SELECT * FROM crime_scene_report WHERE date=20180115 AND city="SQL City"`
@@ -64,11 +65,11 @@ From that I made the query:
 
 So the relevant report was the murder.
 
-This game me two witnesses to lookup. After doing a similar basic check of the person table which had the structure:
+This gave me two witnesses to lookup. After doing a similar basic check of the person table which had the structure:
 
 `CREATE TABLE person ( id integer PRIMARY KEY, name text, license_id integer, address_number integer, address_street_name text, ssn integer, FOREIGN KEY (license_id) REFERENCES drivers_license(id) )`
 
-I wrote the queries:
+I assumed the end of the street was at the highest number wrote the queries:
 
 `SELECT MAX(address_number) FROM person WHERE address_street_name="Northwestern Dr"`
 

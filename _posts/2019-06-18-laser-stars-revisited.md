@@ -4,7 +4,6 @@ author: jon
 layout: post
 categories:
   - Hardware
-  - Personal
 image: 2020/Frame-00131.png
 ---
 

@@ -4,7 +4,6 @@ date: 2012-11-19T11:26:53+00:00
 author: jon
 layout: post
 categories:
-  - Personal
   - Software
 ---
 I have a daily commute that I drive down the US 101 highway. The length of the drive can vary immensely with traffic, and I&#8217;ve always been curious what the optimal departure times are. I decided to gather data to solve this empirically, and went on an adventure in finding the right tool for the job.
