@@ -75,7 +75,7 @@ void loop() {
 }
 ```
 
-changing the WIFI_SSID, WIFI_PASSWORD, and ARDUINO_HOSTNAME. The ARDUINO_HOSTNAME didn't seem to take in my case, though I haven't put any effort into figuring out the issue.
+changing the WIFI_SSID, WIFI_PASSWORD, and ARDUINO_HOSTNAME. The ARDUINO_HOSTNAME wouldn't resolve for me, and I traced this down to the issue that it's using a service called mDNS which is natively supported on OSX and only partially supported on windows. To see my device I could use the [Service Browser Android App](https://play.google.com/store/apps/details?id=com.druk.servicebrowser&hl=en_US), or install the Bonjour SDK for Windows found [here](https://developer.apple.com/download/more/?=Bonjour%20SDK%20for%20Windows) (you'll need an Apple login, though the insall can also be found at <https://www.softpedia.com/get/Programming/SDK-DDK/Bonjour-SDK.shtml>).
 
 Under "Project Tasks" choose "Upload and Monitor". This builds the project and attempts to upload the results to the configured serial port. After a minute or so it should finish and start monitoring the serial port for messages coming from the board. You should see something like:
 
@@ -94,5 +94,7 @@ Change the `upload_port` in `platformio.ini` to the IP address for your board an
 Now when you upload, it should be able to use the WiFi. As long as your project continues to have `OTA.loop()` called in it's loop it should continue to support OTA updates. One thing to look out for is that if your code ends up in an infinite loop, `OTA.loop()` might not end up getting called, preventing you from updating. During development I found it useful to add a waiting period just running the OTA loop to allow an update after a restart even if the code got into an infinite loop or crash. 
 
 If you suspect the IP address might not be right, the board isn't connecting to the WiFi, or isn't taking OTA updates you can always repeat the initial upload process with the board connected to the computer and the upload_port changed back to the serial port.
+
+From there you can program mostly as you would for any other Arduino target. PlatformIO has some of it's own quirks in building code, but at least for me was mostly just more sensible then the normal Arduino IDE. <https://arduino-esp8266.readthedocs.io/en/latest/libraries.html> lists some of the special concerns for this platform.
 
 You can also see the code for [Wreath Pixel Display]({% post_url 2017-07-04-wreath-pixel-display %}) in <https://github.com/axlan/Sound-Catcher/tree/master/arduino/NodeMCU/SoundCatcherNoTimer> . This includes a basic logging framework as well as a modular settings page framework.
