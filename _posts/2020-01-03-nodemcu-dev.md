@@ -75,7 +75,9 @@ void loop() {
 }
 ```
 
-changing the WIFI_SSID, WIFI_PASSWORD, and ARDUINO_HOSTNAME. The ARDUINO_HOSTNAME wouldn't resolve for me, and I traced this down to the issue that it's using a service called mDNS which is natively supported on OSX and only partially supported on windows. To see my device I could use the [Service Browser Android App](https://play.google.com/store/apps/details?id=com.druk.servicebrowser&hl=en_US), or install the Bonjour SDK for Windows found [here](https://developer.apple.com/download/more/?=Bonjour%20SDK%20for%20Windows) (you'll need an Apple login, though the insall can also be found at <https://www.softpedia.com/get/Programming/SDK-DDK/Bonjour-SDK.shtml>).
+changing the WIFI_SSID, WIFI_PASSWORD, and ARDUINO_HOSTNAME.
+
+The ARDUINO_HOSTNAME wouldn't resolve for me, and I traced this down to the issue that it's using a service called mDNS which is natively supported on OSX and only partially supported on windows. To see my device I could use the [Service Browser Android App](https://play.google.com/store/apps/details?id=com.druk.servicebrowser&hl=en_US), or install the Bonjour SDK for Windows found [here](https://developer.apple.com/download/more/?=Bonjour%20SDK%20for%20Windows) (you'll need an Apple login, though the insall can also be found at <https://www.softpedia.com/get/Programming/SDK-DDK/Bonjour-SDK.shtml>). My understanding is that `dns-sd.exe -G v4 threehouseslights.local` should give the IP of the device, but my Windows PC seems to not be searching the right network. There's also a chrome extension that seemed to work. In the end I decided to just rely on the IP address.
 
 Under "Project Tasks" choose "Upload and Monitor". This builds the project and attempts to upload the results to the configured serial port. After a minute or so it should finish and start monitoring the serial port for messages coming from the board. You should see something like:
 
