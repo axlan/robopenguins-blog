@@ -76,6 +76,8 @@ Cons
 * Dependent on many services with complicated interactions
 * Very tied to specific AWS services, potentially hard to migrate
 
+After the fact, I also found a write up for another project that took a similar approach: <https://aws.amazon.com/blogs/iot/using-aws-iot-to-create-a-smart-home-water-monitoring-solution/>
+
 # Setting up board for AWS IoT
 
 After doing some research into how AWS IoT worked and what it did, I figured out my first task. I wanted to set up my board to connect to AWS IoT over MQTT. The resource I used to navigate this was <https://github.com/debsahu/ESP-MQTT-AWS-IoT-Core>. The instructions weren't always totally clear, but it was almost the exact task I needed to do. It also had firmware code examples I could use almost unmodified. I used the PubSubClient library, and just modified the code to only target my ESP8266 hardware platform.
@@ -92,6 +94,8 @@ Here's the basic steps I took:
 Pretty quickly I was able to see values being read and written to the device by monitoring the serial.
 
 # Creating a HTTP API for the board
+
+So now I had AWS as the broker for the MQTT messages coming off the board. I could interact with them directly; any of the clients in <https://github.com/hobbyquaker/awesome-mqtt> would work. However, I figured the process would be much easier if I had a translation layer between the MQTT and HTTP.
 
 So my goal was to be able to send HTTP commands from a html frontend and have them control the display. To do this I needed a way to map HTTP requests to MQTT messages that would be received by the board. The easiest/cheapest way to implement this on AWS appears to be to use a Lambda function triggered by an API Gateway.
 
