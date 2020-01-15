@@ -175,4 +175,4 @@ The API Gateway has an option to enable CORS headers which was nice. But for me,
 
 I spent a lot of time messing with the API Gateway and Lambda to try to send the HTTP OPTIONS message to a different lambda, but in the end I just decided to return a 200 if no key is provided and not process it.
 
-With that I acomplished my goal and was ready to program the actual project!
+With that I accomplished my goal and was ready to program the actual project!
