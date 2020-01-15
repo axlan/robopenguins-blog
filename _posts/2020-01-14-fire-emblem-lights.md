@@ -41,61 +41,61 @@ It supports MQTT as well as ACN to, making it easy to interface with other contr
 
 The first step was cutting out the frame. I didn't really have a great way to do this, so I bought a tiny saw attachment for my Dremel.
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/fire_emblem_lights/IMG_20200105_133745.jpg" alt="dremel saw">]({{ site.image_host }}/2020/fire_emblem_lights/IMG_20200105_133745_thumb.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/fire_emblem_lights/IMG_20200105_133745_thumb.jpg" alt="dremel saw">]({{ site.image_host }}/2020/fire_emblem_lights/IMG_20200105_133745.jpg)
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/fire_emblem_lights/IMG_20200106_172311.jpg" alt="cut frame">]({{ site.image_host }}/2020/fire_emblem_lights/IMG_20200106_172311_thumb.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/fire_emblem_lights/IMG_20200106_172311_thumb.jpg" alt="cut frame">]({{ site.image_host }}/2020/fire_emblem_lights/IMG_20200106_172311.jpg)
 
 Next was cutting out the chibi characters to put in it. I had a to take a bit of a detour when one of the mirrors in the cutter shattered: 
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/fire_emblem_lights/IMG_20200101_225454.jpg" alt="broken mirror">]({{ site.image_host }}/2020/fire_emblem_lights/IMG_20200101_225454_thumb.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/fire_emblem_lights/IMG_20200101_225454_thumb.jpg" alt="broken mirror">]({{ site.image_host }}/2020/fire_emblem_lights/IMG_20200101_225454.jpg)
 
 I got a 20 mm gold coated Si mirror as a replacement, and had to spend some time recalibrating everything. I even tried to fix the placement of the workspace inside the cutter:
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/fire_emblem_lights/IMG_20200108_214150.jpg" alt="inside cutter">]({{ site.image_host }}/2020/fire_emblem_lights/IMG_20200108_214150_thumb.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/fire_emblem_lights/IMG_20200108_214150_thumb.jpg" alt="inside cutter">]({{ site.image_host }}/2020/fire_emblem_lights/IMG_20200108_214150.jpg)
 
 One of the flaws is that the exhaust port blocks the laser for the first 15mm or so. I managed to cut into it with my Dremel, but would have been extremely slow going. I did figure out that the laser focus was a centimeter or so above the work surface, so I added some spacers and guiding pieces to make it easier to line pieces up and have them in focus.
 
 Finally I was able to start cutting out the pieces and painting them.
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/fire_emblem_lights/IMG_20200106_155241.jpg" alt="blue lion">]({{ site.image_host }}/2020/fire_emblem_lights/IMG_20200106_155241_thumb.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/fire_emblem_lights/IMG_20200106_155241_thumb.jpg" alt="blue lion">]({{ site.image_host }}/2020/fire_emblem_lights/IMG_20200106_155241.jpg)
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/fire_emblem_lights/IMG_20200109_010421.jpg" alt="cut chibis">]({{ site.image_host }}/2020/fire_emblem_lights/IMG_20200109_010421_thumb.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/fire_emblem_lights/IMG_20200109_010421_thumb.jpg" alt="cut chibis">]({{ site.image_host }}/2020/fire_emblem_lights/IMG_20200109_010421.jpg)
 
 I had resized the iris pieces to fit some cooking skewers I had lying around. Unfortunately, this compromised the designs structural stability and I ended up having to redo it.
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/fire_emblem_lights/IMG_20200107_174411.jpg" alt="iris and pegs">]({{ site.image_host }}/2020/fire_emblem_lights/IMG_20200107_174411_thumb.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/fire_emblem_lights/IMG_20200107_174411_thumb.jpg" alt="iris and pegs">]({{ site.image_host }}/2020/fire_emblem_lights/IMG_20200107_174411.jpg)
 
 Our cat was mildly interested in helping.
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/fire_emblem_lights/IMG_20200107_190453.jpg" alt="Nala helping">]({{ site.image_host }}/2020/fire_emblem_lights/IMG_20200107_190453_thumb.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/fire_emblem_lights/IMG_20200107_190453_thumb.jpg" alt="Nala helping">]({{ site.image_host }}/2020/fire_emblem_lights/IMG_20200107_190453.jpg)
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/fire_emblem_lights/IMG_20200107_191059.jpg" alt="assembled iris">]({{ site.image_host }}/2020/fire_emblem_lights/IMG_20200107_191059_thumb.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/fire_emblem_lights/IMG_20200107_191059_thumb.jpg" alt="assembled iris">]({{ site.image_host }}/2020/fire_emblem_lights/IMG_20200107_191059.jpg)
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/fire_emblem_lights/IMG_20200107_232901.jpg" alt="Nala helping">]({{ site.image_host }}/2020/fire_emblem_lights/IMG_20200107_232901_thumb.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/fire_emblem_lights/IMG_20200107_232901_thumb.jpg" alt="Nala helping">]({{ site.image_host }}/2020/fire_emblem_lights/IMG_20200107_232901.jpg)
 
 I ended up using thicker wooden dowels and sanding them down to make more effective pegs.
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/fire_emblem_lights/IMG_20200110_235136.jpg" alt="new pegs">]({{ site.image_host }}/2020/fire_emblem_lights/IMG_20200110_235136_thumb.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/fire_emblem_lights/IMG_20200110_235136_thumb.jpg" alt="new pegs">]({{ site.image_host }}/2020/fire_emblem_lights/IMG_20200110_235136.jpg)
 
 <iframe width="524" height="394" src="https://www.youtube.com/embed/_tEdhEV98sQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 The last piece to make was to mount the LEDs onto the display. I had bought a string of the LEDs this time to make the soldering less tedious, and I decided the best way to mount them was as a matrix to back light each chibi. I measured and cut holes into a piece of cardboard, then glued the LEDs in place.
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/fire_emblem_lights/IMG_20200110_153959.jpg" alt="matrix front">]({{ site.image_host }}/2020/fire_emblem_lights/IMG_20200110_153959_thumb.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/fire_emblem_lights/IMG_20200110_153959_thumb.jpg" alt="matrix front">]({{ site.image_host }}/2020/fire_emblem_lights/IMG_20200110_153959.jpg)
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/fire_emblem_lights/IMG_20200110_155849.jpg" alt="matrix back">]({{ site.image_host }}/2020/fire_emblem_lights/IMG_20200110_155849_thumb.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/fire_emblem_lights/IMG_20200110_155849_thumb.jpg" alt="matrix back">]({{ site.image_host }}/2020/fire_emblem_lights/IMG_20200110_155849.jpg)
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/fire_emblem_lights/IMG_20200112_002044.jpg" alt="assembled panels">]({{ site.image_host }}/2020/fire_emblem_lights/IMG_20200112_002044_thumb.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/fire_emblem_lights/IMG_20200112_002044_thumb.jpg" alt="assembled panels">]({{ site.image_host }}/2020/fire_emblem_lights/IMG_20200112_002044.jpg)
 
 With all the pieces done, I just needed to assemble things. I wanted to defuse the light a bit, but only had clear plastic. I ended up cutting up a shopping bag and gluing it to the back of the plastic panels that I cut out.
 
 I also engraved the crest of flame to sit in the center of the iris. 
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/fire_emblem_lights/IMG_20200113_164546.jpg" alt="full assembled lights on">]({{ site.image_host }}/2020/fire_emblem_lights/IMG_20200113_164546_thumb.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/fire_emblem_lights/IMG_20200113_164546_thumb.jpg" alt="full assembled lights on">]({{ site.image_host }}/2020/fire_emblem_lights/IMG_20200113_164546.jpg)
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/fire_emblem_lights/IMG_20200113_170913.jpg" alt="full assembled lights off">]({{ site.image_host }}/2020/fire_emblem_lights/IMG_20200113_170913_thumb.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/fire_emblem_lights/IMG_20200113_170913_thumb.jpg" alt="full assembled lights off">]({{ site.image_host }}/2020/fire_emblem_lights/IMG_20200113_170913.jpg)
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/fire_emblem_lights/IMG_20200113_170935.jpg" alt="full assembled back">]({{ site.image_host }}/2020/fire_emblem_lights/IMG_20200113_170935_thumb.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/fire_emblem_lights/IMG_20200113_170935_thumb.jpg" alt="full assembled back">]({{ site.image_host }}/2020/fire_emblem_lights/IMG_20200113_170935.jpg)
 
 # Video + LED Sync
 
