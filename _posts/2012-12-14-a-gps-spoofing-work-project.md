@@ -5,10 +5,11 @@ author: jon
 layout: post
 categories:
   - Work
+image: 2020/pcss-640x352.jpg
 ---
 One of my work projects from awhile back popped up on Ars Technica.<figure style="width: 640px" class="wp-caption alignnone">
 
-[<img class=" " title="PCSS" src="http://cdn.arstechnica.net/wp-content/uploads/2012/12/pcss-640x352.jpg" alt="" width="640" height="352" />](http://arstechnica.com/security/2012/12/how-to-bring-down-mission-critical-gps-networks-with-2500/)<figcaption class="wp-caption-text">My Baby!</figcaption></figure> 
+[<img class=" " title="PCSS" src="{{ site.image_host }}/2020/pcss-640x352.jpg" alt="" width="640" height="352" />](http://arstechnica.com/security/2012/12/how-to-bring-down-mission-critical-gps-networks-with-2500/)<figcaption class="wp-caption-text">My Baby!</figcaption></figure> 
 
 [http://arstechnica.com/security/2012/12/how-to-bring-down-mission-critical-gps-networks-with-2500/](http://arstechnica.com/security/2012/12/how-to-bring-down-mission-critical-gps-networks-with-2500/ "how-to-bring-down-mission-critical-gps-networks")
 
