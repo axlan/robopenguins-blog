@@ -105,7 +105,7 @@ There were surprisingly few uploaded, so I decided to make my own. I downloaded 
 
 <iframe width="524" height="394" src="https://www.youtube.com/embed/x80iYZsz9io" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Next I had to sync it with the frame. Turns out Youtube's embedded player has an API that let's you sync Javascript with what's going on in a video: <https://developers.google.com/youtube/iframe_api_reference>. I used this to create a page that would check the Youtube progress on a timer, and make AJAX calls to the WLED server to send the updated state for the LEDs. There's an array of states with time codes and the state for the current time gets sent. You can see the page [here](http://www.robopenguins.com/assets/wp-content/pages/mariabday2018.html). This only works on my LAN of course.
+Next I had to sync it with the frame. Turns out Youtube's embedded player has an API that let's you sync Javascript with what's going on in a video: <https://developers.google.com/youtube/iframe_api_reference>. I used this to create a page that would check the Youtube progress on a timer, and make AJAX calls to the WLED server to send the updated state for the LEDs. There's an array of states with time codes and the state for the current time gets sent. You can see the page [here](http://maria-gift.s3-website-us-west-1.amazonaws.com/mariabday2020.html). This only controls the lights if it's opened in my LAN.
 
 <details><summary>Abridged Javascript</summary>
 <p>
