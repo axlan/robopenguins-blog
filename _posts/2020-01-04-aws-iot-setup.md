@@ -6,7 +6,6 @@ categories:
   - Hardware
   - Software
 image: 2020/AWS_IOT.png
-featured: true
 ---
 
 As a followup to [NodeMCU Development]({% post_url 2020-01-03-nodemcu-dev %}), I decided to connect my project to the AWS IoT cloud to see what that entailed. Turns out, it's a huge amount of headache for not much gain for a small project. I can see how it would become useful if I was deploying hundreds of devices, but it doesn't really streamline the hobbyist workflow.
