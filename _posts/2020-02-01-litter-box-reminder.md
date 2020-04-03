@@ -12,7 +12,7 @@ Another simple "home automation" project. My wife mentioned it would be nice to 
 
 Here's the final project. I just soldered an RGB LED to the front, and attached AA batteries instead of the original coin cell.
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/litter_butterfly.jpg" alt="Finished Product">]({{ site.image_host }}/2020/litter_butterfly.jpg")
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/litter_butterfly.jpg" alt="Finished Product">]({{ site.image_host }}/2020/litter_butterfly.jpg)
 
 All it does, is count the hours since the button was last pressed, and turn the LED orange, then red as the time approaches 24 hours.
 

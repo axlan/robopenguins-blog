@@ -22,7 +22,7 @@ The first huge issue is that I hadn't realized that the ESP8266 in my door buzze
 
 While I was doing this, I added the relay control functionality to [WLED](https://github.com/Aircoookie/WLED) as a usermod. Basically some code anyone can stick in to add functionality. Here's my [commit](https://github.com/Aircoookie/WLED/commit/0e82f2a02f49301ed21d2c07923596480258903f). I decided to use [Blynk](https://blynk.io/) as the easiest way to forward commands to the board. It basically does a lot of the same stuff as the AWS IoT, but much simpler and more limited. It's all managed through an app which isn't great, but keeps things simple. It's also free as long as you only have a very basic dashboard.
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/blynk_app.jpg" alt="Blynk App">]({{ site.image_host }}/2020/blynk_app.jpg")
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/blynk_app.jpg" alt="Blynk App">]({{ site.image_host }}/2020/blynk_app.jpg)
 
 Since I couldn't use [WLED](https://github.com/Aircoookie/WLED) directly, I combined the user_mod I made with the old code into it's own [project](https://github.com/axlan/door-buzzer/). This was a bit quick and dirty, but I was getting tired of using process of elimination to figure out what would work on my board.
 
