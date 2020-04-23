@@ -94,3 +94,15 @@ Painted by Maria
 [<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/cleric4_thumb.jpg" alt="Cleric 4">]({{ site.image_host }}/2020/miniatures/cleric4.jpg)
 
 [<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/cleric5_thumb.jpg" alt="Cleric 5">]({{ site.image_host }}/2020/miniatures/cleric5.jpg)
+
+## Svetlana, the Beagle Barbarian
+
+Painted by me
+
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/barb_1_thumb.jpg" alt="Barbarian 1">]({{ site.image_host }}/2020/miniatures/barb_1.jpg)
+
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/barb_2_thumb.jpg" alt="Barbarian 2">]({{ site.image_host }}/2020/miniatures/barb_2.jpg)
+
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/barb_3_thumb.jpg" alt="Barbarian 3">]({{ site.image_host }}/2020/miniatures/barb_3.jpg)
+
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/barb_4_thumb.jpg" alt="Barbarian 4">]({{ site.image_host }}/2020/miniatures/barb_4.jpg)
