@@ -16,7 +16,7 @@ The gimmick for [Exapunks](http://www.zachtronics.com/exapunks/) is that your in
 
 One interesting feature of these games is that they let you see how your solution stacks up against all the other players. Here's an example:
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/exapunks/score.png" alt="Score Histogram">]({{ site.image_host }}/2020/exapunks/score.png")
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/exapunks/score.png" alt="Score Histogram">]({{ site.image_host }}/2020/exapunks/score.png)
 
  * Cycles - The number of cycles it takes to run through the test data.
  * Size - The number of instructions you wrote
@@ -42,15 +42,15 @@ Playing through the game so far, I had never really had to master the exact way 
 
 I thought this would be a good chance to really understand this functionality. Here's my codes evolution:
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/exapunks/solutions.png" alt="Score progress">]({{ site.image_host }}/2020/exapunks/solutions.png")
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/exapunks/solutions.png" alt="Score progress">]({{ site.image_host }}/2020/exapunks/solutions.png)
 
 My second solution was similar to the first, but but had two nerves sharing the global register. I did this by using idle instructions (`NOOP`) to make sure they were out of phase:
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/exapunks/solution2.png" alt="Solution 2">]({{ site.image_host }}/2020/exapunks/solution2.png")
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/exapunks/solution2.png" alt="Solution 2">]({{ site.image_host }}/2020/exapunks/solution2.png)
 
 My third solution extended this so that all the bots were using the global register. However hear I hit a problem. All the `NOOP` I needed for padding was making the solution go over the maximum allowed size. I had to move to having all the code start in a single bot and replicate to reduce the size:
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/exapunks/solution3.png" alt="Solution 3">]({{ site.image_host }}/2020/exapunks/solution3.png")
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/exapunks/solution3.png" alt="Solution 3">]({{ site.image_host }}/2020/exapunks/solution3.png)
 
 Here's where I needed to really understand exactly how the global M register worked to get more improvements. I made a test program to just try to sync 6 bots as fast as possible as a simpler test case.
 
@@ -68,6 +68,6 @@ From there I could tighten up the loop so that each of the 3 sets of bots were o
 
 <iframe src="https://giphy.com/embed/WTiMguJ4VerjfcaAPy" width="480" height="355" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/exapunks/solution5.png" alt="Solution 5">]({{ site.image_host }}/2020/exapunks/solution5.png")
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/exapunks/solution5.png" alt="Solution 5">]({{ site.image_host }}/2020/exapunks/solution5.png)
 
 Glad that after all that work I got a pretty good solution and got my red line on the score board.

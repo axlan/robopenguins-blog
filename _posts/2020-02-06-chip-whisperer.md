@@ -22,7 +22,7 @@ While the basic idea and first few tutorials are explained pretty well, things s
 
 I'll be talking about my experience setting up and using the [chipwhisperer-lite](http://store.newae.com/chipwhisperer-lite-cw1173-basic-board/), but it seems like they keep things consistent between hardware revisions for the most part.
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/chipwhisperer/Cwlite_basic.png" alt="Solution 5">]({{ site.image_host }}/2020/chipwhisperer/Cwlite_basic.png")
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/chipwhisperer/Cwlite_basic.png" alt="Solution 5">]({{ site.image_host }}/2020/chipwhisperer/Cwlite_basic.png)
 
 At a high level the board has two parts:
 
@@ -114,7 +114,7 @@ composition
 ```
 Where orange is the addition and blue is the multiplication
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/chipwhisperer/lab2_both.png" alt="Solution 5">]({{ site.image_host }}/2020/chipwhisperer/lab2_both.png")
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/chipwhisperer/lab2_both.png" alt="Solution 5">]({{ site.image_host }}/2020/chipwhisperer/lab2_both.png)
 
 One thing that these labs don't really cover, is how the multiple traces are being synced up so that they all line up in time for the programs execution. My understanding is that the target is outputting a sync signal to simplify this.
 

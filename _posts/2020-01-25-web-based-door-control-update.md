@@ -36,4 +36,4 @@ To connect the pieces I found the [Blynk web API](https://blynkapi.docs.apiary.i
 
 Seeing that this API could also tell you if a device was connected, I decided to add a monitoring service. [UptimeRobot](https://uptimerobot.com/), can monitor a URL for free and notify you if there's a problem. I set it up to do a keyword monitor on `http://blynk-cloud.com/MY_AUTH_TOKEN/isHardwareConnected`. It alerts me if that URL doesn't return the string `true`.
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/uptime.png" alt="uptime screenshot">]({{ site.image_host }}/2020/uptime.png")
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/uptime.png" alt="uptime screenshot">]({{ site.image_host }}/2020/uptime.png)
