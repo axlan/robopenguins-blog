@@ -104,6 +104,8 @@ To find which side was up, I would compare the sensor measurement to these compu
 
 Normally, the web interface for WLED projects is compiled onto the microcontroller. Since Google maps needs an internet connection anyway, I ended up putting 99% of the code for controlling the project in a javascript file that could be imported from a remote source. This way I didn't have to keep reprogramming the microcontroller to update the web client. The code for the web client is: <https://github.com/axlan/WLED/blob/globe-deploy/globe_ctrl/site/map_ctrl.js>
 
+The main modification I did in the WLED software was to make it so the sequence of the effects would follow the route we took instead of just lighting up the LEDs in their order on the strand. Initially, I thought I would need to hack this in myself, but as I was modifying the code, I found the feature already existed! I enabled the custom mapping table: <https://github.com/axlan/WLED/blob/globe-deploy/wled00/FX_fcn.cpp#L35>. It's a little weird since we didn't solve the travelling salesman problem, and we back track. This means that the length of lights in the sequence is 32 even though there are only 24 LEDs. Fortunately, WLED handled this OK if I configured it to think there were 32 LEDs.
+
 The branch with my entire WLED project is in: <https://github.com/axlan/WLED/tree/globe-deploy>
 
 # Bonus Cat
