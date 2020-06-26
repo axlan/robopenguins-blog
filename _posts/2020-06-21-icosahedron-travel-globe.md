@@ -72,7 +72,15 @@ In addition to having a gallery that controlled the LEDs on the globe, I wanted 
 
 [<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/globe/controller_thumb.webp" height="50%" width="50%" alt="controller">]({{ site.image_host }}/2020/globe/controller.jpg)
 
-The final touch was to pull apart a paper towel holder to make a stand.
+# Stand Build
+
+Originally, I had grand plans of making a multi-axis rotating base to mount the globe in. I could have even looked into wireless, or magnetic contact charging for the USB power pack. After playing around a bit with the materials I had on hand, I decided to take a much simpler approach. I ended up pulling apart a paper towel holder to make a stand with minimal effort.
+
+It originally looked something like this:
+
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/globe/31s11INSR5L._AC_.webp" width="200px" alt="view2">]({{ site.image_host }}/2020/globe/31s11INSR5L._AC_.webp)
+
+I took the top off and pulled the metal rods out of the base. I then bent them into a bit of a claw to hold the globe:
 
 [<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/globe/view2_thumb.webp" height="50%" width="50%" alt="view2">]({{ site.image_host }}/2020/globe/view2.jpg)
 
