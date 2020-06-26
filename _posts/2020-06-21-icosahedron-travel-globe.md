@@ -72,6 +72,12 @@ In addition to having a gallery that controlled the LEDs on the globe, I wanted 
 
 [<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/globe/controller_thumb.webp" height="50%" width="50%" alt="controller">]({{ site.image_host }}/2020/globe/controller.jpg)
 
+The final touch was to pull apart a paper towel holder to make a stand.
+
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/globe/view2_thumb.webp" height="50%" width="50%" alt="view2">]({{ site.image_host }}/2020/globe/view2.jpg)
+
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/globe/view1_thumb.webp" height="50%" width="50%" alt="view1">]({{ site.image_host }}/2020/globe/view1.jpg)
+
 # Software Build
 
 The first thing I did was set up my photo gallery.
