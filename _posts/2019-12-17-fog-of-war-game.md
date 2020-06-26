@@ -4,7 +4,7 @@ author: jon
 layout: post
 categories:
   - Software
-image: 2019/fog_battle.png
+image: 2019/fog_battle.webp
 featured: true
 ---
 
@@ -71,7 +71,7 @@ This package actually implements the game. The Core class has it's entry point, 
 The game game can be understood at a high level as a set of somewhat independent views. The Core class puts one of these views on the screen at a time and gives a callback to trigger when it's time to move to the next screen. There is a shared state that keeps track of any persistent information.
 
 Here's the state diagram of how the game moves between the views:
-[<img class="aligncenter size-large" src="{{ site.image_host }}/2019/Fog_Game_Screen_States.png" alt="State machine for game screens" />]({{ site.image_host }}/2019/Fog_Game_Screen_States.png)
+[<img class="aligncenter size-large" src="{{ site.image_host }}/2019/Fog_Game_Screen_States.webp" alt="State machine for game screens" />]({{ site.image_host }}/2019/Fog_Game_Screen_States.png)
 
 # Assets Pipelines
 
@@ -95,7 +95,7 @@ In addition I made use of three 3rd party tools.
 
 Here's a test campaign map I created along with the invisible city names and paths between cities:
 
-[<img class="aligncenter size-large" src="{{ site.image_host }}/2019/fog_map.png" height="50%" width="50%" alt="Tiled map example" />]({{ site.image_host }}/2019/fog_map.png)
+[<img class="aligncenter size-large" src="{{ site.image_host }}/2019/fog_map.webp" height="50%" width="50%" alt="Tiled map example" />]({{ site.image_host }}/2019/fog_map.png)
 
 ## Skin Composer
 

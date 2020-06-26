@@ -6,11 +6,11 @@ categories:
   - Hardware
   - Electronic Art
   - Software
-image: 2019/MVIMG_20190314_222936-thumb.jpg
+image: 2019/MVIMG_20190314_222936-thumb.webp
 ---
 This is a bit of a weird one. I'm not sure what drew me to this project, but I decided to do a project to use a laser to draw "constellations" on some glow in the dark stars on a ceiling. I wasn't sure how complex the control software would need to be, so I ended up biting off a bigger project then I initially intended. In the end this was less about result, and more about the challenges that this system posed.
 
-[<img class="aligncenter size-large" src="{{ site.image_host }}/2019/MVIMG_20190314_222936.jpg" height="50%" width="50%" alt="" />]({{ site.image_host }}/2019/MVIMG_20190314_222936.jpg)
+[<img class="aligncenter size-large" src="{{ site.image_host }}/2019/MVIMG_20190314_222936.webp" height="50%" width="50%" alt="" />]({{ site.image_host }}/2019/MVIMG_20190314_222936.jpg)
 
 Note that this wasn't drawn by the control system I'll talk about, I drew this by moving the laser manually.
 
@@ -22,21 +22,21 @@ Initially I used a lower power red laser to lower the risk of eye damage, and I 
 
 Here's some pictures of the initial test set up:
 
-[<img class="aligncenter size-large" src="{{ site.image_host }}/2019/IMG_20190106_223356.jpg" height="50%" width="50%" alt="" />]({{ site.image_host }}/2019/IMG_20190106_223356.jpg)
+[<img class="aligncenter size-large" src="{{ site.image_host }}/2019/IMG_20190106_223356.webp" height="50%" width="50%" alt="" />]({{ site.image_host }}/2019/IMG_20190106_223356.jpg)
 
 I used a small amount of [warbla](https://www.worbla.com/) to create the mount for the laser.
 
-[<img class="aligncenter size-large" src="{{ site.image_host }}/2019/IMG_20190106_223402.jpg" height="50%" width="50%" alt="" />]({{ site.image_host }}/2019/IMG_20190106_223402.jpg)
+[<img class="aligncenter size-large" src="{{ site.image_host }}/2019/IMG_20190106_223402.webp" height="50%" width="50%" alt="" />]({{ site.image_host }}/2019/IMG_20190106_223402.jpg)
 
 To make things stable enough to test, I mounted everything on a piece of wood.
 
-[<img class="aligncenter size-large" src="{{ site.image_host }}/2019/IMG_20190126_191424.jpg" height="50%" width="50%" alt="" />]({{ site.image_host }}/2019/IMG_20190126_191424.jpg)
+[<img class="aligncenter size-large" src="{{ site.image_host }}/2019/IMG_20190126_191424.webp" height="50%" width="50%" alt="" />]({{ site.image_host }}/2019/IMG_20190126_191424.jpg)
 
 Here's what it looked like with the violet laser mounted in:
 
-[<img class="aligncenter size-large" src="{{ site.image_host }}/2019/IMG_20190217_182917.jpg" height="50%" width="50%" alt="" />]({{ site.image_host }}/2019/IMG_20190217_182917.jpg)
+[<img class="aligncenter size-large" src="{{ site.image_host }}/2019/IMG_20190217_182917.webp" height="50%" width="50%" alt="" />]({{ site.image_host }}/2019/IMG_20190217_182917.jpg)
 
-[<img class="aligncenter size-large" src="{{ site.image_host }}/2019/IMG_20190309_153347.jpg" height="50%" width="50%" alt="" />]({{ site.image_host }}/2019/IMG_20190309_153347.jpg)
+[<img class="aligncenter size-large" src="{{ site.image_host }}/2019/IMG_20190309_153347.webp" height="50%" width="50%" alt="" />]({{ site.image_host }}/2019/IMG_20190309_153347.jpg)
 
 # Software
 
@@ -84,7 +84,7 @@ Initially I was hoping to just calibrate the servos and draw without any sort of
 
 I ended up using [OpenCV](https://opencv.org/) to both track the laser, and localize the camera view. For localizing the camera view, I didn't wanted to go with something simple, so I taped QR codes measured out to bound the part of the ceiling I would be drawing on. All the OpenCV work was based on other [projects](#reference-projects).
 
-[<img class="aligncenter size-large" src="{{ site.image_host }}/2019/IMG_20190221_150733.jpg" height="50%" width="50%" alt="" />]({{ site.image_host }}/2019/IMG_20190221_150733.jpg)
+[<img class="aligncenter size-large" src="{{ site.image_host }}/2019/IMG_20190221_150733.webp" height="50%" width="50%" alt="" />]({{ site.image_host }}/2019/IMG_20190221_150733.jpg)
 
 Once these were up, I was able to add an analysis module that would superimpose where the stars should go, to help guide me as I was taping them to the ceiling.
 

@@ -5,7 +5,7 @@ author: jon
 layout: post
 categories:
   - Personal
-image: 2020/silicon-chip.jpg
+image: 2020/silicon-chip.webp
 ---
 Awhile back my great aunt asked me for some resources on learning about computers. I&#8217;d thought I&#8217;d upload the conversation to save it for posterity.
 

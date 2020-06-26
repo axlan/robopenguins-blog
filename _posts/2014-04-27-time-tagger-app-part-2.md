@@ -5,11 +5,11 @@ author: jon
 layout: post
 categories:
   - Software
-image: 2014/04/timetaggernewui.png
+image: 2014/04/timetaggernewui.webp
 ---
 After getting the most basic functionality working I realized I had hit a bit of a dead end. SQLJet was severely limited in how it could manipulate the data. I decided to take what I learned and start over. This time I decided to focus on the UI first, and then fill in the backend.
 
-[<img class="aligncenter wp-image-423 size-full" src="{{ site.image_host }}/2014/04/timetaggernewui.png" alt="timetaggernewui" width="476" height="428" />]({{ site.image_host }}/2014/04/timetaggernewui.png)
+[<img class="aligncenter wp-image-423 size-full" src="{{ site.image_host }}/2014/04/timetaggernewui.webp" alt="timetaggernewui" width="476" height="428" />]({{ site.image_host }}/2014/04/timetaggernewui.png)
 
 <!--more-->
 

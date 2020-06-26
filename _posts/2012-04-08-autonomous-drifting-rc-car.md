@@ -6,7 +6,7 @@ layout: post
 categories:
   - Academic
   - Hardware
-image: 2012/CIMG0108-thumb.jpg
+image: 2012/CIMG0108-thumb.webp
 ---
   
 As part of a project for the machine learning lab at Cornell, I did the hardware and some of the software to make a stock RC car autonomously drift though a track.
@@ -17,12 +17,12 @@ The microcontroller that drove the car from the remote control was put on a swit
 
 Here are some more pictures
 
-<img src="{{ site.image_host }}/2012/CIMG0107.jpg" />
+<img src="{{ site.image_host }}/2012/CIMG0107.webp" />
 
-<img src="{{ site.image_host }}/2012/CIMG0108.jpg" />
+<img src="{{ site.image_host }}/2012/CIMG0108.webp" />
 
-<img src="{{ site.image_host }}/2019/DSCN1311.jpg" />
+<img src="{{ site.image_host }}/2019/DSCN1311.webp" />
 
-<img src="{{ site.image_host }}/2019/DSCN1312.jpg" />
+<img src="{{ site.image_host }}/2019/DSCN1312.webp" />
 
-<img src="{{ site.image_host }}/2019/DSCN1315.jpg" />
+<img src="{{ site.image_host }}/2019/DSCN1315.webp" />

@@ -8,7 +8,7 @@ categories:
   - Hardware
   - Software
   - Personal
-image: 2017/01/DSCN0632-300x225.jpg
+image: 2017/01/DSCN0632-300x225.webp
 ---
 Wow this is an old one. I&#8217;ve decided to go back and write up some of the first projects I did.
 
@@ -25,11 +25,11 @@ In his words:
 I think I ended up punishing myself anyway.
 
 Here&#8217;s some early test images and the board itself:  
-[<img class="alignnone wp-image-503 size-full" src="{{ site.image_host }}/2017/01/vga_schem-e1484813729723.png" width="658" height="311" srcset="{{ site.image_host }}/2017/01/vga_schem-e1484813729723.png 658w, {{ site.image_host }}/2017/01/vga_schem-e1484813729723-300x142.png 300w" sizes="(max-width: 658px) 100vw, 658px" />]({{ site.image_host }}/2017/01/vga_schem-e1484813729723.png)  
-[<img class="alignnone size-medium wp-image-504" src="{{ site.image_host }}/2017/01/DSCN0632-300x225.jpg" alt="" width="300" height="225" srcset="{{ site.image_host }}/2017/01/DSCN0632-300x225.jpg 300w, {{ site.image_host }}/2017/01/DSCN0632-768x576.jpg 768w, {{ site.image_host }}/2017/01/DSCN0632-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" />]({{ site.image_host }}/2017/01/DSCN0632.jpg)
+[<img class="alignnone wp-image-503 size-full" src="{{ site.image_host }}/2017/01/vga_schem-e1484813729723.webp" width="658" height="311" srcset="{{ site.image_host }}/2017/01/vga_schem-e1484813729723.png 658w, {{ site.image_host }}/2017/01/vga_schem-e1484813729723-300x142.png 300w" sizes="(max-width: 658px) 100vw, 658px" />]({{ site.image_host }}/2017/01/vga_schem-e1484813729723.png)  
+[<img class="alignnone size-medium wp-image-504" src="{{ site.image_host }}/2017/01/DSCN0632-300x225.webp" alt="" width="300" height="225" srcset="{{ site.image_host }}/2017/01/DSCN0632-300x225.jpg 300w, {{ site.image_host }}/2017/01/DSCN0632-768x576.jpg 768w, {{ site.image_host }}/2017/01/DSCN0632-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" />]({{ site.image_host }}/2017/01/DSCN0632.jpg)
 
-[<img class="alignnone size-medium wp-image-505" src="{{ site.image_host }}/2017/01/DSCN0633-300x225.jpg" alt="" width="300" height="225" srcset="{{ site.image_host }}/2017/01/DSCN0633-300x225.jpg 300w, {{ site.image_host }}/2017/01/DSCN0633-768x576.jpg 768w, {{ site.image_host }}/2017/01/DSCN0633-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" />]({{ site.image_host }}/2017/01/DSCN0633.jpg)
+[<img class="alignnone size-medium wp-image-505" src="{{ site.image_host }}/2017/01/DSCN0633-300x225.webp" alt="" width="300" height="225" srcset="{{ site.image_host }}/2017/01/DSCN0633-300x225.jpg 300w, {{ site.image_host }}/2017/01/DSCN0633-768x576.jpg 768w, {{ site.image_host }}/2017/01/DSCN0633-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" />]({{ site.image_host }}/2017/01/DSCN0633.jpg)
 
-[<img class="alignnone size-medium wp-image-506" src="{{ site.image_host }}/2017/01/DSCN0640-300x225.jpg" alt="" width="300" height="225" srcset="{{ site.image_host }}/2017/01/DSCN0640-300x225.jpg 300w, {{ site.image_host }}/2017/01/DSCN0640-768x576.jpg 768w, {{ site.image_host }}/2017/01/DSCN0640-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" />]({{ site.image_host }}/2017/01/DSCN0640.jpg)
+[<img class="alignnone size-medium wp-image-506" src="{{ site.image_host }}/2017/01/DSCN0640-300x225.webp" alt="" width="300" height="225" srcset="{{ site.image_host }}/2017/01/DSCN0640-300x225.jpg 300w, {{ site.image_host }}/2017/01/DSCN0640-768x576.jpg 768w, {{ site.image_host }}/2017/01/DSCN0640-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" />]({{ site.image_host }}/2017/01/DSCN0640.jpg)
 
-[<img class="alignnone size-medium wp-image-507" src="{{ site.image_host }}/2017/01/DSCN0641-300x225.jpg" alt="" width="300" height="225" srcset="{{ site.image_host }}/2017/01/DSCN0641-300x225.jpg 300w, {{ site.image_host }}/2017/01/DSCN0641-768x576.jpg 768w, {{ site.image_host }}/2017/01/DSCN0641-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" />]({{ site.image_host }}/2017/01/DSCN0641.jpg)
+[<img class="alignnone size-medium wp-image-507" src="{{ site.image_host }}/2017/01/DSCN0641-300x225.webp" alt="" width="300" height="225" srcset="{{ site.image_host }}/2017/01/DSCN0641-300x225.jpg 300w, {{ site.image_host }}/2017/01/DSCN0641-768x576.jpg 768w, {{ site.image_host }}/2017/01/DSCN0641-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" />]({{ site.image_host }}/2017/01/DSCN0641.jpg)

@@ -5,7 +5,7 @@ layout: post
 categories:
   - Hardware
   - Personal
-image: 2019/piano_thumb.jpg
+image: 2019/piano_thumb.webp
 ---
 
 Today I decided to break out a Alesis Q45 midi keyboard that I've had lying around. Much to my dismay, my computer had trouble detecting it. Looking at the device manager I was getting "Device Descriptor Request Failed" when I tried to plug it in.
@@ -19,4 +19,4 @@ While the issue in the video was with one of the power pins, I had the exact sam
 
 Did a quick blue wire fix, and it worked like new.
 
-[<img class="aligncenter size-large" src="{{ site.image_host }}/2019/blue_wire.jpg" height="50%" width="50%" alt="" />]({{ site.image_host }}/2019/blue_wire.jpg)
+[<img class="aligncenter size-large" src="{{ site.image_host }}/2019/blue_wire.webp" height="50%" width="50%" alt="" />]({{ site.image_host }}/2019/blue_wire.jpg)

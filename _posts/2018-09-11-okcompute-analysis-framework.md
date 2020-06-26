@@ -6,11 +6,11 @@ layout: post
 categories:
   - Software
   - Work
-image: 2018/09/example_full_graph.jpg
+image: 2018/09/example_full_graph.webp
 ---
 As part of my work at <a href="https://www.swiftnav.com/" target="_blank" rel="noopener">Swift Navigation</a> I&#8217;ve done a lot of work analyzing the results of test runs and building CI frameworks to generate metrics or raise alarms based on the results. One of the challenges is that since the analysis is being performed on devices that are under development, they often create results that violate assumptions made by the analysis code. It can also be hard to trace through the analysis code and come up with the initial failure that led to a missing downstream result.
 
-[<img class="aligncenter size-full wp-image-606" src="{{ site.image_host }}/2018/09/example_full_graph.jpg" alt="" width="483" height="443" srcset="{{ site.image_host }}/2018/09/example_full_graph.jpg 483w, {{ site.image_host }}/2018/09/example_full_graph-300x275.jpg 300w" sizes="(max-width: 483px) 100vw, 483px" />]({{ site.image_host }}/2018/09/example_full_graph.jpg)
+[<img class="aligncenter size-full wp-image-606" src="{{ site.image_host }}/2018/09/example_full_graph.webp" alt="" width="483" height="443" srcset="{{ site.image_host }}/2018/09/example_full_graph.jpg 483w, {{ site.image_host }}/2018/09/example_full_graph-300x275.jpg 300w" sizes="(max-width: 483px) 100vw, 483px" />]({{ site.image_host }}/2018/09/example_full_graph.jpg)
 
 I made a generic framework to try to help with this sort of analysis.
 

@@ -5,7 +5,7 @@ layout: post
 categories:
   - Software
   - Work
-image: 2019/IMG_20180315_153135496-thumb.jpg
+image: 2019/IMG_20180315_153135496-thumb.webp
 ---
 
 This was a blog post I did for Swift Navigaiton. I appears it's been lost to the sands of time, so I'm reproducing it here.
@@ -13,7 +13,7 @@ This was a blog post I did for Swift Navigaiton. I appears it's been lost to the
 # Summery
 Building and running hardware in the loop (HITL) testing infrastructure is a large scale effort for Swift Navigation. The nature of GPS processing, and the interaction of RTOS, embedded Linux, and FPGA components makes HITL testing especially important. Having to manage local custom hardware adds unique challenges that don’t easily fit into typical software development workflows.
 
-[<img class="aligncenter size-large wp-image-602" src="{{ site.image_host }}/2019/IMG_20180315_153135496-thumb.jpg" alt="" width="268" height="486" />]({{ site.image_host }}/2019/IMG_20180315_153135496-thumb.jpg)
+[<img class="aligncenter size-large wp-image-602" src="{{ site.image_host }}/2019/IMG_20180315_153135496-thumb.webp" alt="" width="268" height="486" />]({{ site.image_host }}/2019/IMG_20180315_153135496-thumb.jpg)
 
 Our approach to HITL testing is to set up racks of test devices each managed by a single server. The server gets AWS simple workflow (SWF) tasks to run combinations of software builds and test scenarios on the attached devices. The results of the test are then uploaded to S3 and go through analysis in the cloud. These results are made available through a web front end to give performance summaries for potential code changes and the current mainline builds. 
 

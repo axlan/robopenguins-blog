@@ -4,7 +4,7 @@ author: jon
 layout: post
 categories:
   - Software
-image: 2020/lying_game/vote_after_page.png
+image: 2020/lying_game/vote_after_page.webp
 ---
 
 With the current call for social isolation, online games have been a way to get some level of socialization. Since a lot of the people I want to play with aren't gamers, the [JackBox](https://jackboxgames.com/) games have been especially popular.
@@ -26,22 +26,22 @@ I was pretty happy with both React and websockets. The I used both websockets an
 Here's some screenshots:
 
 Login:
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/lying_game/login_page.png" alt="login">]({{ site.image_host }}/2020/lying_game/login_page.png)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/lying_game/login_page.webp" alt="login">]({{ site.image_host }}/2020/lying_game/login_page.png)
 
 Login failed:
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/lying_game/login_failed.png" alt="login failed">]({{ site.image_host }}/2020/lying_game/login_failed.png)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/lying_game/login_failed.webp" alt="login failed">]({{ site.image_host }}/2020/lying_game/login_failed.png)
 
 Waiting room:
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/lying_game/waiting_room.png" alt="waiting">]({{ site.image_host }}/2020/lying_game/waiting_room.png)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/lying_game/waiting_room.webp" alt="waiting">]({{ site.image_host }}/2020/lying_game/waiting_room.png)
 
 Entering a lie:
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/lying_game/prompt_page.png" alt="prompt">]({{ site.image_host }}/2020/lying_game/prompt_page.png)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/lying_game/prompt_page.webp" alt="prompt">]({{ site.image_host }}/2020/lying_game/prompt_page.png)
 
 Preparing to vote:
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/lying_game/vote_before_page.png" alt="voting before">]({{ site.image_host }}/2020/lying_game/vote_before_page.png)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/lying_game/vote_before_page.webp" alt="voting before">]({{ site.image_host }}/2020/lying_game/vote_before_page.png)
 
 After voting waiting for others:
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/lying_game/vote_after_page.png" alt="voting after">]({{ site.image_host }}/2020/lying_game/vote_after_page.png)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/lying_game/vote_after_page.webp" alt="voting after">]({{ site.image_host }}/2020/lying_game/vote_after_page.png)
 
 Round score screen:
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/lying_game/results_page.png" alt="results">]({{ site.image_host }}/2020/lying_game/results_page.png)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/lying_game/results_page.webp" alt="results">]({{ site.image_host }}/2020/lying_game/results_page.png)

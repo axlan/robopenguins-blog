@@ -4,7 +4,7 @@ author: jon
 layout: post
 categories:
   - Hardware
-image: 2020/NodeMCUv1.0-pinout.jpg
+image: 2020/NodeMCUv1.0-pinout.webp
 ---
 
 I'm starting another electronic art project, and decided to use the NodeMCU for the processor. It's cheap, easy to setup, and has WiFi. However, when I previously used the board (see [Wreath Pixel Display]({% post_url 2017-07-04-wreath-pixel-display %})) I wasn't very happy with the development environment. Here I'll go through the new setup I settled on for this project.

@@ -5,7 +5,7 @@ layout: post
 categories:
   - Hardware
   - Academic
-image: 2020/jtag/raspi_scope_thumb.jpg
+image: 2020/jtag/raspi_scope_thumb.webp
 ---
 
 While this wasn't a particularly novel project, I spent some time trying to better familiarize myself with how the [JTAG](https://en.wikipedia.org/wiki/JTAG) interface works.
@@ -18,11 +18,11 @@ It's only when I've read about it in the context of reverse engineering that I h
 
 To try to get a better intuition of what's how JTAG works I wanted to connect a generic JTAG adapter to one of the embedded processors I had lying around. I decided to go with the [FT2232H Mini Module](https://www.ftdichip.com/Support/Documents/DataSheets/Modules/DS_FT2232H_Mini_Module.pdf) since it's cheap and can be used for a variety of other applications as well. The first thing I needed to do was figure out how the modules power distribution worked. There are no built in jumpers, so I had to do some soldering to connect the Vcc and IO power.
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/jtag/ft2232_mini_mods.jpg" alt="ft2232_mini_mods">]({{ site.image_host }}/2020/jtag/ft2232_mini_mods.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/jtag/ft2232_mini_mods.webp" alt="ft2232_mini_mods">]({{ site.image_host }}/2020/jtag/ft2232_mini_mods.jpg)
 
 I thought starting with a microcontroller would be easier, but I was surprised to find JTAG isn't supported accross the board on Atmel products. The atmega328p commonly found in Arduinos supports a proprietary alternative (debugWIRE). I found I had an Atmega32 that supported JTAG so I tried to connect to it with a minimal setup.
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/jtag/atmega32_test.jpg" alt="atmega32_test">]({{ site.image_host }}/2020/jtag/atmega32_test.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/jtag/atmega32_test.webp" alt="atmega32_test">]({{ site.image_host }}/2020/jtag/atmega32_test.jpg)
 
 For the host side I used [OpenOCD](http://openocd.org/). It's a pretty complicated tool, and I had some mixed luck trying to follow tutorials and the manuals. There's a decent amount of information out there, but there's so many combinations of adapters and processors, it can be hard to figure out what's relevant.
 
@@ -47,7 +47,7 @@ To run OpenOCD I tried to use the config they provided for the MiniModule (https
 
 Once again though I wasn't able to detect the processor. At this point I connected a scope to see what was hapenning.
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/jtag/raspi_scope.jpg" alt="raspi_scope">]({{ site.image_host }}/2020/jtag/raspi_scope.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/jtag/raspi_scope.webp" alt="raspi_scope">]({{ site.image_host }}/2020/jtag/raspi_scope.jpg)
 
 Amazingly, connected the scope fixed it. As long as the scope was attached to the the reset pin things worked and I was able detect the RaspPi over JTAG. Eventually I realized that for my combination of processor and adapter I needed to specify `reset_config trst_only` in the OpenOCD config. I ended up with the following combined config:
 

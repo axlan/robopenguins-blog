@@ -4,7 +4,7 @@ author: jon
 layout: post
 categories:
   - Software
-image: 2019/sushi_go_gui.png
+image: 2019/sushi_go_gui.webp
 ---
 
 I made a framework for testing AI's made to play the card game "Sushi Go". Source at <https://github.com/axlan/sushi_go_ai> . It included a GUI to allow a human to play against an AI, and for playing back the gamestate from a recorded game.
@@ -58,7 +58,7 @@ The code in this file encoded the rules of Sushi Go. It has classes for represen
 
 Each game played in the arena can have the gamestates serialized into a JSON file with the `-b` option. These JSON files can then be played back with the playback_viewer script.
 
-[<img class="aligncenter size-large" src="{{ site.image_host }}/2019/sushi_go_gui.png" height="50%" width="50%" alt="" />]({{ site.image_host }}/2019/sushi_go_gui.png)
+[<img class="aligncenter size-large" src="{{ site.image_host }}/2019/sushi_go_gui.webp" height="50%" width="50%" alt="" />]({{ site.image_host }}/2019/sushi_go_gui.png)
 
 ## ai_rand1.py
 

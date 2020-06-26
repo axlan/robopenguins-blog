@@ -5,11 +5,11 @@ author: jon
 layout: post
 categories:
   - Software
-image: 2013/08/astar-300x150.png
+image: 2013/08/astar-300x150.webp
 ---
 I wrote this almost a year ago, but never posted it since I didn't get a chance to fully comment the code. Since I probably won't get around to it any time soon, I'm posting it now. I even shoddily converted it into a java applet!
 
-[<img class="size-medium wp-image-405 alignnone" alt="astar" src="{{ site.image_host }}/2013/08/astar-300x150.png" width="300" height="150" />  
+[<img class="size-medium wp-image-405 alignnone" alt="astar" src="{{ site.image_host }}/2013/08/astar-300x150.webp" width="300" height="150" />  
 ]({{ site.image_host }}/2013/08/astar.png) 
 
 Here's a simple 2D shortest path planning algorithm written in Java.
@@ -22,7 +22,7 @@ I've spent a bit of time brushing up on some algorithms and data structure basic
 
 When I was first learning to code I made some simple top down 2D games. I would often have had to solve the problem of finding the shortest path from point A to point B while navigating obstacles as shown crudely below:
 
-[<img class="alignleft size-medium wp-image-230" title="atob" alt="" src="{{ site.image_host }}/2012/10/atob-300x221.png" width="300" height="221" />]({{ site.image_host }}/2012/10/atob.png)
+[<img class="alignleft size-medium wp-image-230" title="atob" alt="" src="{{ site.image_host }}/2012/10/atob-300x221.webp" width="300" height="221" />]({{ site.image_host }}/2012/10/atob.png)
 
 I think I remember copy/pasting some black box code I found on the internet and never giving the problem much thought.
 
@@ -75,10 +75,10 @@ For me the easiest way to think about this algorithm relates back to the rule th
 
 To put this into terms of the 2D path problem, the cost is going to be shortest distance from a given point to the target point. For my simple demo I'm going to make the world out of tiles that can be traversed by going up, down, left or right. Some tiles will be treated as impassible walls. In the absence of any walls the distance from point A to B is abs(A.x-B.x) + abs(A.y-B.y) . This provides a perfect heuristic for the A* search, since the presence of walls can only increase the minimum path.
 
-[<img class="size-full wp-image-235" title="worldmove" alt="" src="{{ site.image_host }}/2012/10/worldmove.png" width="263" height="243" />]({{ site.image_host }}/2012/10/worldmove.png)
+[<img class="size-full wp-image-235" title="worldmove" alt="" src="{{ site.image_host }}/2012/10/worldmove.webp" width="263" height="243" />]({{ site.image_host }}/2012/10/worldmove.png)
 Possible Movements
 
-[<img class="size-medium wp-image-234" title="cost" alt="" src="{{ site.image_host }}/2012/10/cost-300x207.png" width="300" height="207" />]({{ site.image_host }}/2012/10/cost.png)
+[<img class="size-medium wp-image-234" title="cost" alt="" src="{{ site.image_host }}/2012/10/cost-300x207.webp" width="300" height="207" />]({{ site.image_host }}/2012/10/cost.png)
 
 The heuristic predicted cost for this example is 3. Due to the obstacle the actual cost is 7.
 

@@ -5,7 +5,7 @@ layout: post
 categories:
   - Software
   - Personal
-image: 2019/pigsim.png
+image: 2019/pigsim.webp
 ---
 
 Here's a bunch of other old projects I dug up while updating the site that I'm throwing together into a pile. This time programming!
@@ -48,7 +48,7 @@ The first is a "chat" app where the participants feed in a text file as a [one t
 
 <https://github.com/axlan/literary-chat>
 
-[<img class="aligncenter size-large" src="{{ site.image_host }}/2019/chat-window.png" height="50%" width="50%" alt="" />]({{ site.image_host }}/2019/chat-window.png)
+[<img class="aligncenter size-large" src="{{ site.image_host }}/2019/chat-window.webp" height="50%" width="50%" alt="" />]({{ site.image_host }}/2019/chat-window.png)
 
 Here's what the server sees:
 
@@ -82,4 +82,4 @@ Here's another puzzle box style project I made. It pulls text from transcripts o
 
 <https://github.com/axlan/nightvalue_puzzle>
 
-[<img class="aligncenter size-large" src="{{ site.image_host }}/2019/nightvale-console.png" height="50%" width="50%" alt="" />]({{ site.image_host }}/2019/nightvale-console.png)
+[<img class="aligncenter size-large" src="{{ site.image_host }}/2019/nightvale-console.webp" height="50%" width="50%" alt="" />]({{ site.image_host }}/2019/nightvale-console.png)

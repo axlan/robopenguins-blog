@@ -4,7 +4,7 @@ author: jon
 layout: post
 categories:
   - Personal
-image: 2020/miniatures/IMG_20200205_141245_thumb.jpg
+image: 2020/miniatures/IMG_20200205_141245_thumb.webp
 ---
 
 For a non-software related project my wife and I recently had a chance to paint some miniatures for our DnD characters.
@@ -15,23 +15,23 @@ First we painted a couple metal miniatures we got a long time ago, but never had
 
 I painted an half-orc librarian:
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/IMG_20200205_141228.jpg" alt="Solution 5">]({{ site.image_host }}/2020/miniatures/IMG_20200205_141228.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/IMG_20200205_141228.webp" alt="Solution 5">]({{ site.image_host }}/2020/miniatures/IMG_20200205_141228.jpg)
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/IMG_20200205_141258.jpg" alt="Solution 5">]({{ site.image_host }}/2020/miniatures/IMG_20200205_141258.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/IMG_20200205_141258.webp" alt="Solution 5">]({{ site.image_host }}/2020/miniatures/IMG_20200205_141258.jpg)
 
 I was pretty happy with how this turned out, but in retrospect, I probably should have done the shawl and rope around the waste in their own colors.
 
 Maria painted a cleric:
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/IMG_20200205_141237.jpg" alt="Solution 5">]({{ site.image_host }}/2020/miniatures/IMG_20200205_141237.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/IMG_20200205_141237.webp" alt="Solution 5">]({{ site.image_host }}/2020/miniatures/IMG_20200205_141237.jpg)
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/IMG_20200205_141306.jpg" alt="Solution 5">]({{ site.image_host }}/2020/miniatures/IMG_20200205_141306.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/IMG_20200205_141306.webp" alt="Solution 5">]({{ site.image_host }}/2020/miniatures/IMG_20200205_141306.jpg)
 
 After that I painted a plastic figure I had 3D printed from [Hero Forge](https://www.heroforge.com/):
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/IMG_20200205_141245.jpg" alt="Solution 5">]({{ site.image_host }}/2020/miniatures/IMG_20200205_141245.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/IMG_20200205_141245.webp" alt="Solution 5">]({{ site.image_host }}/2020/miniatures/IMG_20200205_141245.jpg)
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/IMG_20200205_141251.jpg" alt="Solution 5">]({{ site.image_host }}/2020/miniatures/IMG_20200205_141251.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/IMG_20200205_141251.webp" alt="Solution 5">]({{ site.image_host }}/2020/miniatures/IMG_20200205_141251.jpg)
 
 I think I went a little too thick with the paint, the wash, and the shellac. It still looks OK, but I think the paint ended up obscuring some of the details.
 
@@ -43,66 +43,66 @@ After sharing our new hobby with some friends, they were excited to tell us that
 
 Painted by me
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/rogue1_thumb.jpg" alt="Rogue 1">]({{ site.image_host }}/2020/miniatures/rogue1.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/rogue1_thumb.webp" alt="Rogue 1">]({{ site.image_host }}/2020/miniatures/rogue1.jpg)
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/rogue2_thumb.jpg" alt="Rogue 2">]({{ site.image_host }}/2020/miniatures/rogue2.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/rogue2_thumb.webp" alt="Rogue 2">]({{ site.image_host }}/2020/miniatures/rogue2.jpg)
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/rogue3_thumb.jpg" alt="Rogue 3">]({{ site.image_host }}/2020/miniatures/rogue3.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/rogue3_thumb.webp" alt="Rogue 3">]({{ site.image_host }}/2020/miniatures/rogue3.jpg)
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/rogue4_thumb.jpg" alt="Rogue 4">]({{ site.image_host }}/2020/miniatures/rogue4.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/rogue4_thumb.webp" alt="Rogue 4">]({{ site.image_host }}/2020/miniatures/rogue4.jpg)
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/rogue5_thumb.jpg" alt="Rogue 5">]({{ site.image_host }}/2020/miniatures/rogue5.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/rogue5_thumb.webp" alt="Rogue 5">]({{ site.image_host }}/2020/miniatures/rogue5.jpg)
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/rogue6_thumb.jpg" alt="Rogue 6">]({{ site.image_host }}/2020/miniatures/rogue6.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/rogue6_thumb.webp" alt="Rogue 6">]({{ site.image_host }}/2020/miniatures/rogue6.jpg)
 
 ## Morgaine, the Dachshund Sorceror
 
 Painted by Maria
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/sorc1_thumb.jpg" alt="Sorceror 1">]({{ site.image_host }}/2020/miniatures/sorc1.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/sorc1_thumb.webp" alt="Sorceror 1">]({{ site.image_host }}/2020/miniatures/sorc1.jpg)
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/sorc2_thumb.jpg" alt="Sorceror 2">]({{ site.image_host }}/2020/miniatures/sorc2.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/sorc2_thumb.webp" alt="Sorceror 2">]({{ site.image_host }}/2020/miniatures/sorc2.jpg)
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/sorc3_thumb.jpg" alt="Sorceror 3">]({{ site.image_host }}/2020/miniatures/sorc3.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/sorc3_thumb.webp" alt="Sorceror 3">]({{ site.image_host }}/2020/miniatures/sorc3.jpg)
 
 ## Cornelius, the Golden Retriever Wizard
 
 Painted by me
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/wizard1_thumb.jpg" alt="Wizard 1">]({{ site.image_host }}/2020/miniatures/wizard1.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/wizard1_thumb.webp" alt="Wizard 1">]({{ site.image_host }}/2020/miniatures/wizard1.jpg)
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/wizard2_thumb.jpg" alt="Wizard 2">]({{ site.image_host }}/2020/miniatures/wizard2.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/wizard2_thumb.webp" alt="Wizard 2">]({{ site.image_host }}/2020/miniatures/wizard2.jpg)
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/wizard3_thumb.jpg" alt="Wizard 3">]({{ site.image_host }}/2020/miniatures/wizard3.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/wizard3_thumb.webp" alt="Wizard 3">]({{ site.image_host }}/2020/miniatures/wizard3.jpg)
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/wizard4_thumb.jpg" alt="Wizard 4">]({{ site.image_host }}/2020/miniatures/wizard4.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/wizard4_thumb.webp" alt="Wizard 4">]({{ site.image_host }}/2020/miniatures/wizard4.jpg)
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/wizard5_thumb.jpg" alt="Wizard 5">]({{ site.image_host }}/2020/miniatures/wizard5.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/wizard5_thumb.webp" alt="Wizard 5">]({{ site.image_host }}/2020/miniatures/wizard5.jpg)
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/wizard6_thumb.jpg" alt="Wizard 6">]({{ site.image_host }}/2020/miniatures/wizard6.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/wizard6_thumb.webp" alt="Wizard 6">]({{ site.image_host }}/2020/miniatures/wizard6.jpg)
 
 ## Cerysse, the St. Bernard Cleric
 
 Painted by Maria
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/cleric1_thumb.jpg" alt="Cleric 1">]({{ site.image_host }}/2020/miniatures/cleric1.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/cleric1_thumb.webp" alt="Cleric 1">]({{ site.image_host }}/2020/miniatures/cleric1.jpg)
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/cleric2_thumb.jpg" alt="Cleric 2">]({{ site.image_host }}/2020/miniatures/cleric2.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/cleric2_thumb.webp" alt="Cleric 2">]({{ site.image_host }}/2020/miniatures/cleric2.jpg)
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/cleric3_thumb.jpg" alt="Cleric 3">]({{ site.image_host }}/2020/miniatures/cleric3.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/cleric3_thumb.webp" alt="Cleric 3">]({{ site.image_host }}/2020/miniatures/cleric3.jpg)
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/cleric4_thumb.jpg" alt="Cleric 4">]({{ site.image_host }}/2020/miniatures/cleric4.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/cleric4_thumb.webp" alt="Cleric 4">]({{ site.image_host }}/2020/miniatures/cleric4.jpg)
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/cleric5_thumb.jpg" alt="Cleric 5">]({{ site.image_host }}/2020/miniatures/cleric5.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/cleric5_thumb.webp" alt="Cleric 5">]({{ site.image_host }}/2020/miniatures/cleric5.jpg)
 
 ## Svetlana, the Beagle Barbarian
 
 Painted by me
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/barb_1_thumb.jpg" alt="Barbarian 1">]({{ site.image_host }}/2020/miniatures/barb_1.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/barb_1_thumb.webp" alt="Barbarian 1">]({{ site.image_host }}/2020/miniatures/barb_1.jpg)
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/barb_2_thumb.jpg" alt="Barbarian 2">]({{ site.image_host }}/2020/miniatures/barb_2.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/barb_2_thumb.webp" alt="Barbarian 2">]({{ site.image_host }}/2020/miniatures/barb_2.jpg)
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/barb_3_thumb.jpg" alt="Barbarian 3">]({{ site.image_host }}/2020/miniatures/barb_3.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/barb_3_thumb.webp" alt="Barbarian 3">]({{ site.image_host }}/2020/miniatures/barb_3.jpg)
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/barb_4_thumb.jpg" alt="Barbarian 4">]({{ site.image_host }}/2020/miniatures/barb_4.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/miniatures/barb_4_thumb.webp" alt="Barbarian 4">]({{ site.image_host }}/2020/miniatures/barb_4.jpg)

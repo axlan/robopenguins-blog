@@ -5,7 +5,7 @@ layout: post
 categories:
   - Hardware
   - Software
-image: 2020/AWS_IOT.png
+image: 2020/AWS_IOT.webp
 ---
 
 As a followup to [NodeMCU Development]({% post_url 2020-01-03-nodemcu-dev %}), I decided to connect my project to the AWS IoT cloud to see what that entailed. Turns out, it's a huge amount of headache for not much gain for a small project. I can see how it would become useful if I was deploying hundreds of devices, but it doesn't really streamline the hobbyist workflow.
@@ -18,7 +18,7 @@ The basic functionality I wanted was a UI for controlling a display. Possibly ad
 
 My previous [ESP8266](https://en.wikipedia.org/wiki/ESP8266) projects generally worked like this:
 
-[<img class="aligncenter size-large" src="{{ site.image_host }}/2020/lan_only.png" alt="LAN only design" />]({{ site.image_host }}/2020/lan_only.png)
+[<img class="aligncenter size-large" src="{{ site.image_host }}/2020/lan_only.webp" alt="LAN only design" />]({{ site.image_host }}/2020/lan_only.png)
 
 A web server running on the board would be both the frontend, and the backend. The board would serve HTML and handle an HTTP API for sending commands and receiving data.
 
@@ -35,7 +35,7 @@ Cons
 
 Initially I wanted to move the HTML hosting off the board with a setup like:
 
-[<img class="aligncenter size-large" src="{{ site.image_host }}/2020/offload_frontend.png" alt="LAN plus web server design" />]({{ site.image_host }}/2020/offload_frontend.png)
+[<img class="aligncenter size-large" src="{{ site.image_host }}/2020/offload_frontend.webp" alt="LAN plus web server design" />]({{ site.image_host }}/2020/offload_frontend.png)
 
 I would have the index HTML request to the board redirect to a cloud HTTP server along with a query string giving the boards LAN IP. Something like:
 
@@ -60,7 +60,7 @@ While I was on this train of thought, I decided to see what it would be like to 
 
 Here's the high level design I came up with:
 
-[<img class="aligncenter size-large" src="{{ site.image_host }}/2020/AWS_IOT.png" alt="LAN plus web server design" />]({{ site.image_host }}/2020/AWS_IOT.png)
+[<img class="aligncenter size-large" src="{{ site.image_host }}/2020/AWS_IOT.webp" alt="LAN plus web server design" />]({{ site.image_host }}/2020/AWS_IOT.png)
 
 Pros
 * Brush up my AWS skills
@@ -84,7 +84,7 @@ After doing some research into how AWS IoT worked and what it did, I figured out
 Here's the basic steps I took:
 
 1. Create a Policy to give the authenticated board access to the AWS IoT resources. Here's where it's found since the instructions on <https://github.com/debsahu/ESP-MQTT-AWS-IoT-Core> didn't specify.
-[<img class="aligncenter size-large" src="{{ site.image_host }}/2020/policies.png" alt="LAN plus web server design" />]({{ site.image_host }}/2020/policies.png)
+[<img class="aligncenter size-large" src="{{ site.image_host }}/2020/policies.webp" alt="LAN plus web server design" />]({{ site.image_host }}/2020/policies.png)
 2. Create a Thing in the AWS IoT to generate the credentials for the board.
 3. Download the certificates for the board and add them to a secrets header file.
 4. Add the PubSubClient and ArduinoJSON libraries to the PlatformIO project.

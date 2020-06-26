@@ -6,11 +6,11 @@ layout: post
 categories:
   - Personal
   - Software
-image: 2012/04/evilution.jpg
+image: 2012/04/evilution.webp
 ---
 This is a very simple evolution simulator.  
 
-[<img src="{{ site.image_host }}/2012/04/evilution.jpg" alt="" title="evilution" width="274" height="233" class="alignleft size-full wp-image-219" />]({{ site.image_host }}/2012/04/evilution.jpg)
+[<img src="{{ site.image_host }}/2012/04/evilution.webp" alt="" title="evilution" width="274" height="233" class="alignleft size-full wp-image-219" />]({{ site.image_host }}/2012/04/evilution.jpg)
   
 Selecting a type (plant or animal) you can place creatures on the board by clicking on the white area.  
 They will try to survive and reproduce with their genes represented by their color. Time can be sped or slowed by changing the time speed value.  

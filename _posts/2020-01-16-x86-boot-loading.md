@@ -4,7 +4,7 @@ author: jon
 layout: post
 categories:
   - Software
-image: 2020/x86_reg.png
+image: 2020/x86_reg.webp
 ---
 
 In my previous careers, I've spent a decent amount of time involved with bringing up processors in embedded platforms. However, despite spending a decent amount of time working with bootloaders and bare metal processors, I still don't have a great sense of exactly what they do and how software is built for them. As a learning exercise, I'm in the process of going from the lowest level with the goal of having a loose understanding of most of what it takes to bring up a Linux OS.
@@ -87,7 +87,7 @@ To build the final example, since I got linker errors.
 
 I tried running these on my laptops by dd'ing the images onto a USB, but couldn't get them to boot. Eventually I switched to a [different tutorial](https://github.com/cirosantilli/x86-bare-metal-examples#bios-hello-world). I was able to actually get a hello world USB to run
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/IMG_20200116_221218_thumb.jpg" alt="laptop hello world">]({{ site.image_host }}/2020/IMG_20200116_221218.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/IMG_20200116_221218_thumb.webp" alt="laptop hello world">]({{ site.image_host }}/2020/IMG_20200116_221218.jpg)
 
 ## Debugging with GDB
 

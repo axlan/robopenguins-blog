@@ -6,13 +6,13 @@ layout: post
 categories:
   - Hardware
   - Personal
-image: 2012/12/2012-12-16-21.51.22-265x300.jpg
+image: 2012/12/2012-12-16-21.51.22-265x300.webp
 ---
 My brother and I used to watch the anime Outlaw Star together as kids, so I decided to get him something based on the show as a gift this year. Being a relatively unpopular show that hasn&#8217;t been on the air in years, there was basically no merchandise available. So I decided to make my own. This is a clock made to look like the computer Gillium II from the show.
 
-[<img class="alignleft size-medium wp-image-301" title="finished clock front" src="{{ site.image_host }}/2012/12/2012-12-16-21.51.22-265x300.jpg" alt="" width="265" height="300" />]({{ site.image_host }}/2012/12/2012-12-16-21.51.22.jpg)  
+[<img class="alignleft size-medium wp-image-301" title="finished clock front" src="{{ site.image_host }}/2012/12/2012-12-16-21.51.22-265x300.webp" alt="" width="265" height="300" />]({{ site.image_host }}/2012/12/2012-12-16-21.51.22.jpg)  
 Vs  
-[<img class="alignleft size-full wp-image-305" title="gillum" src="{{ site.image_host }}/2012/12/gillum.png" alt="" width="300" height="215" />]({{ site.image_host }}/2012/12/gillum.png)
+[<img class="alignleft size-full wp-image-305" title="gillum" src="{{ site.image_host }}/2012/12/gillum.webp" alt="" width="300" height="215" />]({{ site.image_host }}/2012/12/gillum.png)
 
 &nbsp;
 
@@ -40,7 +40,7 @@ Next I dissected the clock radio. Originally I was hoping to drive some blinki
 
 The clock radio I used looked like this
 
-[<img class="alignleft  wp-image-312" title="Digital-clock-radio-basic" src="{{ site.image_host }}/2012/12/Digital-clock-radio-basic.jpg" alt="" width="600" height="400" />]({{ site.image_host }}/2012/12/Digital-clock-radio-basic.jpg)
+[<img class="alignleft  wp-image-312" title="Digital-clock-radio-basic" src="{{ site.image_host }}/2012/12/Digital-clock-radio-basic.webp" alt="" width="600" height="400" />]({{ site.image_host }}/2012/12/Digital-clock-radio-basic.jpg)
 
 &nbsp;
 
@@ -60,7 +60,7 @@ The clock radio I used looked like this
 
 In order to fit the board into the tin I needed to rotate the display 90 degrees so that it faced upward. This meant that there was no way that I could reuse the original set of controls. I didn&#8217;t feel the need to preserve all of the radio and alarm functionality so I decided to make the only input the time setting controls.
 
-[<img class="alignleft size-medium wp-image-304" title="inside clock" src="{{ site.image_host }}/2012/12/inside-clock-300x268.jpg" alt="" width="300" height="268" />]({{ site.image_host }}/2012/12/inside-clock.jpg)
+[<img class="alignleft size-medium wp-image-304" title="inside clock" src="{{ site.image_host }}/2012/12/inside-clock-300x268.webp" alt="" width="300" height="268" />]({{ site.image_host }}/2012/12/inside-clock.jpg)
 
 &nbsp;
 
@@ -79,4 +79,4 @@ First I removed a four position switch that was used to change the alarm/radio m
 Before I mounted the clock circuit into the tin I desoldered some of the extra parts like the speaker and the original input circuitry. The clock circuit was just barely to big to fit, so I had to cut off some of the corners which fortunately didn&#8217;t contain anything important. I screwed the clock circuit back onto the plastic bottom of the clock which I cut down to a size that would fit. To put everything together I had to I ended up gluing the switch, cables, and circuitry in place with epoxy. I cut a little chunk out of the tin for the cable to fit through and bent back the metal so the cord wouldn&#8217;t be sitting on a sharp edge. With all the done the tins lid could still be taken off and on giving access to the inner side of the plastic and the clock circuitry.
 
 I painted the colored parts of the clock face on the inside of the plastic, and doing the black sections on the outside with a sharpy. I&#8217;m sure there&#8217;s a better way since the paint I used could be easily be chipped off if it rubbed against anything sharp, but still it ended up looking pretty nice.  
-[<img class="alignleft size-medium wp-image-302" title="finished clock side" src="{{ site.image_host }}/2012/12/2012-12-16-21.51.29-257x300.jpg" alt="" width="257" height="300" />]({{ site.image_host }}/2012/12/2012-12-16-21.51.29.jpg)
+[<img class="alignleft size-medium wp-image-302" title="finished clock side" src="{{ site.image_host }}/2012/12/2012-12-16-21.51.29-257x300.webp" alt="" width="257" height="300" />]({{ site.image_host }}/2012/12/2012-12-16-21.51.29.jpg)

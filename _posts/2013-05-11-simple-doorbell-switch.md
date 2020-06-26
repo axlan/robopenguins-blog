@@ -6,7 +6,7 @@ layout: post
 categories:
   - Hardware
   - Personal
-image: 2013/05/2013-05-11-11.06.07-300x225.jpg
+image: 2013/05/2013-05-11-11.06.07-300x225.webp
 ---
 <div>
   Here&#8217;s a quick hack I through together to prevent jerks from ringing my doorbell late at night.
@@ -16,7 +16,7 @@ image: 2013/05/2013-05-11-11.06.07-300x225.jpg
 </div>
 
 <div>
-  <a href="{{ site.image_host }}/2013/05/2013-05-11-11.06.07.jpg"><img class="alignleft size-medium wp-image-365" alt="Doorbell Switch" src="{{ site.image_host }}/2013/05/2013-05-11-11.06.07-300x225.jpg" width="300" height="225" /></a>
+  <a href="{{ site.image_host }}/2013/05/2013-05-11-11.06.07.jpg"><img class="alignleft size-medium wp-image-365" alt="Doorbell Switch" src="{{ site.image_host }}/2013/05/2013-05-11-11.06.07-300x225.webp" width="300" height="225" /></a>
 </div>
 
 <div>

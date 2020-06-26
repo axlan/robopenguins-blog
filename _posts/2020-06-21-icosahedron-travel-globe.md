@@ -6,7 +6,7 @@ categories:
   - Hardware
   - Electronic Art
   - Software
-image: 2020/globe/globe_title_thumb.jpg
+image: 2020/globe/globe_title_thumb.webp
 featured: true
 ---
 
@@ -32,45 +32,45 @@ I added circles to indicate where the cities were, and in retrospect I probably 
 
 Here it is printed out:
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/globe/flat_thumb.jpg" height="50%" width="50%" alt="flat print">]({{ site.image_host }}/2020/globe/flat.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/globe/flat_thumb.webp" height="50%" width="50%" alt="flat print">]({{ site.image_host }}/2020/globe/flat.jpg)
 
 Rather than go with the screws used by the reference projects, I decided to hot glue it together. It was pretty finicky to put together and is almost certainly less sturdy. However, it's nice to have the entire surface clear and seems fairly robust.
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/globe/asm1_thumb.jpg" height="50%" width="50%" alt="assemble 1">]({{ site.image_host }}/2020/globe/asm1.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/globe/asm1_thumb.webp" height="50%" width="50%" alt="assemble 1">]({{ site.image_host }}/2020/globe/asm1.jpg)
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/globe/asm2_thumb.jpg" height="50%" width="50%" alt="assemble 2">]({{ site.image_host }}/2020/globe/asm2.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/globe/asm2_thumb.webp" height="50%" width="50%" alt="assemble 2">]({{ site.image_host }}/2020/globe/asm2.jpg)
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/globe/asm3_thumb.jpg" height="50%" width="50%" alt="assemble 3">]({{ site.image_host }}/2020/globe/asm3.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/globe/asm3_thumb.webp" height="50%" width="50%" alt="assemble 3">]({{ site.image_host }}/2020/globe/asm3.jpg)
 
 It took me a while to decide what to do in addition to the wood build. Unsurprisingly, I wanted to put LEDs in it. I wanted them to be interactive somehow, and eventually I came up with the idea of making it interact with a Google Maps photo gallery. The idea is to cut holes for the cities we visited and light up an LED under the hole when showing the corresponding pictures. We drew lines on the globe to connect the cities.
 
 To make the innards accessible, I initially tried to build a hinge:
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/globe/flap_thumb.jpg" height="50%" width="50%" alt="hinge">]({{ site.image_host }}/2020/globe/flap.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/globe/flap_thumb.webp" height="50%" width="50%" alt="hinge">]({{ site.image_host }}/2020/globe/flap.jpg)
 
 which worked OK. I wanted to to look nicer though so I ended up going with adding magnets to the corners:
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/globe/magnet_thumb.jpg" height="50%" width="50%" alt="magnet">]({{ site.image_host }}/2020/globe/magnet.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/globe/magnet_thumb.webp" height="50%" width="50%" alt="magnet">]({{ site.image_host }}/2020/globe/magnet.jpg)
 
 # Electronics Build
 
 For the electronics I stayed in my comfort zone and went with WS2812B LEDs and a NodeMCU like in the ([Wreath Pixel Display]({% post_url 2017-07-04-wreath-pixel-display %}) and ([Fire Emblem Lights]({% post_url 2020-01-14-fire-emblem-lights %}) projects. Trying to save money, a cheaper ESP-8266 board, the D1 Mini. This worked great. I also went with the cheapest WS2812B string I could find. It turned out these were not the LEDs with the built in controller I was used to, but were actually pretty bulky lights.
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/globe/led_wiring_thumb.jpg" height="50%" width="50%" alt="led wiring">]({{ site.image_host }}/2020/globe/led_wiring.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/globe/led_wiring_thumb.webp" height="50%" width="50%" alt="led wiring">]({{ site.image_host }}/2020/globe/led_wiring.jpg)
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/globe/attach_led_thumb.jpg" height="50%" width="50%" alt="attach led">]({{ site.image_host }}/2020/globe/attach_led.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/globe/attach_led_thumb.webp" height="50%" width="50%" alt="attach led">]({{ site.image_host }}/2020/globe/attach_led.jpg)
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/globe/light_leak_thumb.jpg" height="50%" width="50%" alt="light leak">]({{ site.image_host }}/2020/globe/light_leak.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/globe/light_leak_thumb.webp" height="50%" width="50%" alt="light leak">]({{ site.image_host }}/2020/globe/light_leak.jpg)
 
 As you can see above, the controller is plugged into a USB power brick. This allows the project to be run wirelessly.
 
 It was a struggle to glue the LEDs in place. For one, I should have done it before assembling the globe. Also, the round shape of the LEDs made it very hard to efficiently glue them in place. I ended up cutting the tops off with a dremel to make them flat.
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/globe/cut_leds_thumb.jpg" height="50%" width="50%" alt="cut leds">]({{ site.image_host }}/2020/globe/cut_leds.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/globe/cut_leds_thumb.webp" height="50%" width="50%" alt="cut leds">]({{ site.image_host }}/2020/globe/cut_leds.jpg)
 
 In addition to having a gallery that controlled the LEDs on the globe, I wanted the control to work in reverse as well. I went with a [mpu-6050 IMU](https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/) which is a 6 axis I2C IMU. It even has some build in processing to handle some of the lower level sensor integration. I wired it into the nodeMCU, and tried to get the whole thing mounted sturdily.
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/globe/controller_thumb.jpg" height="50%" width="50%" alt="controller">]({{ site.image_host }}/2020/globe/controller.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/globe/controller_thumb.webp" height="50%" width="50%" alt="controller">]({{ site.image_host }}/2020/globe/controller.jpg)
 
 # Software Build
 
@@ -98,7 +98,7 @@ The next thing I figured out was how to interpret the IMU data in order to contr
 
 With the script [collect_face_gravity.py](https://github.com/axlan/WLED/blob/globe-deploy/globe_ctrl/collect_face_gravity.py) I would collect a series of measurements of the gravity vector as I sat the globe with one of the sides of interest up while rotating it. This would give me the gravity measurements that could correspond with that side being up. Next, I [processed](https://github.com/axlan/WLED/blob/globe-deploy/globe_ctrl/process_grav.py) these measurements to find their centers, and plot them to make sure they didn't overlap. Since they were quite distinct, this would work reliably. Here's a plot of the 7 sides of interest.
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/globe/point_clouds.jpg" height="50%" width="50%" alt="point clouds">]({{ site.image_host }}/2020/globe/point_clouds.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/globe/point_clouds.webp" height="50%" width="50%" alt="point clouds">]({{ site.image_host }}/2020/globe/point_clouds.jpg)
 
 To find which side was up, I would compare the sensor measurement to these computed centers. I then just use the gyro measurement to detect if the globe was being rotated with a simple empirical threshold.
 
@@ -110,4 +110,4 @@ The branch with my entire WLED project is in: <https://github.com/axlan/WLED/tre
 
 # Bonus Cat
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/globe/cat_face_thumb.jpg" alt="cat face">]({{ site.image_host }}/2020/globe/cat_face.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/globe/cat_face_thumb.webp" alt="cat face">]({{ site.image_host }}/2020/globe/cat_face.jpg)

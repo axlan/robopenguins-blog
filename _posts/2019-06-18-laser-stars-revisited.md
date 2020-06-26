@@ -4,7 +4,7 @@ author: jon
 layout: post
 categories:
   - Hardware
-image: 2020/Frame-00131.png
+image: 2020/Frame-00131.webp
 ---
 
 During some time off, I decided to rewrite the laser_stars (<http://www.robopenguins.com/laser-stars/>) code using the ROS framework. During the original project I ended up creating a lot of the configuration / diagnostics / reconfigurability that you'd get for free in ROS. It's not a perfect fit since ROS is focused on robots, but I treated the laser point on the ceiling like a robot. The only library that seemed similar to what I wanted was <http://wiki.ros.org/visp_auto_tracker> . However, I think what I was doing was different enough that it didn't make a good base for development.
@@ -41,7 +41,7 @@ I tried <https://play.google.com/store/apps/details?id=com.pas.webcam&hl=en_US> 
 
 I was able to get the tracking to work in real time an align the target frame, but it was pretty fragile. I would have to set up a lot of logic to try to get around the limitations.
 
-[<img class="aligncenter size-large" src="{{ site.image_host }}/2020/Screenshot_2019-06-15_10-52-25.png" height="50%" width="50%" alt="" />]({{ site.image_host }}/2020/Screenshot_2019-06-15_10-52-25.png)
+[<img class="aligncenter size-large" src="{{ site.image_host }}/2020/Screenshot_2019-06-15_10-52-25.webp" height="50%" width="50%" alt="" />]({{ site.image_host }}/2020/Screenshot_2019-06-15_10-52-25.png)
 
 This package fully works, but probably needs to have the reliability changes I mentioned added to be truly useful.
 
@@ -57,7 +57,7 @@ rosrun rqt_image_view rqt_image_view /laser_pointer_tracker1/thresholded_combine
 rosrun rqt_image_view rqt_image_view /image_publisher1/image_raw &
 ```
 
-[<img class="aligncenter size-large" src="{{ site.image_host }}/2020/Screenshot_2019-06-18_02-31-22.png" height="50%" width="50%" alt="" />]({{ site.image_host }}/2020/Screenshot_2019-06-18_02-31-22.png)
+[<img class="aligncenter size-large" src="{{ site.image_host }}/2020/Screenshot_2019-06-18_02-31-22.webp" height="50%" width="50%" alt="" />]({{ site.image_host }}/2020/Screenshot_2019-06-18_02-31-22.png)
 
 Initially I wanted to use rviz for displaying the output, but since things were 2D it seemed easier to just output images.
 

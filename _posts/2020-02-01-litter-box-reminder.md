@@ -5,14 +5,14 @@ layout: post
 categories:
   - Hardware
   - Personal
-image: 2020/litter_butterfly_thumb.jpg
+image: 2020/litter_butterfly_thumb.webp
 ---
 
 Another simple "home automation" project. My wife mentioned it would be nice to have a way to keep track of when the cat litter was last cleaned. This is a pretty straight forward microcontroller project, but I made it much harder by trying to use a very old dev board I had lying around.
 
 Here's the final project. I just soldered an RGB LED to the front, and attached AA batteries instead of the original coin cell.
 
-[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/litter_butterfly.jpg" alt="Finished Product">]({{ site.image_host }}/2020/litter_butterfly.jpg)
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/litter_butterfly.webp" alt="Finished Product">]({{ site.image_host }}/2020/litter_butterfly.jpg)
 
 All it does, is count the hours since the button was last pressed, and turn the LED orange, then red as the time approaches 24 hours.
 
