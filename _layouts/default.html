@@ -3,13 +3,42 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-<link rel="icon" href="{{ site.baseurl }}/assets/images/pebguin.png">
+{% if site.url %}
+    {% assign abs_url =  site.url %}
+{% else %}
+    {% assign abs_url =  site.host %}
+{% endif %}
+
+<link rel="icon" href="{{ abs_url }}/assets/images/pebguin.png">
     
 <title>{{ page.title }} | {{site.name}}</title>
         
-{% seo %}
-    
+<!-- Custom SEO tag -->
+{% assign pagecontent_description = page.excerpt | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 160 %}
+
+<meta name="description" content="{{ pagecontent_description }}">
+
+<!-- Facebook and Twitter integration -->
+<meta property="og:title" content="{{ page.title }}"/>
+<meta name="author" content="{{ page.author }}" />
+<meta property="og:url" content="{{ abs_url }}{{ page.url }}"/>
+<meta property="og:type" content="article">
+{% if page.image %}<meta property="og:image" content="{{ site.image_host }}/{{ page.image }}"/>{% endif %}
+<meta property="og:site_name" content="{{ site.title }}"/>
+<meta property="og:description" content="{% if pagecontent_description.size > 10 %}{{ pagecontent_description }}{% else %}{{ site.description }}{% endif %}"/>
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@{{ site.twitter_url }}">
+<meta name="twitter:title" content="{{ page.title }}" />
+{% if page.image %}<meta name="twitter:image" content="{{ site.image_host }}{{ page.image }}" />{% endif %}
+<meta name="twitter:url" content="{{ abs_url }}{{ page.url }}" />
+<meta name="twitter:description" content="{% if pagecontent_description.size > 10 %}{{ pagecontent_description }}{% else %}{{ site.description }}{% endif %}" />
+
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: abs_url }}">
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: abs_url }}">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="{{ "/sitemap.xml" | prepend: abs_url }}" />
+<!-- End Custom SEO tag -->
+
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
