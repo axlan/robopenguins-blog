@@ -326,4 +326,6 @@ This shows all the pointers in their expected locations:
 | my_section          | .my_section |
 {:.mbtablestyle}
 
+Compiling with the larger linker script, I can change line 129 from `. = .;` to `. = 0x6000000;`. After recompiling I can see that I moved the .bss and HELLO_FUNC_ARRAY2 to 0x6000000.
+
 The basics of what the linker does isn't that hard to understand, but even after looking at a lot of low level code, there's still a lot of complexity here that I'm just glossing over. I'm sure this would be a lot more straight forward on an embedded bare metal system without the additional complexity of running on an OS.
