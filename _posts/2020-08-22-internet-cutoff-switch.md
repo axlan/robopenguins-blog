@@ -46,3 +46,7 @@ The next issue is that it's a bit annoying to have to configure a set of Blackli
 Finally as predicted integrating into WLED was a fairly painless process. Here's my fork with the full functionality <https://github.com/axlan/WLED/tree/pi_hole_ctrl>. Just needed to remember all the places I needed to add the new variables to get them to appear in the web UI. Doing a quick mock up mostly worked on the first shot, though I quickly realized I needed pull-down resistors.
 
 [<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/IMG_20200828_171324_thumb.webp" alt="real life">]({{ site.image_host }}/2020/IMG_20200828_171324.jpg)
+
+Awhile later I took the time to make an enclosure and add an indicator LED. I took this design https://www.thingiverse.com/thing:619365 and drilled out holes with a dremel. The LED is controlled by the normal WLED firmware.
+
+[<img class="aligncenter wp-image-373 size-medium" src="{{ site.image_host }}/2020/pi_switch_box_thumb.webp" alt="switch box">]({{ site.image_host }}/2020/pi_switch_box.jpg)
