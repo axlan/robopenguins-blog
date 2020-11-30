@@ -88,3 +88,33 @@ for elem in driver.find_elements(By.XPATH, "//div[contains(@class, 'timelinex-ca
 
 driver.close()
 ```
+
+I wrote another simple script to turn the output into a simple markdown doc:
+
+```python
+import os
+import re
+
+# regex to remove temperature metadata
+temp_re = re.compile(r'[0-9]+C$')
+# regex to remove timezone metadata
+tz_re = re.compile(r'\(.+\)')
+
+with open('travel_journal.md', 'w') as out_fd:
+    for i in range(247):
+        path = f'journal_entries/{i}_data/'
+        with open(path + 'footer.txt') as fd:
+            footer = fd.read()
+        with open(path + 'text.txt') as fd:
+            text = fd.read()
+        print(footer)
+        footer = footer.splitlines()
+        date = tz_re.sub('', footer[0])
+        out_fd.write(f'# {date}\n\n')
+        if len(footer) > 1:
+            location = temp_re.sub('', footer[1])
+            out_fd.write(f'{location}\n\n')
+        if os.path.exists(path + 'image.png'):
+            out_fd.write(f'![]({path + "image.png"})\n\n')
+        out_fd.write(f'{text}\n\n')
+```
