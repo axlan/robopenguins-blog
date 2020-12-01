@@ -6,7 +6,7 @@ categories:
   - Software
   - Hardware
   - Personal
-image: 2020/pi-logo.svg
+image: 2020/pi_switch_box_thumb.webp
 ---
 
 I had a really cool 3 position key switch that I've been trying to come up for a use for. I decided to make an IoT controller that could turn parts of the internet on or off.
@@ -33,7 +33,7 @@ Lately I've been using WLED as the base for my projects. It might seem a little 
  * Already integrated with many API's
  * Support for user mods to add features without needing to modify core functionality.
 
-I had actually made a somewhat similar framework for my wreath project way back when INSERT LINK, but it isn't nearly as slick or well tested. I haven't found any other library that offers this great base out of the box. It would be possible to make a fork that strips out everything else, but until I hit a resource limit, there isn't much point. 
+I had actually made a somewhat similar framework for my wreath project way back when [Pixel Wreath]({% post_url 2017-07-04-wreath-pixel-display %}), but it isn't nearly as slick or well tested. I haven't found any other library that offers this great base out of the box. It would be possible to make a fork that strips out everything else, but until I hit a resource limit, there isn't much point. 
 
 I was able to pretty quickly get a Python script that could control the PiHole, and after a bit of finagling I was able to get it working on the ESP8266 <https://github.com/axlan/ArduinoPiHole>. However, I was hitting some annoying issues. Parsing the data requested from the PiHole interface would fail fairly regularly. The page is 25kB so I needed to read it in line by line, so I'm not sure if I was hitting some sort of timeout. Alternatively, I'm not sure if spending so long handling a request was causing the ESP8266 issues. I ended up just pointing my script at a different page (of similar size) and had things just work. I still got hung up a bit needing to handle encoding characters, but eventually I got it working. Unfortunately, it's extremely fragile and the only somewhat robust part (the Json parsing) uses relatively large amount of memory.
 
