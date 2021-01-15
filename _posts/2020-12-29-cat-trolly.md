@@ -121,7 +121,7 @@ With the code up and running, I wired up the sensors for the chair
 
 [<img class="center" src="{{ site.image_host }}/2020/cat_trolly/chair_wiring_thumb.webp" alt="motor mount">]({{ site.image_host }}/2020/cat_trolly/chair_wiring.jpg)
 
-I immediately began to collect data. I made a monitoring service that would periodically connect to the sensors and collect the data in an SQLLite database and a Jupyter notebook to do the analysis <https://github.com/axlan/cat_chair/blob/master/controller>. You can see the sensor measurements over a couple days here
+I immediately began to collect data. I made a monitoring service that would periodically connect to the sensors and collect the data in an SQLite database and a Jupyter notebook to do the analysis <https://github.com/axlan/cat_chair/blob/master/controller>. You can see the sensor measurements over a couple days here
 
 [<img class="center" src="{{ site.image_host }}/2020/cat_trolly/measurement_plot_thumb.webp" alt="Click for interactive plot">]({{ site.image_host }}/2020/cat_trolly/measurements.html)
 
