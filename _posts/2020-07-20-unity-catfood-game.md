@@ -4,6 +4,7 @@ author: jon
 layout: post
 categories:
   - Software
+  - Cat
 image: 2020/cat_game_pic.webp
 ---
 

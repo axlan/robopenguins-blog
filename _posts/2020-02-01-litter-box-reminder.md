@@ -5,6 +5,7 @@ layout: post
 categories:
   - Hardware
   - Personal
+  - Cat
 image: 2020/litter_butterfly_thumb.webp
 ---
 
