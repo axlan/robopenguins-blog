@@ -6,7 +6,6 @@ categories:
   - Hardware
   - Academic
 image: 2020/chipwhisperer/AEBREAK.webp
-featured: true
 ---
 
 I finally had a chance to dig into the [chipwhisperer](https://newae.com/tools/chipwhisperer/). It's a learning tool to teach about hardware security vulnerabilities like [Side-channel attacks](https://en.wikipedia.org/wiki/Side-channel_attack).

@@ -7,6 +7,7 @@ categories:
   - Hardware
   - Cat
 image: 2020/cat_trolly/nala_angry_thumb.webp
+featured: true
 ---
 
 I wanted to do a quickish project over my time off for the holidays. I had a recently broken a coffee grinder, and it inspired me to automate a chair in my office to follow the sun. This seems like a weird project, but it was to placate my cat Nala, who cries when the chair isn't in a sun beam.
