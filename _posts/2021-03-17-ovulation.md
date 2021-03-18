@@ -104,3 +104,7 @@ void loop() {
 ```
 
 All in all seems like a solidly made little product. I'd guess that the cost of materials is on the order of a couple dollars, though I imagine the custom cartridge loader might dominate the production cost. The design was so simple it reminded me of something you'd see in the Zachatronics game Shenzhen IO.
+
+The one somewhat surprising piece of its operation is that it keeps track of it's state between uses while not appearing to have any write-able non-volatile memory. It is looking for a spike in estrogen, which it claims to do by comparing with the previous day. This implies that even when it appears to be off (LCD is blank). It is really keeping its RAM set in some sort of low power mode at least for the week you're supposed to use it for testing.
+
+It's so simple that it's not surprising the small watch battery could go for years in a low power state, which is probably a more common way of tracking persistent state then I'd have guessed.
