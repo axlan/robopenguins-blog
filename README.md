@@ -17,7 +17,7 @@ NOTE to test with project image set you need to copy down the images from S3
 `aws s3 sync s3://www.robopenguins.com/assets/wp-content/ assets/wp-content/`
 
 Deployed with:
-`JEKYLL_ENV=production jekyll build`
+`JEKYLL_ENV=production bundle exec jekyll build`
 `aws s3 sync _site/ s3://www.robopenguins.com/ --delete --exclude="assets/wp-content/*"`
 if images were added
 `aws s3 sync _site/assets/wp-content/ s3://www.robopenguins.com/assets/wp-content/`
