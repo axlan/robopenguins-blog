@@ -4,6 +4,7 @@ author: jon
 layout: post
 categories:
   - Software
+  - Academic
 image: 2021/cross_compile/ARM-x86.webp
 ---
 
@@ -19,11 +20,13 @@ A lot of my initial confusion came from the wide variety of cross compiling scen
 
  * Compiling for a different processor architecture (x86 machine targeting Arm)
  * Compiling for a different OS (Windows compiling Linux code)
- * Compiling for a different set of core libraries (glibc comes up in Linux)
+ * Compiling for a different set of core libraries (glibc and the ABI come up in Linux)
 
-There's some nuance here since some instruction sets are backwards compatible (x64 and x86), and some operating systems can provide some levels of emulation.
+There's some nuance here since some instruction sets are backwards compatible (x64 and x86), and some operating systems can provide some levels of emulation. Typically, when cross compiling you trade off portability with performance.
 
 Basically it comes down to whether the OS can correctly interpret the layout of the executable, and whether the machine instructions are compatible with the processor.
+
+I found <https://elinux.org/images/1/15/Anatomy_of_Cross-Compilation_Toolchains.pdf> to be a good primer of more of the details of what Linux tools are included in a cross compiler.
 
 # Choosing a Cross Compiler
 
@@ -88,8 +91,60 @@ I looked at:
  * <https://gist.github.com/fm4dd/c663217935dc17f0fc73c9c81b0aa845>
  * <https://github.com/abhiTronix/raspberry-pi-cross-compilers>
  * <https://www.raspberrypi.org/forums/viewtopic.php?t=11629>
+ * <https://gcc.gnu.org/onlinedocs/gcc/ARM-Options.html>
 
 For additional reference on which flags to use.
+
+## Understanding the Software Backwards Compatibility
+
+I can inspect the generated binaries with the `file` and `readelf` commands:
+
+```bash
+$ file data/hello32 
+data/hello32: ELF 32-bit LSB shared object, ARM, EABI5 version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux-armhf.so.3, for GNU/Linux 3.2.0, BuildID[sha1]=4cf11af4932f12e469f1933e88ecadc0856e62b1, not stripped
+
+$ file readelf --notes data/hello32 
+
+Displaying notes found in: .note.ABI-tag
+  Owner                Data size        Description
+  GNU                  0x00000010       NT_GNU_ABI_TAG (ABI version tag)
+    OS: Linux, ABI: 3.2.0
+
+$ objdump -p data/hello32 
+
+data/hello32:     file format elf32-little
+
+...
+
+Dynamic Section:
+  NEEDED               libstdc++.so.6
+  NEEDED               libm.so.6
+  NEEDED               libgcc_s.so.1
+  NEEDED               libc.so.6
+  ...
+
+Version References:
+  required from libgcc_s.so.1:
+    0x0b792655 0x00 05 GCC_3.5
+  required from libc.so.6:
+    0x0d696914 0x00 04 GLIBC_2.4
+  required from libstdc++.so.6:
+    0x08922974 0x00 03 GLIBCXX_3.4
+    0x0849afa3 0x00 02 CXXABI_ARM_1.3.3
+
+```
+
+My understanding here is that this binary should be compatible with a version of Linux using library version >= then those printed above. 
+
+Looking at <https://en.wikipedia.org/wiki/Raspberry_Pi_OS>, it looks like these should be compatible the Raspian releases 2016 and later.
+
+For a more complicated program I would need to cross compile all the libraries I was using since I couldn't use native libraries installed on the build environment.
+
+## Hardware Compatibility
+
+When it comes to the hardware, I looked at the table in <https://en.wikipedia.org/wiki/Raspberry_Pi#Specifications>
+
+Basically all the models I'm interested either support `ARMv7-A` or `ARMv8-A` along with the `VFPv4 + NEON` floating point unit.
 
 ## Running QEMU
 
@@ -125,3 +180,24 @@ sudo umount /mnt/raspbian
 ```
 
 Unfortunately, you need to shutdown and restart QEMU to get it to read in the modified files. At least this let me confirm that I was indeed able to run with my cross compiled binaries.
+
+Next I wanted to see if compiling targeting an older arm version would work.
+
+Compiled with: `arm-linux-gnueabihf-gcc -march=armv7-a -mfpu=neon-vfpv4 -o hello32_old hello.c`
+
+Then ran the 32 bit OS on the same emulated hardware
+
+```
+qemu-system-aarch64 \
+  -m 1024 \
+  -M raspi3 \
+  -kernel data/kernel8.img \
+  -dtb data/bcm2710-rpi-3-b.dtb \
+  -sd data/2020-05-27-raspios-buster-lite-armhf.img \
+  -append "console=ttyAMA0 root=/dev/mmcblk0p2 rw rootwait rootfstype=ext4" \
+  -nographic
+```
+
+This also ran with no problem, showing that the instruction set was backwards compatible.
+
+I was then able to repeat this test on real hardware showing that the QEMU was working as expected.
