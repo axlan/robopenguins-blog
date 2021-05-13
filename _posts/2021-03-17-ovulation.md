@@ -6,6 +6,7 @@ categories:
   - Software
   - Hardware
   - Personal
+  - Reverse Engineering
 image: 2021/ovulation/main_thumb.webp
 ---
 

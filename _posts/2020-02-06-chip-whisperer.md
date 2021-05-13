@@ -5,6 +5,7 @@ layout: post
 categories:
   - Hardware
   - Academic
+  - Reverse Engineering
 image: 2020/chipwhisperer/AEBREAK.webp
 ---
 

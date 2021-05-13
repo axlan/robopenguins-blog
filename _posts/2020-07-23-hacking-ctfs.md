@@ -4,6 +4,7 @@ author: jon
 layout: post
 categories:
   - Software
+  - Reverse Engineering
 image: 2020/GHIDRA_1_thumb.jpg
 ---
 

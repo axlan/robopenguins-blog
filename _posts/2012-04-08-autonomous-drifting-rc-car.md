@@ -6,6 +6,7 @@ layout: post
 categories:
   - Academic
   - Hardware
+  - Reverse Engineering
 image: 2012/CIMG0108-thumb.webp
 ---
   
