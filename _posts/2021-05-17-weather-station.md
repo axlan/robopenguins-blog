@@ -1,5 +1,5 @@
 ---
-title: Adding Wifi to Home Weather Station
+title: Adding Wifi to a Weather Station
 author: jon
 layout: post
 categories:
@@ -250,19 +250,19 @@ One final mystery with the display board is where its sensors for reporting "ind
 
 Like many of my previous [IoT projects]({{ site.baseurl }}/categories.html#IoT), I used a ESP8266 integration board with PlatformIO to create the firmware to at networked data logging to the display <https://github.com/axlan/sainlogic-sdr/tree/main/firmware>.
 
-For the first time in awhile, I needed to worry about microcontroller timing. Often when working on a microcontroller, you can assume you have fairly deterministic processing (each run through a loop should take a fairly stable amount of time). Initially I tried to rely on this to sample the input coming from the display, run it through the decoding algorithm, and build up a message's worth of bits. This sort of worked, but was fairly error prone.
+For the first time in awhile, I needed to worry about microcontroller timing. Often when working on a microcontroller, you can assume you have fairly deterministic processing (each run through a loop should take a fairly stable amount of time). Initially, I tried to rely on this to sample the input coming from the display, run it through the decoding algorithm, and build up a message's worth of bits. As I'd shown with the data I captured with the scope, the same algorithms I'd developed with the SDR worked on this signal as well. My initial pass sort of worked, but was failing a lot of the time.
 
-Digging in a bit, it seemed like the main loop would sometime have a delay between runs. This is likely for the ESP8266 to handle it's Wifi stack, and whatever else it's doing in the background.
+Digging in a bit, it seemed like the code would sometime have a delay between loops. This is likely for the ESP8266 to handle it's Wifi stack and whatever else it's doing in the background.
 
-To improve the stability, I switched to using a timer interrupt that would periodically sample the pin and store it in a buffer. Then the main loop would process whatever was in the buffer asynchronously.
+To improve the stability, I switched to using a timer interrupt that would periodically sample the pin and store it in a buffer. Then the main loop would process the buffered data asynchronously.
 
-To debug things and figure out what parameters to use, I also create a debug mode that would basically turn the firmware into a logic analyser. This would capture a continuous block of samples to dump that I could analyze in a python notebook.
+To debug things and figure out what parameters to use, I also created a debug mode that would basically turn the firmware into a logic analyser. This would capture a continuous block of samples to dump that I could analyze in a python notebook.
 
 I had the ESP8266 subscribe to an [MQTT](https://mqtt.org/) broker running on my LAN. So any application I wanted could listen in. I would see occasional errors, but it looks like I was getting >90% of the messages.
 
 ## Uploading Results to Weather Underground
 
-Once this was reliably working, I just needed to decide what to do with the data. I created a client that logged the raw results to a file for future debugging/analysis in <https://github.com/axlan/sainlogic-sdr/tree/main/client>. I decided that rather then write my own dashboard, I would upload the results to Weather Underground. This was kind of on a whim, since I like the idea of adding home sensors to larger aggregation projects, but I can understand if some folks would think this is an unnecessary case of giving a big corporation unnecessary personal data.
+Once this was reliably working, I just needed to decide what to do with the data. I created a client that logged the raw results to a file for future debugging/analysis in <https://github.com/axlan/sainlogic-sdr/tree/main/client>. I decided that rather then write my own dashboard, I would upload the results to Weather Underground. This was kind of on a whim, since I like the idea of adding home sensors to larger aggregation projects, but I can understand if some folks would think this is a case of giving a big corporation unnecessary personal data.
 
 It doesn't really take much to set this up. Going to the <https://www.wunderground.com/>, you need to make an account. With that you can add a device. It gives you a list of weather sensors, but there's an option for RaspberryPi. You give some basic info about where the station is located and you get an ID and Key to access the API with. I found this guide <https://projects.raspberrypi.org/en/projects/uploading-weather-data-to-weather-underground>, but really all you need to do is send a GET request based on this reference page <https://support.weather.com/s/article/PWS-Upload-Protocol?language=en_US>. I added a script to my client code to handle converting and uploading the data, and wrapped it up in a systemd service.
 
