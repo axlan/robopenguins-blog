@@ -6,6 +6,7 @@ categories:
   - Software
   - Hardware
   - Personal
+  - IoT
 image: 2020/pi_switch_box_thumb.webp
 ---
 

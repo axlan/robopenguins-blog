@@ -4,6 +4,7 @@ author: jon
 layout: post
 categories:
   - Hardware
+  - IoT
 image: 2020/NodeMCUv1.0-pinout.webp
 ---
 

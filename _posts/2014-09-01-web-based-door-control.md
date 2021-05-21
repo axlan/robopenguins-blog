@@ -5,6 +5,7 @@ author: jon
 layout: post
 categories:
   - Hardware
+  - IoT
 image: 2014/09/2014-08-31-17.43.30-224x300.webp
 ---
 After have locked myself out of my apartment one too many times, I decided that running to make a keyless entry system. I&#8217;ve been looking for a project to use a Raspberry Pi in for awhile, and this seemed like a good fit.

@@ -6,6 +6,7 @@ categories:
   - Hardware
   - Electronic Art
   - Software
+  - IoT
 image: 2020/globe/globe_title_thumb.webp
 featured: true
 ---

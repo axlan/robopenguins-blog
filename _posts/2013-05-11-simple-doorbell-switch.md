@@ -6,6 +6,7 @@ layout: post
 categories:
   - Hardware
   - Personal
+  - IoT
 image: 2013/05/2013-05-11-11.06.07-300x225.webp
 ---
 <div>

@@ -6,6 +6,7 @@ categories:
   - Software
   - Hardware
   - Cat
+  - IoT
 image: 2020/cat_trolly/nala_angry_thumb.webp
 featured: true
 ---

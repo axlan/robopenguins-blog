@@ -5,6 +5,7 @@ layout: post
 categories:
   - Software
   - Hardware
+  - IoT
 image: 2020/uptime.webp
 ---
 

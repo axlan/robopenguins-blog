@@ -5,6 +5,7 @@ layout: post
 categories:
   - Hardware
   - Software
+  - IoT
 image: 2020/AWS_IOT.webp
 ---
 
