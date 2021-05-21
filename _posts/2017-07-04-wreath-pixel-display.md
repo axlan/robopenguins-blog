@@ -8,6 +8,7 @@ categories:
   - Electronic Art
   - Hardware
   - Software
+  - IoT
 image: 2017/07/2017-07-02-14.47.49-267x300.webp
 ---
 This idea was based on the concept of making a &#8220;Sound Catcher&#8221; pixel display. I&#8217;ve been wanting to make this for a long time, but only recently made the time to put it together. I originally wanted to turn this into a display for ambient sound in the room, but ended up making it into a general audio display and clock.
