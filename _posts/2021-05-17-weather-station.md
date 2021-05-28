@@ -12,6 +12,8 @@ image: 2021/weather/display_thumb.webp
 
 I bought a cheap weather station with the intent of adding networked data logging. I ended up reverse engineering both the RF transmission, as well as the inter-chip communication at the receiver.
 
+In the end I was able to feed the data to weather underground to use as the frontend.
+
 While I kept it nearby during development, here it is at its final destination:
 
 <iframe src="https://giphy.com/embed/TQAcvQmtjJ9WrYCNWQ" width="360" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
@@ -60,6 +62,8 @@ and zoomed in a bit:
 
 The main thing I noticed here was that the signal is super loud and the bits appear to be encoded as amplitude (as apposed to in phase). The other thing was that that there were only two widths of the pulses. The shortest pulses were about 46.3uS and there would sometime be pulses that were twice as long. Coincidentally, this appeared to be the same modulation scheme that I saw in my warm up project [Setting Up GNURadio and Tracking Planes]({% post_url 2021-05-16-gnuradio-adsb %}). The data is being transmitted with pulse position modulation (PPM) <https://en.wikipedia.org/wiki/Pulse-position_modulation>. This is a simple case where a `0` is transmitted as "low, high" and a a `1` is transmitted as "high, low". This means that `11` is "low, high, low, high" and `10` is "low, high, high, low".
 
+I realized later that this may have been easier to find existing code for if I instead searched for examples that handled [Manchester Encoding](https://en.wikipedia.org/wiki/Manchester_code) which is the same encoding, but focussed on the digital encoding rather then a RF modulation.
+
 Initially, I did some more complicated approaches for being able to decode the bits even if the signal was weak, or there was noise, but most of this seemed to be overkill since the signal was so strong for my use case.
 
 Eventually I switched to a [new notebook](https://github.com/axlan/sainlogic-sdr/blob/main/notebooks/sdr_analysis2.ipynb) to try to refine the bit detection to a more streamlined algorithm.
@@ -71,6 +75,8 @@ As I continued to look at the data, I noticed that the duration of the pulses wa
 With all this figured out I now had a set of 128 bits that I needed to find meaning for.
 
 It was at about this point that I learned about the [Univeral Radio Hacker](https://github.com/jopohl/urh) project and gave it a shot. It puts a lot of the tools and processing I'm doing together in a no-programming needed GUI. However, in practice I found it wasn't a great fit for interpreting this signal. I could kind of get it to decode the bits, but it seemed like it had issues with the inconsistent bit length. It would have been nice to use it for tracking the interpretations of the bits and the differences between messages, but I ended up continuing to do this in Python.
+
+Another tool I only found out afterwards is <http://triq.net/bitbench> which tries to simplify turning the binary messages into parsed values. Similar to URH, it streamlines the process, but for this example it hit issues with some of the values being stored in non-contiguous bytes.
 
 ## Decoding the Data
 
