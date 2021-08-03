@@ -17,14 +17,6 @@ Aside from just playing the game, I was also interested in getting cards with cu
 
 So I set out in my search to get an affordable set of cards. I was looking either to make a [cube](https://magic.wizards.com/en/articles/archive/how-build/building-your-first-cube-2016-05-19) or a set of [commander decks](https://magic.wizards.com/en/content/commander-format).
 
-# Chinese Bootlegs
-
-When looking to buy large sets of proxies, I first stumbled on <https://www.reddit.com/r/bootlegmtg/>. This subreddit mostly discusses the process of buying counterfeit cards from Chinese manufacturers. There are a bunch of sellers on Ali Express, as well as direct contacts. This is very blatantly illegal, so there's a lot of opaqueness around the sellers since they constantly need to make new listings as old ones are shut down. It appears you can get full sets, and extremely valuable rare cards at a fraction of the retail price but I:
-
-a. Had no desire for the cards to appear official. I actually would prefer cards with non-standard appearance.
-b. This required building knowledge and participating in a pretty shady marketplace.
-c. It's not that cheap.
-
 # Bootlegs
 
 When looking to buy large sets of proxies, I first stumbled on <https://www.reddit.com/r/bootlegmtg/>. This subreddit mostly discusses the process of buying counterfeit cards from Chinese manufacturers. There are a bunch of sellers on Ali Express, as well as direct contacts. This is very blatantly illegal, so there's a lot of opaqueness around the sellers since they constantly need to make new listings as old ones are shut down. It appears you can get full sets, and extremely valuable rare cards at a fraction of the retail price but:
@@ -57,7 +49,7 @@ You start with <https://www.mpcautofill.com/> which has a web frontend to import
 
 Next you need to download the desktop client <https://github.com/ndepaola/mpc-autofill/releases> to actual send the order to MPC. This is a Python script that runs a browser with [Selenium](https://www.selenium.dev/) automation. This will create the order, just like you would if you were doing it manually, but the mouse is controlled by the script, and it will go through the whole process of setting up your order.
 
-While the auto fill took worked perfectly I did hit a couple issues. The process of uploading the images for the 640 cards took about 4 hours, and I repeatedly had the MPC website hang when it would try to load the checkout page. Eventually, I ran mpc-autofill directly from the script so I could pause it to log in, and then to save the order when I was done to avoid this issue.
+While the auto fill tool worked perfectly I did hit a couple issues. The process of uploading the images for the 640 cards took about 4 hours, and I repeatedly had the MPC website hang when it would try to load the checkout page. Eventually, I ran mpc-autofill directly from the script so I could pause it to log in, and then to save the order when I was done to avoid this issue.
 
 ## Making Custom Cards
 
@@ -115,3 +107,5 @@ The Commanders:
 
 I intentionally left the companion text off Yorion, but accidently removed the `flying` keyword as well:
 [<img class="center" src="{{ site.image_host }}/2021/mtg/typo_thumb.webp" alt="agent link">]({{ site.image_host }}/2021/mtg/typo.jpg)
+
+So far it's been a lot of fun having a set of decks to cycle through and seeing a huge swath of what MtG has to offer. My wife and I have been working through the combinations and she even started a spreadsheet to track the match up favorability ranking.
