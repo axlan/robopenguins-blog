@@ -91,6 +91,8 @@ I decided to go for value and get a max sized deck of 640 cards. I ended up most
 
 Since I didn't order any basic lands, I was able to fit 7 commander decks into the order with a few cards left over for odds and ends. Using the MPC-Autofill website was super straightforward, though I mentioned the issues I had actually making the order above. I ended up needing to manually add my custom cards after the script was done, but once I managed to save my order on MPC, this was pretty easy.
 
+I went with a nice Black Lotus card back so these are all unmistakeably proxies. When sleeved up, it's impossible to tell the "real" basic land cards from the "fake" printed cards by feel.
+
 Here's some pictures of the results (click for bigger)!
 
 The full stack:
