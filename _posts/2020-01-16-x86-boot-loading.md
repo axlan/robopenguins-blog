@@ -149,7 +149,7 @@ honestly this was a lot easier then half the times I've tried to install pre-bui
 
 One minor point I finally tried to clarify is the difference between the names for the different x86 compatible architexures (x86, i386, i686, amd64, x86_64, IA-32e, EM64). This [stack exchange](https://serverfault.com/questions/610308/x86-i386-i686-amd64-i5-i7-archtecture-processor-confusion) covers it pretty well.
 
-Unfortunetly, after all this, I still hit a ton of compiler errors. It looks like <https://github.com/matlo607/simple-x86-bootloader> was written for a much older version of GCC. After learning a little about the [BSS section](https://en.wikipedia.org/wiki/.bss) I found a pretty easy fix and got things compiling.
+Unfortunately, after all this, I still hit a ton of compiler errors. It looks like <https://github.com/matlo607/simple-x86-bootloader> was written for a much older version of GCC. After learning a little about the [BSS section](https://en.wikipedia.org/wiki/.bss) I found a pretty easy fix and got things compiling.
 
 There were scripts to generate disk images that would let me test in QEMU, but they had some issues for me. Eventually, I managed to get the scripts to run successfully, but even after all that the image didn't run correctly. I made my changes on [this fork](https://github.com/axlan/simple-x86-bootloader/tree/img-build-fix)
 
