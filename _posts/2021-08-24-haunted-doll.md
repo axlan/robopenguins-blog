@@ -59,11 +59,15 @@ The main optimization I needed to worry about was storing all the text in PROGME
 
 I decided to structure the program as a series of menus. Each "screen" would print out a message, then offer a series of choices to the user. The user could then go through the menu options which would highlight the selected option. Confirming an option would bring up a new "screen" with it's own set of choices. I wrote a python script that made editing these menus easier.
 
+I probably made this a lot more complicated then it needed to be. As part of the python generation, each menu could also specify callbacks. These handle the external actions that might be triggered by selecting a menu item (like exiting, or updating the quiz answers).
+
 Initially I made full use of Num Lock, Scroll Lock, and Caps Lock for navigating forward and backwards and selecting options. However, I realized that many keyboards may not actually have all these keys. Instead, I moved to just using Caps Lock. The interface would be started up by double tapping Caps Lock. A single click would move to the next option, and double tapping would select. Exit would be a menu option on each screen that would put the device back into its idle state.
 
 The current selection would be shown by using SHIFT to highlight the text. This assumes a fairly basic text editor that doesn't manipulate things too much. It would also be totally thrown off if the user clicks on the editor, or types anything.
 
 Aside, from some silly text, the main "application" is a personality quiz like the "Which game of thrones character are you?" sort of thing. It determines what kind of haunted doll you would be. I quickly realized I didn't have enough memory to store the text of a "real" quiz. So I picked a small set of questions and mapped them randomly to lists of adjectives and nouns to generate a unique doll based on the 64 possible combinations of answers.
+
+I did a pass at refactoring to try to modularize the code a bit better. This actually increased the flash usage by a hundred bytes or so. This probably would have been reduced if I had stuck to doing everything in a more `C` like style, but I decided it was good enough, since it still fit.
 
 ## Additional Challenges
 
