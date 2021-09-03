@@ -11,7 +11,7 @@ image: 2021/doll/head_on_hub_thumb.webp
 
 I added a USB cable to a doll which would be detected as a USB keyboard, and give a personality quiz through notepad. The user starts and responds to the doll by pressing "Caps Lock" on their real keyboard.
 
-<iframe width="1583" height="620" src="https://www.youtube.com/embed/gEcOB3jOMtE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="1583" height="620" src="https://www.youtube.com/embed/L9BVZdRDygo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 All my code for this project is in <https://github.com/axlan/haunted_doll>
 
