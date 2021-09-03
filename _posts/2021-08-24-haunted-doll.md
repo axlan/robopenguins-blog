@@ -6,22 +6,22 @@ categories:
   - Hardware
   - Electronic Art
   - Software
-image: 2021/two_key_box/PXL_20210804_232349371_thumb.webp
+image: 2021/doll/head_on_hub_thumb.webp
 ---
 
 I added a USB cable to a doll which would be detected as a USB keyboard, and give a personality quiz through notepad.
 
-TODO DEMO
+<iframe width="1583" height="620" src="https://www.youtube.com/embed/gEcOB3jOMtE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 All my code for this project is in <https://github.com/axlan/haunted_doll>
 
 # Brainstorming
 
-This summer had several weddings and after my last gift ([Two Keys Wedding Gift Box]({% post_url 2021-08-04-two-key-box %})) I couldn't restrain my desire to make something a bit weirder. I was still on a bit of a time crunch, and had to set my sights on something achievable.
+I had mentioned that I made the ([Two Keys Wedding Gift Box]({% post_url 2021-08-04-two-key-box %})) as a gift for a college friend's wedding. Well, I had a second college friend getting married, and I couldn't restrain my desire to make something a bit weirder. I was still on a bit of a time crunch, and had to set my sights on something achievable.
 
 We had a running joke back in school involving hiding a dollar store baby doll around the apartment. I ended up bringing the doll home at the end of our time together, and it's been sitting in my parts bin ever since.
 
-I was interested in finding a way for the doll to "talk" in an unusual way. This is sort of inspired by the weird techniques that came out of the spiritualist movement, like ghosts tapping out morse code like signals.
+I was interested in finding a way for the doll to "talk" in an unusual way. This is sort of inspired by the weird techniques that came out of the spiritualist movement, like [ghosts tapping out morse code like signals](https://en.wikipedia.org/wiki/Fox_sisters).
 
 When I was reading about the [Digispark USB](http://digistump.com/products/1) from my last project, I had noticed that the bootloader worked by having the microcontroller bit bang USB data. There were libraries available to have the chip act as a number of low speed devices. I thought having the doll pretend to be a keyboard would be an interesting solution.
 
@@ -33,7 +33,7 @@ While spoofing a keyboard would be "a" way to send data from the doll to the PC,
 
 For a long time I've wanted to better understand the details of how USB works. While this was still a pretty shallow foray into the details, I actually got progressed my understanding at least a little bit.
 
-First a little background on USB. Most people are at least somewhat aware of USB and that it's gone through different cables and speed iterations (<https://en.wikipedia.org/wiki/USB#History>). At a super high level generally USB is a way to connect a "device" to a "host". Being able to be a USB host or device are actually fairly different problems. An MCU acting as a USB host, might be able to have a USB drive plugged into it and read the data, while an MCU acting as a USB host might be able to show up as a USB drive when plugged into a computer. Here I'll be talking about adding USB device capabilities to an MCU.
+First a little background on USB. Most people are at least somewhat aware of USB and that it's gone through different cables and speed iterations (<https://en.wikipedia.org/wiki/USB#History>). At a super high level generally USB is a way to connect a "device" to a "host". Being able to be a USB host or device are actually fairly different problems. An MCU acting as a USB host, might be able to have a USB drive plugged into it and read the data, while an MCU acting as a USB device might be able to show up as a USB drive when plugged into a computer. Here I'll be talking about adding USB device capabilities to an MCU.
 
 The USB specification of USB interfaces is very generic. You can specify entirely custom devices that require special drivers, or you can conform to some pre-specified interfaces and use the built in drivers. In this case I'm trying to conform to the human interface device ([HID](https://www.usb.org/hid)) standard for a keyboard. Even here's there's some room for customization, but I need at least the minimal functionality of sending keypresses, modifier keys, and receiving the LEDs to light. Basically this entails making the device correctly advertise its capabilities and handling the input and output packets this specifies.
 
@@ -59,7 +59,7 @@ One thing I noted is that pretty much none of these libraries has been updated i
 
 Most of coding this project was to actually make the interface between the user and the doll. Since this is an extremely resource constrained system (512 byte RAM, 6012 bytes flash), I knew I would need to be careful with how I was storing and manipulating strings. Early on I realized that using almost any Arduino framework functions would eat up a huge amount of the flash and RAM, so I had to write my own.
 
-The main optimization I needed to worry about was storing all the text in PROGMEM. Normally the variables the program is using need to be loaded into RAM, but the PROGMEM macro allows you to load them straight from flash. See this [Ardiono documentation](https://www.arduino.cc/reference/en/language/variables/utilities/progmem/) for a more in depth explanation.
+The main optimization I needed to worry about was storing all the text in PROGMEM. Normally the variables the program is using need to be loaded into RAM, but the PROGMEM macro allows you to load them straight from flash. See this [Arduino documentation](https://www.arduino.cc/reference/en/language/variables/utilities/progmem/) for a more in depth explanation.
 
 I decided to structure the program as a series of menus. Each "screen" would print out a message, then offer a series of choices to the user. The user could then go through the menu options which would highlight the selected option. Confirming an option would bring up a new "screen" with it's own set of choices. I wrote a python script that made editing these menus easier.
 
@@ -77,15 +77,32 @@ I did a pass at refactoring to try to modularize the code a bit better. This act
 
 From the start I was fighting against RAM and flash usage. However, it was crazy that include a call that triggered an Arduino framework `print` statement used thousands of bytes of flash over directly writing a loop over a character string. Even just setting an LED used over a hundred bytes for what boils down to only a couple opcodes if done optimally. I mostly just used trial and error, commenting out portions of the code to figure out what I needed to cut or optimize. Fortunately, VUSB appears to be written very efficiently, and I didn't need to worry there much. I also chose to keep the size of my writing fairly modest to avoid needing to go too deep into the optimization rabbit hole.
 
-As I mentioned before, the menu working properly depends on the behavior of the text editor. If I had a specific OS+editor combo I was targeting I would have been able to be more efficient by using keyboard shortcuts for copy/paste and "select all". I left the most compatible implementation in place which can be pretty slow. There's a delay between each key stroke so it can take a few seconds to move the cursor all the way across the screen. I thought this accentuated the whole "haunted" esthetic.
+As I mentioned before, the menu working properly depends on the behavior of the text editor. If I had a specific OS+editor combo I was targeting I would have been able to be more efficient by using keyboard shortcuts for copy/paste and "select all". I left the most compatible implementation in place which can be pretty slow. There's a delay between each key stroke so it can take a few seconds to move the cursor all the way across the screen. I thought this accentuated the whole "haunted" aesthetic.
 
-Aside from the software challenges, it turns out the Digispark USB emulation isn't bullet proof electrically either. I had trouble getting it to be detected on some PC's. It seems like USB 3 interfaces might be a particular issue: <https://arduino.stackexchange.com/questions/63137/digispark-micro-attiny85-not-working-on-macbook-pro-2016>. I got around this by finding an old USB hub I could use. All the PC's I tested with with happy connecting through the hub.
+Aside from the software challenges, it turns out the Digispark USB emulation isn't bullet proof electrically either. I had trouble getting it to be detected on some PC's. It seems like USB 3 interfaces might be a particular issue: <https://arduino.stackexchange.com/questions/63137/digispark-micro-attiny85-not-working-on-macbook-pro-2016>. I got around this by finding an old USB hub I could use. All the PC's I tested with were happy connecting through the hub.
 
-TODO add pictures of USB hub.
+Here's the hub before and after soldering on the Digispark:
+
+[<img class="center" src="{{ site.image_host }}/2021/doll/hub_thumb.webp" alt="agent link">]({{ site.image_host }}/2021/doll/hub.jpg)
+
+[<img class="center" src="{{ site.image_host }}/2021/doll/hub_open_thumb.webp" alt="agent link">]({{ site.image_host }}/2021/doll/hub_open.jpg)
+
+[<img class="center" src="{{ site.image_host }}/2021/doll/key_on_hub_thumb.webp" alt="agent link">]({{ site.image_host }}/2021/doll/key_on_hub.jpg)
 
 The last and most unexpected issue was testing this on OSX. When you connect a USB keyboard the OS brings up a configuration wizard. It prompts you to press a series of keys then select the keyboard type. This totally interferes with my application. If I was just targeting OSX I could get around this by entering the keys once or on a hardware button, but it would be a pretty big pain.
 
 ## Putting it Together
 
-TODO how to put in doll.
+The last step was integrating the hub with the Digispark into the doll. The hub was just the right size to fit in the doll, but there wan't enough space unless I was able to get the Digispark into the doll's head. The neck was too narrow, so I needed to cut a slot for it to fit. 
 
+[<img class="center" src="{{ site.image_host }}/2021/doll/head_on_hub_thumb.webp" alt="agent link">]({{ site.image_host }}/2021/doll/head_on_hub.jpg)
+
+All that was left was to sew it back together. Maria helped with that. The main effort was making the USB cable more closely resemble an umbilical cord then a penis.
+
+It looks suitably creepy when connected.
+
+[<img class="center" src="{{ site.image_host }}/2021/doll/doll_thumb.webp" alt="agent link">]({{ site.image_host }}/2021/doll/doll.jpg)
+
+[<img class="center" src="{{ site.image_host }}/2021/doll/doll_on_laptop_thumb.webp" alt="agent link">]({{ site.image_host }}/2021/doll/doll_on_laptop.jpg)
+
+[<img class="center" src="{{ site.image_host }}/2021/doll/doll_on_pc_thumb.webp" alt="agent link">]({{ site.image_host }}/2021/doll/doll_on_pc.jpg)
