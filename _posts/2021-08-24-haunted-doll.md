@@ -97,7 +97,7 @@ The last step was integrating the hub with the Digispark into the doll. The hub 
 
 [<img class="center" src="{{ site.image_host }}/2021/doll/head_on_hub_thumb.webp" alt="agent link">]({{ site.image_host }}/2021/doll/head_on_hub.jpg)
 
-All that was left was to sew it back together. Maria helped with that. The main effort was making the USB cable more closely resemble an umbilical cord then a penis.
+All that was left was to sew it back together. Maria helped with that. The main effort was making the USB cable more closely resemble an umbilical cord than a penis.
 
 It looks suitably creepy when connected.
 
