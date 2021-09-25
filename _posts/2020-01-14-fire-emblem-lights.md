@@ -7,6 +7,7 @@ categories:
   - Software
   - Personal
   - IoT
+  - WLED
 image: 2020/fire_emblem_lights/IMG_20200113_164546_thumb_thumb.webp
 featured: true
 ---

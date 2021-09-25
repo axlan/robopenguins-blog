@@ -7,6 +7,7 @@ categories:
   - Electronic Art
   - Software
   - IoT
+  - WLED
 image: 2020/globe/globe_title_thumb.webp
 featured: true
 ---

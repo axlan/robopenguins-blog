@@ -6,6 +6,7 @@ categories:
   - Software
   - Hardware
   - IoT
+  - WLED
 image: 2020/uptime.webp
 ---
 
