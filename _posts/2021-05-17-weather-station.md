@@ -100,7 +100,7 @@ Since the message length was a multiple of 128 it was natural to assume the data
 | ID / Header         | ?        | ?                   | ?         |
 | Check Sum           | ?        | ?                   | ?         |
 {:.mbtablestyle}
-
+ 
 So something like this will need to fit in 16 bytes. If I only include the documented measurements, and pad each one to a full number of bytes this would be at 11 bytes, which is certainly possible.
 
 When I looked at the bytes that were output over time I was able to notice the following features.
@@ -109,6 +109,8 @@ When I looked at the bytes that were output over time I was able to notice the f
   * The integer in byte 11 matched the humidity on the display
   * The 12-14th bytes always seemed to stay the same.
   * The last byte would never change on it's own, but if the message changed by even one other bit, it would change to a "random" value. This indicated it was probably a checksum.
+
+UPDATE: Months after I finished this project I got a GitHub issue with more of the message decoded: <https://github.com/axlan/sainlogic-sdr/issues/2>  
 
 ### Figuring Out the CRC
 
