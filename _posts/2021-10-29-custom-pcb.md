@@ -29,6 +29,8 @@ Here's my initial prototype in action:
 
 All the designs and code can be found at <https://github.com/axlan/mtg-life-tracker>
 
+See [this update](#update) at the end for my second revision.
+
 # Coming Up With a PCB Project Idea
 
 I've been looking for an excuse to do a PCB design project. While I've designed a few boards for school and work, I've never had a PCB manufactured for a personal project. This is mostly because I'm impatient and don't want to wait weeks to iterate on a design. Also, it can be intimidating. There are a lot of things you need to get right for a non-trivial board. Since I haven't used the tools much there's also a pretty steep learning curve. Still, prices have come way down since the last time I looked into it, and I could get a board design printed and shipped for under $10.
@@ -249,3 +251,20 @@ Since it's wifi enabled, I also added MQTT client code along with a script to pl
 - Add a menu to simulate dice rolls
 - Add a companion client to more easily set the icons for the different counters
 - With the second board actual record a two player game and plot the results
+
+# <a name="update"></a> Update
+
+I actually did some follow up work on this. I really wanted to redeem myself for my dumb I2C pin mixup and get better buttons, so I made a second revision of the board:
+
+[<img class="center" src="{{ site.image_host }}/2021/life_tracker/v2_front_thumb.webp" alt="agent link">]({{ site.image_host }}/2021/life_tracker/v2_front.jpg)
+
+
+[<img class="center" src="{{ site.image_host }}/2021/life_tracker/v2_back_thumb.webp" alt="agent link">]({{ site.image_host }}/2021/life_tracker/v2_back.jpg)
+
+Putting together the board was smooth sailing. I used the heat gun to solder the AS1115 which worked beautifully. I made a minor error where I had the through holes for the buttons too small, so I had to file down the pins a bit (now corrected in the design). 
+
+I also added the dice rolling logic:
+
+[<img class="center" src="{{ site.image_host }}/2021/life_tracker/dice_thumb.webp" alt="agent link">]({{ site.image_host }}/2021/life_tracker/dice.jpg)
+
+It let's you roll a number of a standard dice size (d4-d100) with an added modifier. The direction buttons edit the roll parameters and the up/down buttons do the roll. The middle joystick button switches between life counter and dice roller modes.
