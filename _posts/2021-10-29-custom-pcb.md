@@ -29,7 +29,7 @@ Here's my initial prototype in action:
 
 All the designs and code can be found at <https://github.com/axlan/mtg-life-tracker>
 
-See [this update](#update) at the end for my second revision.
+See [this update](#update) at the end for my second revision with improved ergonomics and a lot more software development.
 
 # Coming Up With a PCB Project Idea
 
@@ -254,17 +254,63 @@ Since it's wifi enabled, I also added MQTT client code along with a script to pl
 
 # <a name="update"></a> Update
 
-I actually did some follow up work on this. I really wanted to redeem myself for my dumb I2C pin mixup and get better buttons, so I made a second revision of the board:
+I actually did some follow up work on this. I really wanted to redeem myself for my dumb I2C pin mixup and get better buttons, so I made a second revision of the board. This revision accomplished all my todos, aside from adding an enclosure and battery.
+
+## Hardware
 
 [<img class="center" src="{{ site.image_host }}/2021/life_tracker/v2_front_thumb.webp" alt="agent link">]({{ site.image_host }}/2021/life_tracker/v2_front.jpg)
 
 
 [<img class="center" src="{{ site.image_host }}/2021/life_tracker/v2_back_thumb.webp" alt="agent link">]({{ site.image_host }}/2021/life_tracker/v2_back.jpg)
 
-Putting together the board was smooth sailing. I used the heat gun to solder the AS1115 which worked beautifully. I made a minor error where I had the through holes for the buttons too small, so I had to file down the pins a bit (now corrected in the design). 
 
-I also added the dice rolling logic:
+Due to chip shortages/streamlining the bill of materials, I swapped a couple parts. I had to switch the seven segment display with one that was pin compatible, and I switched the joystick to a pin compatible surface mount version from Amazon. Fortunately, it fit fine on my through hole footprints.
 
-[<img class="center" src="{{ site.image_host }}/2021/life_tracker/dice_thumb.webp" alt="agent link">]({{ site.image_host }}/2021/life_tracker/dice.jpg)
+I still had a minor error in this revision where I made the holes for the buttons too small (now corrected in the design). I had to file down the pins a bit.
 
-It let's you roll a number of a standard dice size (d4-d100) with an added modifier. The direction buttons edit the roll parameters and the up/down buttons do the roll. The middle joystick button switches between life counter and dice roller modes.
+Since I hand assembled all five boards, I started coming up with a few additional refinements.
+
+First, I improved my heat gun technique for attaching the AS1115. Here's the process I ended up with:
+1. Tin the pads for the chip.
+2. Balance the board over the heat gun with the chip sitting on the pads.
+3. Heat the board from the bottom for 2 minutes on medium, then 2 minutes on high.
+4. Let the board cool.
+5. Test the connections and try to manually fix any shorts/missed connections with an iron.
+This ended up working reasonably well. I'd usually only need to clean up one or two pins.
+
+I also evolved how I connected the OLED. I initially used stiff wires to connect the OLED to the D1 mini board. This worked well, but I was concerned it would put stress on the solder joints which might break over time. Subsequent boards I used spacers and hot glue to attach.
+
+The last trick was to improve the joystick ergonomics. The bare joystick is a bit sharp. I had gotten some runner nubs, but I didn't have a great way of attaching them, and didn't have enough for all the boards. I found adding a dollop of hot glue and rotating the board to keep it in a ball made a ball topped stick like an arcade cabinet.  
+
+## Software
+
+See <https://github.com/axlan/mtg-life-tracker/tree/master/firmware> for firmware development.
+
+With these fancy new boards, I also spend some time improving the software. I mostly focussed on creating a platform that could be easily configured, and could have a variety of mostly independent applications that I could switch between with a menu brought up by pressing down on the joystick:
+
+<iframe width="1583" height="620" src="https://www.youtube.com/embed/55A8KElr7mg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="1583" height="620" src="https://www.youtube.com/embed/TAKEltv94Vk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+I ended up with a high level design somewhat reminiscent of what I did for my [wreath pixel clock]({% post_url 2017-07-04-wreath-pixel-display %}) way back when.
+
+I created a base `App` class that would be the interface to each feature.
+
+```cpp
+class App {
+public:
+  virtual void Up() = 0;
+  virtual void Down() = 0;
+  virtual void Left() = 0;
+  virtual void Right() = 0;
+  virtual void Increment() = 0;
+  virtual void Decrement() = 0;
+  virtual void Display() = 0;
+  virtual const char* GetName() const = 0;
+  virtual void Update() {};
+};
+```
+
+The selected app has these functions called from the main run loop when it's selected. 
+
+For configuration I started out with the [WifiManager](https://github.com/tzapu/WiFiManager) library. It seems to have undergone a recent refactor and was a bit buggy, so I made a fork to support the functionality I was interested in. I'd probably keep developing this going forward since this is a set of functionality I've wanted to add to a bunch of projects.
