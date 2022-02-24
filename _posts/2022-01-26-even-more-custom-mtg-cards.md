@@ -47,6 +47,8 @@ I spend most of this article going into the details of how I hacked the tooling 
 
 [<img class="center" src="{{ site.image_host }}/2022/hellboy_mtg/highlights_thumb.webp" alt="agent link">]({{ site.image_host }}/2022/hellboy_mtg/highlights.jpg)
 
+I don't go into much details of the process of printing the cards, but I cover that more extensively in my previous post on the subject [print magic card proxies]({% post_url 2021-07-30-printing-mtg-cards %}).
+
 You can find instructions to see the cards I made on MPC Fill at the [end of this article](#submitted).
 
 # Looking for a Card Creation Tool
@@ -157,7 +159,9 @@ If I were to do all these changes, I could have automated the whole process. The
 
 So now that I had the images for the cards, I needed to actually add them to an order. I still wanted to use <https://github.com/chilli-axe/mpc-autofill> to make it a little less tedious and error prone, but the documented usage is more focussed on putting together the card set on the web interface and downloading the images from the cloud. There is an issue to add an option for local cards <https://github.com/chilli-axe/mpc-autofill/issues/39>, but that's still a work in progress.
 
-To get around this I wrote a script that took my list of cards and card backs and generated the order XML used to run an order. Here's the script I used: <https://gist.github.com/axlan/21faf9c28b40904662124d20ff365f2b> . It also copies the cards into the cache directory used by MPC Autofill. This script directly encodes the cards and the makes the assumption that the card names match the file names. Some
+A developer responded that the project appears to be inactive and the fork <https://github.com/MrTeferi/mpc-fill> is the current active source of development.
+
+To get around this I wrote a script that took my list of cards and card backs and generated the order XML used to run an order. Here's the script I used: <https://gist.github.com/axlan/21faf9c28b40904662124d20ff365f2b> . It also copies the cards into the cache directory used by MPC Autofill. This script directly encodes the cards and the makes the assumption that the card names match the file names.
 
 The exported XML can be loaded into MPC Autofill like normal and it skips downloading images and just uploads the generated order.
 

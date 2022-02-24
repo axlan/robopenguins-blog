@@ -21,6 +21,8 @@ So I set out in my search to get an affordable set of cards. I was looking eithe
 I made a follow up article more focussed on making a deck with entirely custom art. I discuss a better pipeline for making cards with custom art there:
 [Making a Custom Hellboy Magic Deck]({% post_url 2022-01-26-even-more-custom-mtg-cards %})
 
+**Also, it's worth noting that MPC Autofill appears to have gone down and replaced by a fork.** Instead of the links mentioned in this article, the site is now hosted at <https://mpcfill.com/> and the most active github repo is <https://github.com/MrTeferi/mpc-fill>.
+
 # Bootlegs
 
 When looking to buy large sets of proxies, I first stumbled on <https://www.reddit.com/r/bootlegmtg/>. This subreddit mostly discusses the process of buying counterfeit cards from Chinese manufacturers. There are a bunch of sellers on Ali Express, as well as direct contacts. This is very blatantly illegal, so there's a lot of opaqueness around the sellers since they constantly need to make new listings as old ones are shut down. It appears you can get full sets, and extremely valuable rare cards at a fraction of the retail price but:
