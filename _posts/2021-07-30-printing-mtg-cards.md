@@ -17,6 +17,10 @@ Aside from just playing the game, I was also interested in getting cards with cu
 
 So I set out in my search to get an affordable set of cards. I was looking either to make a [cube](https://magic.wizards.com/en/articles/archive/how-build/building-your-first-cube-2016-05-19) or a set of [commander decks](https://magic.wizards.com/en/content/commander-format).
 
+### Update
+I made a follow up article more focussed on making a deck with entirely custom art. I discuss a better pipeline for making cards with custom art there:
+[Making a Custom Hellboy Magic Deck]({% post_url 2022-01-26-even-more-custom-mtg-cards %})
+
 # Bootlegs
 
 When looking to buy large sets of proxies, I first stumbled on <https://www.reddit.com/r/bootlegmtg/>. This subreddit mostly discusses the process of buying counterfeit cards from Chinese manufacturers. There are a bunch of sellers on Ali Express, as well as direct contacts. This is very blatantly illegal, so there's a lot of opaqueness around the sellers since they constantly need to make new listings as old ones are shut down. It appears you can get full sets, and extremely valuable rare cards at a fraction of the retail price but:
