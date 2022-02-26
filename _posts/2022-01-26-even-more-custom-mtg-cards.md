@@ -4,6 +4,7 @@ author: jon
 layout: post
 categories:
   - Personal
+  - Magic the Gathering
 image: 2022/hellboy_mtg/Devil%E2%80%99s%20Play_thumb.webp
 ---
 

@@ -4,6 +4,7 @@ author: jon
 layout: post
 categories:
   - Personal
+  - Magic the Gathering
 image: 2021/mtg/misc_thumb.webp
 ---
 

@@ -6,6 +6,7 @@ categories:
   - Hardware
   - Electronic Art
   - Software
+  - Magic the Gathering
 image: 2021/life_tracker/full_assembled_thumb.webp
 ---
 
