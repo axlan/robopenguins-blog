@@ -8,6 +8,7 @@ categories:
   - Software
   - IoT
   - WLED
+  - Laser Cutter
 image: 2020/globe/globe_title_thumb.webp
 featured: true
 ---

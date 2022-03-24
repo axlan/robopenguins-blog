@@ -4,6 +4,7 @@ author: jon
 layout: post
 categories:
   - Hardware
+  - Laser Cutter
 image: 2019/IMG_20190217_180557-thumb.webp
 ---
 Maria got me a k40 laser cutter for my birthday!

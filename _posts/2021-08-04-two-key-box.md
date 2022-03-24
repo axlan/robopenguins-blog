@@ -6,6 +6,7 @@ categories:
   - Hardware
   - Electronic Art
   - Software
+  - Laser Cutter
 image: 2021/two_key_box/PXL_20210804_232349371_thumb.webp
 ---
 
