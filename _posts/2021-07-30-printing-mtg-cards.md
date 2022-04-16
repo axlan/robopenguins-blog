@@ -22,6 +22,9 @@ So I set out in my search to get an affordable set of cards. I was looking eithe
 I made a follow up article more focussed on making a deck with entirely custom art. I discuss a better pipeline for making cards with custom art there:
 [Making a Custom Hellboy Magic Deck]({% post_url 2022-01-26-even-more-custom-mtg-cards %})
 
+I also made a custom engraved deck box to hold the results:
+[Card Boxes]({% post_url 2022-03-23-card-boxes %})
+
 **Also, it's worth noting that MPC Autofill appears to have gone down and replaced by a fork.** Instead of the links mentioned in this article, the site is now hosted at <https://mpcfill.com/> and the most active github repo is <https://github.com/MrTeferi/mpc-fill>.
 
 # Bootlegs

@@ -38,6 +38,9 @@ The original creator, Mike Mignola, has a interesting art style that alternates 
 
 I spend most of this article going into the details of how I hacked the tooling a bit to make the process a bit easier for me, but here are the result:
 
+I also made a custom engraved deck box to hold the results:
+[Card Boxes]({% post_url 2022-03-23-card-boxes %})
+
 ## The Card Images
 
 <iframe src="https://drive.google.com/embeddedfolderview?id=1-lOUivMhmWv2DLq-P5EV2dUYCav73EZh#grid" style="width:100%; height:600px; border:0;"></iframe>
