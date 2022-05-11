@@ -11,7 +11,7 @@ While C structures seem very straightforward, there are some surprising behavior
 
 While I'm focussing on this from the perspective of handling structures in C, this goes for any language where the raw memory representation of data is important. Be this the Python struct library, or binary data sent over a network interface. Also, pretty much everything I discuss here is the same for POD structs in C++.
 
-I'm also only going to be discussing packing and alignment behaviors rather then how the data primitives are encoded. While floats and integers might not always be represented the same way on certain systems, `IEEE 754` floating point and little endian is typically a safe assumption for many processors. If you're writing code that doesn't assume the structure of primitives, you'll either need to avoid doing computations or convert the data for each computation. 
+I'm also only going to be discussing packing and alignment behaviors rather then how the data primitives are encoded. While floats and integers might not always be represented the same way on certain systems, `IEEE 754` floating point and little endian is typically a safe assumption for many processors. If you're writing code that doesn't assume the structure of primitives, you'll either need to avoid doing computations or convert the data for each computation.
 
 # Background
 
@@ -25,7 +25,7 @@ Even looking at all these articles, they often are simplifying or conflating the
  * The compiler
    * Packing behavior
    * Alignment behavior
-   * Definition for the primitive types (e.g. the size of `int`) 
+   * Definition for the primitive types (e.g. the size of `int`)
  * The processor instruction set
    * 32 vs 64 bit
    * ARM vs Intel vs other
@@ -37,6 +37,8 @@ This also isn't getting into vector instruction sets like SIMD or AVX which have
 # Why Would One Care?
 
 For most programs this complexity can be totally ignored. As long as you reference structures in a type safe way and the program is self contained, the compiler will treat the structs consistently regardless of how they're actually stored in memory.
+
+In fact most of the time you **DONT'T** want to mess with this stuff. As described in [this article](https://hackaday.com/2022/05/10/data-alignment-across-architectures-the-good-the-bad-and-the-ugly/), there can be significant performance impacts on trying to enforce non-optimal alignment.
 
 There are two main reasons why this may become relevant:
  1. You are trying to optimize your program.
@@ -171,7 +173,7 @@ struct Foo5 {
 
 ## Combining Packed and Aligned
 
-Combining these attributes causes the members to be packed, but with the struct as a whole aligned to the given size. 
+Combining these attributes causes the members to be packed, but with the struct as a whole aligned to the given size.
 
 ```c
 // This struct is will be 8 byte aligned when declared on the stack to match its attribute
