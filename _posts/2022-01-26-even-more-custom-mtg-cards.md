@@ -8,6 +8,8 @@ categories:
 image: 2022/hellboy_mtg/Devil%E2%80%99s%20Play_thumb.webp
 ---
 
+**For an update on the custom card creator Card Conjurer mentioned in this article see this update: [Running Card Conjurer Locally](% 2022-11-25-local-card-conjurer %)**
+
 Since my project to [print magic card proxies]({% post_url 2021-07-30-printing-mtg-cards %}) came out so well, I decided to make another. This time I made an entire EDH deck using art from Hellboy comics.
 
 <script type="text/javascript">
