@@ -4,7 +4,7 @@ author: jon
 layout: post
 categories:
   - Software
-  - Hardware
+  - Blogging
 image: 2020/ssl-certificate.webp
 ---
 

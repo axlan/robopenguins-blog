@@ -57,6 +57,10 @@ I don't go into much details of the process of printing the cards, but I cover t
 
 You can find instructions to see the cards I made on MPC Fill at the [end of this article](#submitted).
 
+It took me almost the full year, but I finally got a chance to play with the deck. It was in a very casual 5 player game, but I had a pretty great draw and won pretty handily. Here's the board state I achieved:
+
+[<img class="center" src="{{ site.image_host }}/2022/hellboy_mtg/board_state_thumb.webp" alt="agent link">]({{ site.image_host }}/2022/hellboy_mtg/board_state.jpg)
+
 # Looking for a Card Creation Tool
 
 Last time I tried a few different custom card creators. None of them offered the flexibility and output quality I was looking for. The only way I found to make high quality cards was to use Photoshop templates. I still wanted to find a more automated way to design custom cards.

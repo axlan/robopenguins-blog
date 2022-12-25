@@ -4,6 +4,7 @@ author: jon
 layout: post
 categories:
   - Personal
+  - Blogging
 image: 2021/retrospective/jobs_thumb.webp
 ---
 

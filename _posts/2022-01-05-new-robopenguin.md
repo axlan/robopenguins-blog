@@ -4,6 +4,7 @@ author: jon
 layout: post
 categories:
   - Personal
+  - Blogging
 image: 2022/penguin-rover.webp
 ---
 
