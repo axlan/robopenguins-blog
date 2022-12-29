@@ -120,8 +120,32 @@ I then created a new Policy, Group, and User so I could generate a read only tok
 With the AWS CLI using the newly generated credentials I could then download the logs with:
 `aws s3 sync s3://MY_BUCKET_NAME/ out/`
 
+# Creating a Custom Analytics Dashboard
 
+The code I'll be discussing can be accessed at: <https://github.com/axlan/http_server_log_analytics>
 
+To actually few the logs I wanted to write a simple dashboard. The hardest decision was how I wanted to capture the data. If I wanted this to scale, using AWS lambda to push the logs into a DB as they were generated would probably make the most sense. I wanted some simpler, so I wrote a script that would generate an intermediate CSV of the combined logs which would be loaded into the dashboard app.
 
+The script is <https://github.com/axlan/http_server_log_analytics/blob/main/update_combined_logs.py>. The only attempt at some efficiency is that it tries to detect if there was a previous run, and append to it instead of reprocessing all the logs.
 
+The intermediate CSV has the:
+ * Client IP address
+ * Reverer URL
+ * Requested URL
+ * HTTP Status
+ * Datetime of request
+ * The device/OS/agent derived from the user agent string
 
+These last values from the user agent string are parsed from <https://github.com/ua-parser> which is a project that maintains a regex for getting these values for most use cases from a massive regex. It's the weakest link of my analysis, but seems to do a reasonable job.
+
+This CSV is then loaded into my dashboard code <https://github.com/axlan/http_server_log_analytics/blob/main/run_dashboard.py>. Here's an example:
+
+[<img class="center" src="{{ site.image_host }}/2022/analytics/my_dash_thumb.webp">]({{ site.image_host }}/2022/analytics/my_dash.png)
+
+It is also fairly quick and dirty. There's a lot of additional features and displays I could add. I also load the whole set of requests into memory where I could probably do a lot iteratively if I wanted to.
+
+# Attempted Hacking
+
+One interesting thing I noticed was that some of the bots or bots pretending to be real users would attempt to scan the site for Wordpress vulnerabilities. Most would look for `/wp-login.php`, but some tried as many as 55 different pages.
+
+Fortunately, since my site is just an S3 bucket, I'm not too concerned.
