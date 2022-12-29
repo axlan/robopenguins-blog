@@ -8,22 +8,22 @@ categories:
 image: 2022/analytics/last_year_google_thumb.webp
 ---
 
-I'm removing Google Analytics from my blog, but still get the view counts. To do this I'm running my own analysis of the HTTP request logs provided by AWS CloudFront.
+I'm removing Google Analytics from my blog, but I'd still like to see view counts. To do this I'm running my own analysis on the HTTP request logs provided by AWS CloudFront.
 
-With Google requiring a migration for their analytics service, I decided now was a good time to bite the bullet and get rid of it. The only problem is that I get a lot of satisfaction to see that at least a few people are looking at this blog, so I wanted a way to get similar data without needing to run client side code.
+With Google requiring a migration for their analytics service, I decided now was a good time to bite the bullet and get rid of it. Google doesn't need my help tracking folks. The only problem is that I get a lot of satisfaction seeing that people are looking at this blog. So to get my "social media engagement" fix, I wanted a way to get similar data without needing to run client side code.
 
 As I mentioned way back in [Added SSL to Blog]({% post_url 2020-01-25-add-ssl-to-blog %}), this site is currently hosted from an AWS S3 bucket behind a CloudFront CDN. CloudFront has a feature where it will log all the requests to an S3 bucket <https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/AccessLogs.html>.
 
-This logs are written as a new compressed CSV files every 5 minutes or so in the "Extended Log File Format" standard. Hypothetically, this means the analysis I'm doing here is generic to any web server that logs requests in this format.
+These logs are written as a compressed CSV file every 5 minutes or so in the "Extended Log File Format" standard. Hypothetically, this means the analysis I'm doing here is generic to any web server that logs requests in this format.
 
 # What I Want to Reproduce from Google Analytics  
 
-Since I don't run adds or do anything commercial with this site, I'm just trying to see:
+Since I don't run ads or do anything commercial with this site, I'm just trying to see:
 
 1. How much traffic my site gets.
 2. Which pages are the most popular.
 
-To save them for posterity here are the logs since I set up my current blog hosting on AWS.
+To save the data for posterity, here are the logs since I set up my current blog hosting on AWS.
 
 [<img class="center" src="{{ site.image_host }}/2022/analytics/last_year_google_thumb.webp">]({{ site.image_host }}/2022/analytics/last_year_google.jpg)
 
@@ -31,7 +31,7 @@ To save them for posterity here are the logs since I set up my current blog host
 
 [<img class="center" src="{{ site.image_host }}/2022/analytics/all_page_views_thumb.webp">]({{ site.image_host }}/2022/analytics/all_page_views.jpg)
 
-Here's the "life time" views for the top 25 pages on my site.
+Here's the "lifetime" views for the top 25 pages on my site.
 
 | Page                                                       | Pageviews | Unique Pageviews | Avg. Time on Page |
 |------------------------------------------------------------|-----------|------------------|-------------------|
@@ -68,17 +68,17 @@ Which is about 140 days of page view time.
 
 # AWS CloudFront Analytics
 
-So it turns out CloudFront has built in analytics. These are accessible from the AWS web console.
+So it turns out CloudFront has built in analytics. These are accessible from the AWS web console:
 
 [<img class="center" src="{{ site.image_host }}/2022/analytics/cloudfront_viewers_thumb.webp">]({{ site.image_host }}/2022/analytics/cloudfront_viewers.png)
 
 There are a couple of problems though:
 
- * They can go back a max of 60 days.
+ * They go back a max of 60 days.
  * They only track raw requests and not "unique visitors".
  * There's no API for downloading the data periodically to archive it.
 
-These aren't huge problems, and would pretty much get me what I wanted. However, I found that turning on logging gives me enough data to roughly replicate most of the additional Google Analytics features.
+These aren't huge problems, and would pretty much get me what I wanted. However, I decided to go the extra mile and use the request logging instead. This gives me enough data to roughly replicate most of the additional Google Analytics features.
 
 # Limitations and Challenges in Rolling my Own Server Side Analytics
 
@@ -124,9 +124,16 @@ With the AWS CLI using the newly generated credentials I could then download the
 
 The code I'll be discussing can be accessed at: <https://github.com/axlan/http_server_log_analytics>
 
-To actually few the logs I wanted to write a simple dashboard. The hardest decision was how I wanted to capture the data. If I wanted this to scale, using AWS lambda to push the logs into a DB as they were generated would probably make the most sense. I wanted some simpler, so I wrote a script that would generate an intermediate CSV of the combined logs which would be loaded into the dashboard app.
+To make my own analytics I needed a way of ingesting the request logs, and feeding the data into some sort of visualization. This wouldn't have been too hard to make totally automated with a website where the data is automatically processed in the backend, but I decided to limit the scope to something that would be easy to run locally. To do this I:
+ * Keep a local sync of the CloudFront logs.
+ * Use these to generate a CSV with the data I'm interested in.
+ * Feed this CSV into a dashboard app to generate and view the analytics.
 
-The script is <https://github.com/axlan/http_server_log_analytics/blob/main/update_combined_logs.py>. The only attempt at some efficiency is that it tries to detect if there was a previous run, and append to it instead of reprocessing all the logs.
+## Generating the Intermediate Data
+
+I went back and forth on this a bit since if I wanted this to scale, using AWS lambda to push the logs into a DB as they were generated would probably make the most sense. However, I decided that since I wanted to run locally with minimal effort and it's all string data a plain CSV would be fine.
+
+To generate the CSV I wrote a script that would combined the Cloudfront logs and filter them down to the values of interest. The script is [update_combined_logs.py](https://github.com/axlan/http_server_log_analytics/blob/main/update_combined_logs.py). The only attempt at some efficiency is that it tries to detect if there was a previous run, and append to it instead of reprocessing all the logs.
 
 The intermediate CSV has the:
  * Client IP address
@@ -138,14 +145,18 @@ The intermediate CSV has the:
 
 These last values from the user agent string are parsed from <https://github.com/ua-parser> which is a project that maintains a regex for getting these values for most use cases from a massive regex. It's the weakest link of my analysis, but seems to do a reasonable job.
 
+## Dashboard
+
 This CSV is then loaded into my dashboard code <https://github.com/axlan/http_server_log_analytics/blob/main/run_dashboard.py>. Here's an example:
 
 [<img class="center" src="{{ site.image_host }}/2022/analytics/my_dash_thumb.webp">]({{ site.image_host }}/2022/analytics/my_dash.png)
 
-It is also fairly quick and dirty. There's a lot of additional features and displays I could add. I also load the whole set of requests into memory where I could probably do a lot iteratively if I wanted to.
+As usual for when I do this sort of thing I went with [Plotly Dash](https://dash.plotly.com/introduction). It is pretty bare bones only generating the graphs I really wanted and not bothering to be super efficient. I also load the whole set of requests into memory where I could probably do a lot iteratively if I wanted to.
 
-# Attempted Hacking
+I made a simple bash script that updates the logs and runs the dashboard. It can take a few minutes or so especially if there are a lot of new logs to process. We'll see as the dataset grows to years of logs if this is sustainable, or if I need to do a pass at making it more efficient eventually.
 
-One interesting thing I noticed was that some of the bots or bots pretending to be real users would attempt to scan the site for Wordpress vulnerabilities. Most would look for `/wp-login.php`, but some tried as many as 55 different pages.
+# Attempted Wordpress Hacking
+
+One interesting thing I noticed was that some of the bots or bots pretending to be real users would attempt to scan the site for Wordpress vulnerabilities. Most would look for `/wp-login.php`, but some tried as many as 55 different pages. Seems like there are about 10 attempts a day just looking for Wordpress vulnerabilities. They would pretty much all be different IP addresses, and they typically used a user agent string to indicate they were Firefox running on Windows.
 
 Fortunately, since my site is just an S3 bucket, I'm not too concerned.
