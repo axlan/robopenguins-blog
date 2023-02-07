@@ -27,7 +27,7 @@ I actually used this NAS for a project ages ago in [Security Camera from a Webca
 
 At the end of the day though, they're still just Linux computers. QNAP has an app store of sorts with built in apps, and people have made third party sites for sharing apps the side-load. I did find someone who packaged Syncthing as a QNAP package <https://qnapclub.eu/en/qpkg/692>, but my device seemed too old to get a binary for.
 
-Instead of trying to get a random package to work, or figure out the packaging myself, I decided I would see if I could just run Syncthing on the QNAP directly.
+Instead of trying to get a random package to work, or figure out the packaging myself, I decided I would see if I could just run Syncthing on the QNAP directly. Trying out this QNAP package would have probably been more straightforward, but at least I can have more confidence that I'm running the newest version and don't need to worry if it's been tampered with.
 
 Looking at <https://syncthing.net/downloads/> the project publishes binaries for a variety of platforms. I looked up the processor in the TS-212 which is a Marvell 6281 1.2GHz. Some further googling revealed it's "fully ARMv5TE-compliant", so I knew that the ARM binary would be the one to try.
 
