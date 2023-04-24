@@ -110,7 +110,7 @@ When I looked at the bytes that were output over time I was able to notice the f
   * The 12-14th bytes always seemed to stay the same.
   * The last byte would never change on it's own, but if the message changed by even one other bit, it would change to a "random" value. This indicated it was probably a checksum.
 
-UPDATE: Months after I finished this project I got a GitHub issue with more of the message decoded: <https://github.com/axlan/sainlogic-sdr/issues/2>  
+UPDATE: Months after I finished this project I got a GitHub issue with more of the message decoded: <https://github.com/axlan/sainlogic-sdr/issues/2>
 
 ### Figuring Out the CRC
 
@@ -221,7 +221,7 @@ I probably did a bit less thorough job here after spending so much time on the R
 
 There's a few things that jump out:
   * There's quite a few unpopulated components. It's likely these would hold the WiFi, or other sensor chips for the more expensive models
-  * There's an antenna looking thing in the lower left side marked RTH
+  * There's an antenna looking thing in the lower left side marked RTH. Chli on [Github](https://github.com/axlan/sainlogic-sdr/issues/3) pointed out: "RTH probably stands for Relative Humidity and the part is a capacitive humidity sensor, maybe a "CON-EFS10" or a similar part."
   * There's two labeled ICs U2 and U71, and the other ones appear to be power related.
   * The big block blob is probably where most of the processing occurs
   * The 4 and 7 pin connectors P5 and P6 look like they could be some sort of debug or programming ports.
@@ -245,6 +245,8 @@ Looking more closely there's a few give aways this chip is receiving the sensor 
 Pins 2 and 3 of the jumper next to this chip showed interesting activity. Pin 3 seemed to go low when a transmission was received with the data being output on pin 2. It seemed like the data on pin 2 was the same I saw with the SDR, but there was additional spurious bits before and after the message. By setting the oscilloscope to capture a single sequence and then saving that the a USB flash drive, I was able to run this data through the same algorithms I'd been using with the SDR and confirm it was the same data.
 
 From there it was a simple matter to attach jumper wires to outputs I was interested in to make a connector for an ESP8266 board. I ended up outputting the two interesting pins along with a power and ground line (I switched jumper wires after an initial test).
+
+[<img class="center" src="{{ site.image_host }}/2021/weather/board_labeled_thumb.webp" alt="agent link">]({{ site.image_host }}/2021/weather/board_labeled.png)
 
 [<img class="center" src="{{ site.image_host }}/2021/weather/display_rework_thumb.webp" alt="agent link">]({{ site.image_host }}/2021/weather/display_rework.jpg)
 
