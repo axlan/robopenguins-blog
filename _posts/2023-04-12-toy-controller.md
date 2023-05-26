@@ -56,3 +56,9 @@ and to integrate it with [one of my previous projects]({% post_url 2020-01-14-fi
 <iframe width="1583" height="620" src="https://www.youtube.com/embed/oS_-zvyJSHY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 For this I wrote a little Python script that listens for updates over MQTT and based on the button presses sends JSON updates to the WLED software on the LED sculpture. It would have been easy enough to control the sculpture directly with MQTT, but no reason to make the demo more complicated.
+
+Awhile later I also added a server for controlling a Sonos:
+
+<iframe width="1583" height="620" src="https://www.youtube.com/embed/QLYZzVxPUkU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+I did this with a Python Sonos control library <https://github.com/SoCo/SoCo>.
