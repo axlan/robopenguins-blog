@@ -1,5 +1,5 @@
 ---
-title: Speeding Up Indexing the Contents of a File in Python
+title: Speeding Search a File for a Binary Sequence in Python
 author: jon
 layout: post
 categories:
@@ -8,7 +8,7 @@ categories:
 image: 2023/python_time_thumb.webp
 ---
 
-I recently spent some time optimizing a deserialization tool at work. I wanted to walk through my process for optimizing some Python code.
+I recently spent some time optimizing a deserialization tool at work. I wanted to walk through my process for optimizing this Python code.
 
 It's a truism that if you want speed, Python is probably not the right language to be using. However, that doesn't mean there aren't situations where Python optimization is useful.
 
@@ -73,7 +73,8 @@ There's many ways to speed this up (besides just switching to another language):
  2. Pure Python is slow. Using a library with native code optimizations can improve speed.
  3. While Python only recently is starting to support true parallel multi-threading, parallelizing the processing can provide speed ups.
  4. Avoiding the more expensive CRC could speed things up depending on how often the preamble appears in the data contents. Adding more checks like requiring 0 in the reserved data, or only processing messages with known message ID's could reduce the number of CRC checks needed.
- 5. While I didn't explore it here, I could potentially use a GPU for speed up.
+ 5. Instead of checking every offset, I could use something like the [Boyer-Moore strstr](https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_string-search_algorithm) algorithm.
+ 6. While I didn't explore it here, I could potentially use a GPU for speed up.
 
 # Optimization process
 
@@ -137,10 +138,12 @@ with open(file_path, 'rb') as fd:
     data = fd.read(READ_SIZE)
     if len(data) == 0:
        break
+    # Check the even offsets
     words0 = struct.unpack(f'{READ_WORDS}H', data)
     for i in range(len(words0)):
       if words0[i] == PREAMBLE:
         offsets.append(total_bytes_read + i*2)
+    # Check the odd offsets
     words1 = struct.unpack(f'{READ_WORDS-1}H', data[1:-1])
     for i in range(len(words1)):
       if words1[i] == PREAMBLE:
