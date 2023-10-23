@@ -1,5 +1,5 @@
 ---
-title: Speeding Search a File for a Binary Sequence in Python
+title: Optimizing Searching a File for a Binary Sequence in Python
 author: jon
 layout: post
 categories:
