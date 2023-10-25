@@ -103,3 +103,7 @@ We're almost at the end of the 3rd volume now, and I only managed one additional
 [<img class="center" src="{{ site.image_host }}/2023/lore_letters/Lore Letter 12 Abhorrents Anonymous_thumb.webp">]({{ site.image_host }}/2023/lore_letters/Lore Letter 12 Abhorrents Anonymous.png)
 
 [<img class="center" src="{{ site.image_host }}/2023/lore_letters/Lore Letter 12 Perrin Appology_thumb.webp">]({{ site.image_host }}/2023/lore_letters/Lore Letter 12 Perrin Appology.png)
+
+Continuing on our adventure, one of the players had a harrowing encounter with the deck of many things. My character made a helpful childrens book warning about some of the dangers:
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR_EFTXECvDtxrbJb9y1owYI4GpY4oj2LRPJe0HyhapZgM_f0QYF4B09UnrcF6JxtmuJbCRUQ4TlyJr/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
