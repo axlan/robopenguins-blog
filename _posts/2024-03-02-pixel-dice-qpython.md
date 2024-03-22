@@ -58,4 +58,6 @@ What I ended up spending time on, was trying to stop Android killing the apps if
 
 I spent a bit of time trying to fix this, QPython had a bunch of settings that claim to keep it running, but they didn't seem to work on my Android 14 pixel 5. I even looked at the background task developer settings, but nothing seemed to help. Generally, background tasks seem to need a persistent notification which these apps didn't offer.
 
+I did eventually find under `Setting->Apps->See all apps->Pixels->App battery usage` I could turn the usage to unrestricted. This seemed to help a bit, but I haven't done a real experiment to quantify it.
+
 Since this really doesn't need to be bullet proof I decided it was good enough, and recorded the demo.
