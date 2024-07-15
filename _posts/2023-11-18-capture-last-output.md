@@ -112,3 +112,72 @@ sleep 5
 
 kill $PID
 ```
+
+# Update
+
+I actually revisited this bit of bash a bit later. The new complication was that I wanted to be able to handle the script being killed with `ctrl+c`.
+
+This turned out to have a bunch of complications. The main one is that even if you add a `trap` to handle the interrupt for the script, the background processes will still receive the signal. I've documented the snippet below to try to cover all the weirdness.
+
+```bash
+echo "Starting Application."
+
+# Catch SIGINT/SIGTERM so they don't completely kill the script.
+# Despite expectations, the application will still see the signal.
+forward_shutdown () {
+    echo "Forwarding shutdown request to application..."
+}
+
+trap forward_shutdown SIGINT SIGTERM
+
+# Use a FIFO to forward the console to tail process. This is to avoid coupling
+# the processes where tail exiting would cause a SIGPIPE. We need to do this
+# because, even when trapping the signal, the background processes (tail and the
+# application) still also receive the signal.
+CONSOLE_FIFO=$(mktemp -u)
+mkfifo $CONSOLE_FIFO
+
+# While running the application will print stderr to the console as normal, but
+# send stdout to the FIFO.
+./my_application > $CONSOLE_FIFO &
+APPLICATION_PID=$!
+
+# Catch the last bit of stdout output to print in the case of an exit caused by
+# a failure.
+EXIT_TEXT_FILE=$(mktemp -u)
+tail -n 500 $CONSOLE_FIFO > $EXIT_TEXT_FILE &
+TAIL_PID=$!
+
+# This waits until either the application exits, or the script itself is
+# interrupted by a signal.
+wait $APPLICATION_PID
+EXIT_CODE=$?
+
+EXIT_TEXT=$(cat $EXIT_TEXT_FILE)
+rm -f $EXIT_TEXT_FILE
+rm -f $CONSOLE_FIFO
+
+# If we receive a SIGINT (2) or SIGTERM (15) to shutdown the script assume the
+# child process was killed. We could add an additional `wait` call to wait for
+# the process to actually exit.
+#
+# We do _not_, however, want to do this on SIGSEGV or any other error signals.
+#
+# An extra complication is that the reported exit for commands is terminated by
+# a signal is reported as SIGNAL_VAL+128:
+# https://www.gnu.org/software/bash/manual/html_node/Exit-Status.html. 
+if [ $EXIT_CODE -eq 130 ] || [ $EXIT_CODE -eq 143 ]; then
+    echo "Application killed."
+    exit 0
+fi
+
+echo "Application exited with code: $EXIT_CODE"
+
+if [ "${EXIT_CODE}" != "0" ]; then
+    CONSOLE_FILE="$CACHE_DIR/console.txt"
+    printf "Last Application output:\n===============================================================\n$EXIT_TEXT\n"
+    exit $EXIT_CODE
+fi
+```
+
+This is pushing what should be attempted in a "simple script" pretty far. While this is pretty solid, it relies on a ton of bash arcana. This sort of functionality is better suited to being managed with things like systemd to control execution and logging.
