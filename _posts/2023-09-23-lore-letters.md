@@ -107,3 +107,7 @@ We're almost at the end of the 3rd volume now, and I only managed one additional
 Continuing on our adventure, one of the players had a harrowing encounter with the deck of many things. My character made a helpful childrens book warning about some of the dangers:
 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR_EFTXECvDtxrbJb9y1owYI4GpY4oj2LRPJe0HyhapZgM_f0QYF4B09UnrcF6JxtmuJbCRUQ4TlyJr/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+When the player who usually did loot accounting missed a couple sessions, I made a in universe ledger:
+
+[<img class="center" src="{{ site.image_host }}/2023/lore_letters/lore letter 13_thumb.webp">]({{ site.image_host }}/2023/lore_letters/lore letter 13.png)
