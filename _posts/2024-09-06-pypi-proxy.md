@@ -18,6 +18,9 @@ There are two ways to do this:
 2. Use a proxy server that create a local cache: <https://github.com/EpicWink/proxpi>
 
 The main advantage of `1.` is that it's a bit simpler. My main concern with it is that multiple builds could occur in parallel that might cause issues. We had seen instance when running multiple instances of pip simultaneously caused the cache to become corrupted. This may have been fixed in more recent pip releases <https://github.com/pypa/pip/issues/12361>.
+#### UPDATE
+After posting this article, a [Hacker News commenter](https://news.ycombinator.com/item?id=41476425) mentioned that there are ways to control concurrent access to the cache mount <https://docs.docker.com/reference/dockerfile/#run---mounttypecache>. This should address the corruption issue for Docker builds. The remaining issue would be reusing the cache for Docker runs as well, if needed. Theoretically, that could be managed with some sort of lock file.
+
 
 The main advantage of `2.` is that a single server could be used by multiple machines. Since I didn't know what this would actually entail, I gave it a shot.
 
@@ -100,3 +103,6 @@ The `--network=host` line let's the builder access the host network and connect 
 This took a lot more trial and error then I was expecting. I guess this isn't a super common use case, but in each step I found I had to grope around blindly for a bit before I found what arguments or configs I needed to modify to overcome the next challenge. The end result at least isn't too complicated.
 
 Now I'm just left with my original question of proxpi versus mounting a cache volume. Unfortunately, I don't have a a great idea of how robust these solutions will be when they're being used in parallel, possibly by different versions of Python and pip. Since we've had issues with the shared file approach, I think I'm going to use the proxy for production (and not just due to sunk cost).
+
+#### UPDATE
+Knowing about the `sharing` setting on the Docker build cache, has pushed me back to using this approach instead. There's still places where the proxy would make more sense, but the simplicity of not needing to rely on another service wins out for my use case.
