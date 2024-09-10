@@ -98,11 +98,64 @@ docker buildx build \
 ```
 The `--network=host` line let's the builder access the host network and connect to the proxpi as `localhost:5000`
 
-# Conclusion
+# Trying the Cache Mount Approach
 
-This took a lot more trial and error then I was expecting. I guess this isn't a super common use case, but in each step I found I had to grope around blindly for a bit before I found what arguments or configs I needed to modify to overcome the next challenge. The end result at least isn't too complicated.
+This took a lot more trial and error then I was expecting. I guess this isn't a super common use case, but in each step I found I had to grope around blindly for a bit before I found what arguments or configs I needed to modify to overcome the next challenge. The end result at least isn't too complicated. However, once I knew about about the `sharing` setting on the Docker build cache, it seemed like aan all around better option. There's still places where the proxy would make more sense, but the simplicity of not needing to rely on another service wins out for my use case.
 
-Now I'm just left with my original question of proxpi versus mounting a cache volume. Unfortunately, I don't have a a great idea of how robust these solutions will be when they're being used in parallel, possibly by different versions of Python and pip. Since we've had issues with the shared file approach, I think I'm going to use the proxy for production (and not just due to sunk cost).
+In actually testing it though I quickly hit a wall of problems. The biggest issue is that I was trying to run the container as a local user, and the build mounts have multiple problems that make this extremely difficult.
 
-#### UPDATE
-Knowing about the `sharing` setting on the Docker build cache, has pushed me back to using this approach instead. There's still places where the proxy would make more sense, but the simplicity of not needing to rely on another service wins out for my use case.
+## Change in --no-cache
+One of the top answers for how to do this on Stackoverflow is: <https://stackoverflow.com/questions/58018300/using-a-pip-cache-directory-in-docker-builds>
+
+It uses `--no-cache` as part of the build command. At some point Docker changed the behavior of this flag to disable the cache mounts <https://github.com/moby/buildkit/issues/2447>.
+
+## Problems Using Variables in Mount Arguments
+
+There appear to be multiple issues using variables to set fields in configuring the mount. I wanted to set the target directory to a path in the user's home directory, and I wanted to set the user ID to a user specified as a command line argument:
+`--mount=type=cache,target=${PIP_CACHE_DIR},uid=${USER_ID},sharing=locked`
+
+Setting the target with a variable appears to work, but seems to silently just not actually cache <https://github.com/moby/buildkit/issues/1173#issuecomment-1635711278>.
+
+Setting the uid with a variable causes the Dockerfile not to parse correctly.
+
+## Bug in File Mode
+
+To get around not being able to set the uid, I tried to set the permissions to allow all users to write to the mount:
+`--mount=type=cache,target=/cache/pip,sharing=locked,mode=0777`
+This runs, but the directory ends up with the permissions `755`.
+
+This appears to be another bug <https://github.com/moby/moby/issues/47415>.
+
+To work around these bugs I ended up needing to generate a dockerfile with the correct user id:
+
+```bash
+#!/usr/bin/env bash
+
+USER_ID=$(id -u)
+
+sed -e "s/__USER_ID__/1000/" Dockerfile_template > Dockerfile_out
+docker buildx build --progress=plain --build-arg USER_NAME=$USER --build-arg USER_ID=$USER_ID --build-arg GROUP_ID=$(id -g) -f Dockerfile_out . 2>&1 | tee test.txt
+```
+
+Dockerfile_template:
+```Dockerfile
+FROM python:3.10
+
+ARG PIP_CACHE_DIR=/cache/
+RUN mkdir -p ${PIP_CACHE_DIR}
+
+ARG USER_NAME=jdiamond
+ARG USER_ID=1000
+ARG GROUP_ID=1000
+RUN groupadd -g ${GROUP_ID} ${USER_NAME} && \
+    useradd --create-home -l -u ${USER_ID} -g ${GROUP_ID} -G sudo,dialout ${USER_NAME} && \
+    echo "${USER_NAME}:${USER_NAME}" | chpasswd
+RUN chmod 777 /cache
+USER ${USER_NAME}
+WORKDIR /home/${USER_NAME}
+
+RUN python -m venv venv
+RUN --mount=type=cache,target=/cache/pip,uid=__USER_ID__,sharing=locked ~/venv/bin/pip --cache-dir=/cache/pip install numpy
+```
+
+It's a bit crazy that there are so many weird behaviors and flat out bugs in this portion of the buildkit functionality. The proxy ends up arguably being simpler after all...
