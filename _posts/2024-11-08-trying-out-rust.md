@@ -306,4 +306,10 @@ After having to jump through so many hoops to get the Python speed up, this was 
 
 More generally, I was pretty with the Rust I've experienced so far. I definitely had flashbacks of when I was learning C++ and had to cycle through trying every iteration of `const int`, `const *int`, `const **int`, etc. This time though I was a bit more confident the compiler would catch anything stupid I mixed up.
 
+I was generally impressed with the standard library API design. It was different enough from the familiar syscall wrappers that I needed to spend a lot of time in the documentation, but most of the changes were clear improvements.
+
+For the most part I liked the ways it diverged from C++. Traits seemed like an improvement over classes/inheritance and matching seemed like an elegant way to handle a lot of common design patterns.
+
+I was much slower in rust due to these differences, but it did force me to think through what I was writing more thoroughly. I still managed to make mistakes, but the possible set of mistakes was much smaller. This was especially useful as a beginner since it typically added an extra check that I was using an interface correctly.
+
 I do want to try something multi-threaded at some point, but I would definitely want to consider rust for any future greenfield system programming I get up to.
