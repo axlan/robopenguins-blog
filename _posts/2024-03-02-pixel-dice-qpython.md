@@ -26,7 +26,7 @@ Here's the demo:
 
 The first thing to decide is what I would use to connect to the die.
 
-Their github page <https://github.com/GameWithPixels> gives SDKs in several languages to connect to the die over Bluetooth. This is absolutely the way one should build a project with them if you want it to be reliable. However, I 
+Their github page <https://github.com/GameWithPixels> gives SDKs in several languages to connect to the die over Bluetooth. This is absolutely the way one should build a project with them if you want it to be reliable. However, I:
   1. Wanted to do this as quickly as possible.
   2. Didn't want to bring a laptop to the game.
 

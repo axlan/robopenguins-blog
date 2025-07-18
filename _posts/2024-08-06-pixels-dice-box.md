@@ -9,6 +9,7 @@ categories:
   - IoT
   - WLED
 image: 2024/dice-box/finished_thumb_wide.webp
+featured: true
 ---
 
 I made an IoT dice box to combine two of my favorite open source LED projects, [Pixels Dice](https://gamewithpixels.com/) and [WLED](https://kno.wled.ge/).
@@ -39,7 +40,7 @@ Unfortunately, it doesn't work on vanilla ESP32 chips, and I've only tested it w
   * Effect color and parameters can be modified like any other effect
   * Different die can be set to control different segments
 * An optional GUI on a TFT screen with custom button controls
-  * Gives die connection and roll 
+  * Gives die connection and roll
   * Can do basic LED effect controls
   * Can display custom info for different roll types (ie. RPG stats/spell info)
 <p float="left">
@@ -50,7 +51,7 @@ Unfortunately, it doesn't work on vanilla ESP32 chips, and I've only tested it w
 * Publish MQTT events from die rolls for remote logging/actions
   * Also report the selected roll type
 <img class="center" src="https://github.com/axlan/WLED/raw/v0.15.0-pixel-dice/usermods/pixels_dice_tray/images/roll_plot.png" width="100%">
-* Control settings through the WLED web 
+* Control settings through the WLED web
 
 # Building the Box
 
