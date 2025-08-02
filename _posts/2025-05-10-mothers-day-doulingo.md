@@ -14,7 +14,7 @@ Maria is a long time Duolingo power user. She recently started doing some readin
 
 I had a sense I wanted to make a Duolingo themed mother's day give, and ended up with this:
 
-[See it here. (sound when scrolled to the end, though browsers are a bit inconsistent about playing it unless you click in the page to give it focus)](https://us-west-1.console.aws.amazon.com/s3/object/maria-gift?region=us-west-1&bucketType=general&prefix=mother_day_2025/index.html)
+[See it here. (sound when scrolled to the end, though browsers are a bit inconsistent about playing it unless you click in the page to give it focus)](https://maria-gift.s3.us-west-1.amazonaws.com/mother_day_2025/index.html)
 
 This is mostly a light Photoshop (GIMP actually) of the Duolingo promotional comic: <https://www.webtoons.com/en/comedy/duolingo/list?title_no=6858>
 
