@@ -82,7 +82,7 @@ This was actually a fairly ripe target for reverse engineering. It has an Atmel 
  * Wheel encoders for wheel speed measurement
  * Bump / drop sensors
 
-After a little searching, I decided that I'd use a 2-Channel Motor Drive Module <https://category.yahboom.net/products/dual-md-module>. This is a nice cheap breakout board for the AT8236 motor driver with some voltage regulators. I was mostly looking for something cheap and simple.
+After a little searching, I decided that I'd use a 2-Channel Motor Drive Module <https://category.yahboom.net/products/dual-md-module>. This is a nice cheap breakout board for the AT8236 motor driver with some voltage regulators. I was mostly looking for something cheap and simple. It has two control pins for each motor. Feeding a PWM signal into one input or the other makes the motor spin forward or backward. Having both inputs high holds the motor in place acting like a break.
 
 It was easy enough to set up and I quickly got a basic test working.
 
@@ -139,11 +139,11 @@ The first thing I did was spend some time getting a handle on how micro-ros work
 
 I initially adapted <https://www.hackster.io/amal-shaji/differential-drive-robot-using-ros2-and-esp32-aae289> to work over UDP. When I started debugging, I decided I would need to do a pretty significant refactor to bring it up to my standards.
 
-I rewrote the motor driver and encoder interfaces to implement a fairly generic abstraction layer. I spent a good amount of time "getting this right" even though there are a bunch of other projects that do the same thing with more development time behind them. This is where I realized how hard these interfaces are to universally abstract, and how much of the design comes down to the set of use cases a person prioritized.
+I rewrote the motor driver and encoder interfaces to implement a [generic abstraction layer](https://github.com/axlan/mint_ros_bot/tree/demo1/firmware/lib/wheel_hal). I spent a good amount of time "getting this right" even though there are a bunch of other projects that do the same thing with more development time behind them. This is where I realized how hard these interfaces are to universally abstract, and how much of the design comes down to the set of use cases a person prioritized.
 
-After finishing a full [micro-ros](https://micro.ros.org/) implementation <https://github.com/axlan/mint_ros_bot/blob/master/firmware/tests/micro_ros_vel_ctrl.cpp>, I decided that for testing the controller basics, it would be better to start with a simpler framework and just get the low level controller working.
+After finishing a full [micro-ros](https://micro.ros.org/) implementation <https://github.com/axlan/mint_ros_bot/blob/demo1/firmware/tests/micro_ros_vel_ctrl.cpp>, I decided that for testing the controller basics, it would be better to start with a simpler framework and just get the low level controller working.
 
-Using the same skeleton I've used for a few other projects, I made a new [main application](https://github.com/axlan/mint_ros_bot/blob/464f8fbdd72988ba98dad626f0d49b41f1c0ad3d/firmware/src/main.cpp). It used the [Arduino NetworkManager library](https://github.com/tzapu/WiFiManager) to handle setting up the WiFi and server configuration, and it would take commands and report status over [MQTT](https://mqtt.org/). This isn't really that far from how ROS handles it, but this sheds some of the layers of complexity for the initial testing.
+Using the same skeleton I've used for a few other projects, I made a new [main application](https://github.com/axlan/mint_ros_bot/blob/demo1/firmware/src/main.cpp). It used the [Arduino NetworkManager library](https://github.com/tzapu/WiFiManager) to handle setting up the WiFi and server configuration, and it would take commands and report status over [MQTT](https://mqtt.org/). This isn't really that far from how ROS handles it, but this sheds some of the layers of complexity for the initial testing.
 
 With the basic set up, I went ahead and tried to drive forward:
 
@@ -151,7 +151,7 @@ With the basic set up, I went ahead and tried to drive forward:
 
 Not only did it not go straight, but my original estimates for the encoder parameters were way off and the distance calculations were way off from what I expected. At the very least I'd need to send different control signals to the motors to have them spin at the same speeds.
 
-I reworked my firmware to accept more flexible commands: `MANUAL,<LEFT PERCENT SPEED>,<RIGHT PERCENT SPEED>,<DISTANCE>,<ENCODER CHECK>` , and I used trial and error to work out parameters that worked for the maneuvers I wanted. I used <https://mqtt-explorer.com/> as an easy way to manually send MQTT commands. Once I had these down, I made a CLI for sending the commands and driving the bot around with the arrow keys [teleop.py](https://github.com/axlan/mint_ros_bot/blob/464f8fbdd72988ba98dad626f0d49b41f1c0ad3d/firmware/python/teleop.py):
+I reworked my firmware to accept more flexible commands: `MANUAL,<LEFT PERCENT SPEED>,<RIGHT PERCENT SPEED>,<DISTANCE>,<ENCODER CHECK>` , and I used trial and error to work out parameters that worked for the maneuvers I wanted. I used <https://mqtt-explorer.com/> as an easy way to manually send MQTT commands. Once I had these down, I made a CLI for sending the commands and driving the bot around with the arrow keys [teleop.py](https://github.com/axlan/mint_ros_bot/blob/demo1/firmware/python/teleop.py):
 
 <iframe width="1000" height="515" src="https://www.youtube.com/embed/tBYzBWuc-0c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
