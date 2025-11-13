@@ -84,7 +84,7 @@ With the hardware assembled, I put it all together:
 
 I powered everything from a USB battery pack. I had a large one that reported nearly no drain after running for a couple of hours.
 
-Once assembled, I started noticing power-related issues. The SD card would often fail to be detected. After debugging, I realized the VIN pin on some Arduino Nano boards couldn't supply enough current for the GPS and SD card. Something in the onboard power conditioning couldn't handle the load. Powering the SD and GPS directly from the USB 5V line fixed the issue (note: powering devices this way can bypass onboard protection and should be done with awareness of the risks).
+Once assembled, I started noticing power-related issues. The SD card would often fail to be detected. After debugging, I realized the VIN pin on some Arduino Nano boards couldn't supply enough current for the GPS and SD card. Something in the onboard power conditioning couldn't handle the load. Powering the SD and GPS directly from the USB 5V line fixed the issue.
 
 [<img class="center" height="50%" width="50%" src="{{ site.image_host }}/2025/traffic_light/power_thumb.webp">]({{ site.image_host }}/2025/traffic_light/power.jpg)
 
