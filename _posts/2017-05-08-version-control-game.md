@@ -5,6 +5,7 @@ author: jon
 layout: post
 categories:
   - Software
+  - "Game Dev"
 image: 2017/05/start-1-300x230.webp
 ---
 
@@ -21,7 +22,7 @@ The idea was for a puzzle game in which the state of the game could &#8220;com
   1. The yellow game screen that shows a commit to consider merging with. This is view only.
   2. The magenta game screen that shows the current state. Moving the character around updates this view.
   3. The box with the merge button and the radio box that selects what action will be performed by clicking on a node in the graph
-  4. The graph of states. Each movement adds a commit to this view. Based on the action selected in the radio box click on a node will: 
+  4. The graph of states. Each movement adds a commit to this view. Based on the action selected in the radio box click on a node will:
       1. Show it in the yellow view
       2. Select it in the magenta view
       3. Delete it

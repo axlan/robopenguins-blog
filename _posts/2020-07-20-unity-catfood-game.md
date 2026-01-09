@@ -5,6 +5,7 @@ layout: post
 categories:
   - Software
   - Cat
+  - "Game Dev"
 image: 2020/cat_game_pic.webp
 ---
 
@@ -47,7 +48,7 @@ I initially tried to go off of one of the built in tutorials, but these had a lo
 
 I hit a lot of little gotchas and pain points dealing with Unity. It's not really worth mentioning each one since they are very specific to what I was doing. Some points of particular frustration were:
 
- * Dealing with the layers and z value which determine the order objects are drawn on the screen and whether the camera will show them. It took a lot of fiddling to figure out how to control the UI versus the objects and some of this reflects that the framework isn't 2D focused. 
+ * Dealing with the layers and z value which determine the order objects are drawn on the screen and whether the camera will show them. It took a lot of fiddling to figure out how to control the UI versus the objects and some of this reflects that the framework isn't 2D focused.
  * Another area that was a bit confusing was the game object system. It is both the best and worst part of Unity. It's great to be able to reference other objects so universally, but there's a lot of hidden magic in how these work. This is especially true as someone who prefers to focus on the code side of things. I liked the pattern from the snake game example of pulling all the references into a singleton object to make them compile time checks. This probably wouldn't work great when dealing with modular components. It's also a bit unclear what the best practice is in terms of which objects should be the parents of scripts, and which objects should be children of each other. This is a vague complaint and is probably more to do with my unfamiliarity than anything else. Learning good design practices would probably fix this, but the tool gives you such a flexible structure that it's easy to make a confusing mess.
  * I hit a lot of issues working with pixel art. Some obscure compression settings, and just a lot of challenges in where to control scaling and pixels per unit. This I think is mostly just that the default settings were not optimized for these kinds of assets.
  * I actually lost work a few times if I edited properties in the GUI while the game preview was running. This coupled with the non-human readable output files made me wish for a cleaner text based representation of some of these features. It's also not great that since all this configuration is so wrapped up in the IDE, the knowledge is not really transferable to other frameworks, and makes UI changes between versions particularly disruptive. If a button isn't in the right place, it's hard to figure out where that setting is now controlled. Also, it took awhile to figure out which windows were sensitive to selecting objects in other parts of the UI. For instance it took a while to realize that the animation window didn't care about an animation file you selected, but it did need you to select an object with a child animator.

@@ -10,9 +10,9 @@
 {% endif %}
 
 <link rel="icon" href="{{ abs_url }}/assets/images/pebguin.png">
-    
+
 <title>{{ page.title }} | {{site.name}}</title>
-        
+
 <!-- Custom SEO tag -->
 {% assign pagecontent_description = page.excerpt | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 160 %}
 
@@ -40,15 +40,15 @@
 <!-- End Custom SEO tag -->
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    
+
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    
+
 <link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
-    
+
 <link href="{{ site.baseurl }}/assets/css/screen.css" rel="stylesheet">
-    
+
 <link href="{{ site.baseurl }}/assets/css/main.css" rel="stylesheet">
-    
+
 <!-- <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script> -->
 <script
     src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -56,8 +56,8 @@
     crossorigin="anonymous"></script>
 
 </head>
-    
-{% if jekyll.environment == 'production' %}    
+
+{% if jekyll.environment == 'production' %}
 <!-- change your GA id in _config.yml -->
 <!-- Google Analytics moved to a new version. Would need to update this. -->
 <!--<script>
@@ -69,34 +69,34 @@ ga('create', '{{site.google_analytics}}', 'auto');
 ga('send', 'pageview');
 </script> -->
 {% endif %}
-    
+
 {% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
 <body class="{{layout}}">
 
-    
+
 <!-- Begin Menu Navigation
 ================================================== -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
-    
-    <div class="container pr-0">    
-    
+
+    <div class="container pr-0">
+
     <!-- Begin Logo -->
     <a class="navbar-brand" href="{{ site.baseurl }}/">
     <img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}">
     </a>
     <!-- End Logo -->
-  
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
     </button>
-    
-    
+
+
     <div class="collapse navbar-collapse" id="navbarMediumish">
-       
+
         <!-- Begin Menu -->
-        
+
             <ul class="navbar-nav ml-auto">
-                
+
                 {% if page.url == "/" %}
                 <li class="nav-item active">
                 {% else %}
@@ -113,6 +113,10 @@ ga('send', 'pageview');
                 <a class="nav-link" href="{{ site.baseurl }}/portfolio.html">Portfolio</a>
                 </li>
 
+                <li class="nav-item">
+                <a class="nav-link" href="{{ site.baseurl }}/fatal_core_dump">Fatal Core Dump Game</a>
+                </li>
+
                 {% if page.url == "/about.html" %}
                 <li class="nav-item active">
                 {% else %}
@@ -124,26 +128,26 @@ ga('send', 'pageview');
                 <li class="nav-item">
                 <a class="nav-link" href="{{ site.baseurl }}/feed.xml">RSS Feed</a>
                 </li>
-                
+
                 <li> Search: {% include search-lunr.html %} </li>
-                
-            </ul>		
-        
-        
-  
+
+            </ul>
+
+
+
         <!-- End Menu -->
 
     </div>
-        
+
     </div>
 </nav>
 <!-- End Navigation
 ================================================== -->
-    
-<div class="site-content">   
-    
+
+<div class="site-content">
+
 <div class="container">
-    
+
 <!-- Site Title
 ================================================== -->
 <div class="mainheading">
@@ -153,14 +157,14 @@ ga('send', 'pageview');
     </p>
 </div>
 
-    
-    
+
+
 <!-- Content
-================================================== --> 
+================================================== -->
 <div class="main-content">
     {{ content }}
 </div>
-    
+
 </div>
 
 <!-- Categories Jumbotron
@@ -172,27 +176,27 @@ ga('send', 'pageview');
                 <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span></h2>
             </div>
 		</div>
-		<div class="col-md-8 p-5 align-self-center text-center">      
+		<div class="col-md-8 p-5 align-self-center text-center">
             {% assign categories_list = site.categories %}
             {% if categories_list.first[0] == null %}
                 {% for category in categories_list %}
                     <a href="{{site.baseurl}}/categories.html#{{ category | url_escape | strip | replace: ' ', '-' }}">{{ category | camelcase }} ({{ site.tags[category].size }})</a>
                 {% endfor %}
             {% else %}
-                {% for category in categories_list %}                        
+                {% for category in categories_list %}
                     <a href="{{site.baseurl}}/categories.html#{{ category[0] | url_escape | strip | replace: ' ', '-' }}">{{ category[0] | camelcase }} ({{ category[1].size }})</a>
                 {% endfor %}
             {% endif %}
             {% assign categories_list = nil %}
 		</div>
-        
 
-        
+
+
 	</div>
 </div>
-    
 
- 
+
+
 
 
 <!-- Begin Footer
@@ -201,9 +205,9 @@ ga('send', 'pageview');
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-sm-6 text-center text-lg-left">
-                 Copyright © {{ site.time | date: "%Y" }} {{ site.name }} 
+                 Copyright © {{ site.time | date: "%Y" }} {{ site.name }}
             </div>
-            <div class="col-md-6 col-sm-6 text-center text-lg-right">    
+            <div class="col-md-6 col-sm-6 text-center text-lg-right">
                 <a target="_blank" href="https://www.wowthemes.net/mediumish-free-jekyll-template/">Mediumish Jekyll Theme</a> by WowThemes.net
             </div>
         </div>
@@ -212,7 +216,7 @@ ga('send', 'pageview');
 <!-- End Footer
 ================================================== -->
 
-   
+
 </div> <!-- /.site-content -->
 
 <!-- Scripts
@@ -221,10 +225,10 @@ ga('send', 'pageview');
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-    
+
 <script src="{{ site.baseurl }}/assets/js/mediumish.js"></script>
 
-<script src="{{ site.baseurl }}/assets/js/ie10-viewport-bug-workaround.js"></script> 
+<script src="{{ site.baseurl }}/assets/js/ie10-viewport-bug-workaround.js"></script>
 
 </body>
 </html>
