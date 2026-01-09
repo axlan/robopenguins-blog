@@ -155,6 +155,8 @@ One stretch goal was allowing the puzzle to be solved entirely in the browser. T
 
 I found <https://github.com/leaningtech/webvm> which let's you emulate a full virtual machine in the browser. I forked it and modified a Dockerfile to include the core dump and install GDB: <https://github.com/axlan/webvm/blob/fatal_core_dump/dockerfiles/debian_mini>.
 
+I spent a bunch of time trying to get [pwndbg](https://github.com/pwndbg/pwndbg) working in the VM. Unfortunately, it ended up being too big to easily fit in the image.
+
 You can try it out here <https://axlan.github.io/webvm/>.
 
 # Putting It All Together
