@@ -4,6 +4,7 @@ author: jon
 layout: post
 categories:
   - Software
+  - IoT
 image: 2026/mabu_trace.png
 ---
 
@@ -86,7 +87,7 @@ instead of the built-in mechanism that I used in my tests:
 
 [<img class="center" src="{{ site.image_host }}/2025/profiling/gen_trace2_open.png">]({{ site.image_host }}/2025/profiling/gen_trace2_open.png)
 
-While this isn't quite as nice as having the cores as their own part of the display, it's a great workaround for getting most of the way there with the much simpler JSON interface. 
+While this isn't quite as nice as having the cores as their own part of the display, it's a great workaround for getting most of the way there with the much simpler JSON interface.
 
 # ESP-IDF Binary Logging Library
 
@@ -96,7 +97,7 @@ At a high level, its usage is the same as the design I came up with. The code ma
 
 There are some major differences, though. Functionally, [min-logger](https://github.com/axlan/min-logger) is much simpler with many fewer features. However, it does out of the box support directly logging values and profiling data, while esp-idf logging is really just about generating formatted log messages.
 
-In terms of implementation, the magic to swap out the strings is very different between the libraries. As explained in [min-logger](https://github.com/axlan/min-logger), the strings are captured by a Python script that uses a regex to identify the logging calls and capture the strings. The mapping is made by either manually assigning IDs or through a compile-time CRC of source file locations of the log call. 
+In terms of implementation, the magic to swap out the strings is very different between the libraries. As explained in [min-logger](https://github.com/axlan/min-logger), the strings are captured by a Python script that uses a regex to identify the logging calls and capture the strings. The mapping is made by either manually assigning IDs or through a compile-time CRC of source file locations of the log call.
 
 The ESP-IDF logger uses the following macros:
 
