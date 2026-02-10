@@ -22,6 +22,8 @@ My goal was to set up a system where multiple tasks on multiple cores could writ
 
 Code for these tests is found at: <https://github.com/axlan/esp32-idf-udp-send-profiling>
 
+While this article is about figuring out how to efficiently send UDP data, based on these results I added a [buffered UDP output option to min-logger](https://github.com/axlan/min-logger/tree/master?tab=readme-ov-file#esp32-buffered-platform-min_logger_buffered_esp32h). I fell down a bit of a rabbit hole making a custom ring buffer for the use case: <https://github.com/axlan/min-logger/blob/master/src/min_logger/platform_implementations/lock_free_ring_buffer.h>.
+
 # Data Synchronization
 
 After reading the [ESP-IDF documentation](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/index.html), I found the [FreeRTOS ring buffer addition](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/system/freertos_additions.html#ring-buffers). Specifically, I could use it in "byte buffer" mode. This meant I could efficiently write arbitrarily sized chunks from multiple tasks and combine them into a single large read for sending over UDP. Initially, I set it up to drain the ring buffer into an array in the UDP send task. However, I realized that by sizing the buffer to be twice the desired UDP write size, I could effectively double-buffer the data and not need to worry about tearing on the consumer side.
