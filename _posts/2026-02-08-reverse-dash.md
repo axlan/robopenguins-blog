@@ -764,6 +764,66 @@ buffer_base[write_offset + 8] |= ((msg_hw_ptr->pose).dir & 0x0F);      // Bits [
 
 This is trivial to port to the Python library to add a more complete version of the missing functionality.
 
+As I continued to read through the original Python library, I realized that the expected behavior was to pack multiple commands into packets. This finally let me figure out that the `for` loop is just writing the command into the next packet with capacity. This gives the extra context for the pose serialization:
+
+```cpp
+#define POSE_CMD_BYTE 0x23
+#define POSE_CMD_SIZE 9
+#define MAX_PACKET_SIZE 20
+
+for (i = 0; i < 3; i++) {
+    uint8_t  cmd         = POSE_CMD_BYTE;
+    uint8_t  msg_len     = POSE_CMD_SIZE;
+    // msg_hw_ptr->packets are the struct:
+    // struct Packet {
+    //   uint32_t size;
+    //   uint8_t data[20];
+    // }
+    uint8_t  packet_size = msg_hw_ptr->packets[i].size;
+
+    if (packet_size + POSE_CMD_SIZE > MAX_PACKET_SIZE) {
+        continue;
+    }
+
+    // Scale pose values to fixed-point integers
+    int16_t x_enc     = (int16_t)round(msg_hw_ptr->pose.x     * 10.0);
+    int16_t y_enc     = (int16_t)round(msg_hw_ptr->pose.y     * 10.0);
+    int16_t theta_enc = (int16_t)round(msg_hw_ptr->pose.theta * 100.0);
+
+    // Clamp time to uint16 range
+    double time_ms = msg_hw_ptr->pose.time * 1000.0;
+    if (time_ms >= 65535.0) time_ms = 65535.0;
+    if (time_ms <= 0.0)     time_ms = 0.0;
+    uint16_t time_enc = (uint16_t)time_ms;
+
+    // Pack command byte and fixed-point values into packet
+    uint8_t *data = &msg_hw_ptr->packets[i].data[packet_size];
+
+    data[0] = cmd;
+    data[1] = (uint8_t)(x_enc     & 0xFF);         // x low byte
+    data[2] = (uint8_t)(y_enc     & 0xFF);         // y low byte
+    data[3] = (uint8_t)(theta_enc & 0xFF);         // theta low byte
+    data[4] = (uint8_t)(time_enc  >> 8);           // time high byte
+    data[5] = (uint8_t)(time_enc  & 0xFF);         // time low byte
+    data[6] = (uint8_t)(x_enc     >> 8) & 0x3F;   // x high bits
+    data[7] = (uint8_t)(y_enc     >> 8) & 0x3F;   // y high bits
+    data[6] |= (uint8_t)(theta_enc >> 2) & 0xC0;  // theta bits 9:8 -> x high byte bits 7:6
+    data[7] |= (uint8_t)(theta_enc >> 4) & 0xC0;  // theta bits 11:10 -> y high byte bits 7:6
+
+    // Pack flags byte
+    // Map mode 5 -> 3, otherwise pass through
+    uint8_t mode = (msg_hw_ptr->pose.mode == 5) ? 3 : (uint8_t)msg_hw_ptr->pose.mode;
+    data[8] = 0;
+    data[8] |= (mode                          & 0x03) << 6;  // bits 7:6 = mode
+    data[8] |= (msg_hw_ptr->pose.ease         & 0x01) << 5;  // bit  5   = ease
+    data[8] |= (msg_hw_ptr->pose.wrap_theta   & 0x01) << 4;  // bit  4   = wrap_theta
+    data[8] |= (msg_hw_ptr->pose.dir          & 0x0F);       // bits 3:0 = dir
+
+    msg_hw_ptr->packets[i].size += msg_len;
+    break;
+}
+```
+
 # Conclusion
 
 While I present a pretty clear progression to understanding this library, the actual process was much messier. I didn't know which leads would be the most fruitful, so sometimes I missed important details as I jumped back and forth, spending time analyzing parts of the library that didn't turn out to be relevant.
