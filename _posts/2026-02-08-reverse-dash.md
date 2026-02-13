@@ -12,6 +12,8 @@ I brushed up on my Ghidra to add to the open source interface for a Dash robot I
 
 Since [Making a Turtle Bot 1: Hacking a Mint Cleaner]({% post_url 2025-08-21-making-a-turtle-bot-pt1 %}), I've been keeping an eye out for other cheap robotic vacuums to play with. On a recent trip, I noticed a decent looking robot in the toy section for $15 <https://store.makewonder.com/products/dash>. A quick search showed the company was still in business and there was a repo that at least claimed to offer Python controls. I figured worse case, I could replace the controller and use it for its motors.
 
+If you just want to use the library I updated, see: <https://github.com/axlan/WonderPy>
+
 # Dash Robot Used as Intended
 
 First, I gave it a spin using it as intended. It is meant to be controlled through an app and has a pretty nice remote control and visual programming language. Everything seemed to be working and already had a pretty neat toy out of my purchase.
@@ -824,6 +826,10 @@ for (i = 0; i < 3; i++) {
 }
 ```
 
+Decoding the sensor data coming from the bot was actually a lot easier.
+
+The `_deserialize` function retrieves the bytes accicociated with each value, and calls the functions to scale them and write them to their corresponding JSON keys.
+
 # Conclusion
 
 While I present a pretty clear progression to understanding this library, the actual process was much messier. I didn't know which leads would be the most fruitful, so sometimes I missed important details as I jumped back and forth, spending time analyzing parts of the library that didn't turn out to be relevant.
@@ -836,9 +842,11 @@ The last mystery is why was the original project designed this way? It's possibl
 
 It's possible that the Python library was initially an internal testing tool. Someone realized that making it public open source would get people like me to consider the dash. If development was standardized on OSX and Python 2.7, that might have been all they supported internally. Once it was released, if it didn't generate a ton of buzz, there may not have been much will to keep updating it.
 
-I plan to fork the original <https://github.com/playi/WonderPy> and make it suitable for my use by:
+To implement my findings I made a fork the original <https://github.com/playi/WonderPy> with the following changes:
  - Making it Python 3 compatible
  - Switching from its deprecated BLE library to <https://github.com/hbldh/bleak>
  - Removing the OSX library and replacing it with Python conversions for the commands/sensors I want to support.
 
 See <https://github.com/axlan/WonderPy>
+
+It is still far from complete. Partly, because some of the features are complicated, but mostly just to not having infinite time.
