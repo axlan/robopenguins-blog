@@ -826,9 +826,20 @@ for (i = 0; i < 3; i++) {
 }
 ```
 
-Decoding the sensor data coming from the bot was actually a lot easier.
+## Systematically Decoding the Commands
 
-The `_deserialize` function retrieves the bytes accicociated with each value, and calls the functions to scale them and write them to their corresponding JSON keys.
+Now the I understood the basic structure of the library, I took notes on the all of the commands and the process to encode them:
+ - <https://github.com/axlan/WonderPy/blob/master/doc/reversing/ReversingDylib.md>
+
+With the mapping of the JSON commands to the flags that get set to send the various command packets, it was fairly quick to go through the features I wanted to support and write the serialization in Python.
+
+In doing this investigation I found quite a few commands that weren't actually referenced in the original Python library. While most were just variations, I found a "Pamplemousse" command that appears to be able to define autonomous behaviors.
+
+## Decoding the Sensors
+
+Decoding the sensor data coming from the bot was more straight-forward than encoding the commands. Rather then going through multiple conversion stages, the `_deserialize` function retrieves the bytes accicociated with each value, and calls the functions to scale them and write them to their corresponding JSON keys.
+
+The one sensor I had trouble with was the microphone. It's supposed to report the direction of detected sound along with its confidence. The reported direction seemed to work (its quite inaccurate which isn't too unexpected), but it never reported any level of confidence. This might just be a lack of decompiling skills or a mistake on my part, but it is also possible this interface changed at some point.
 
 # Conclusion
 
