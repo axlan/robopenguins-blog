@@ -12,7 +12,7 @@ I brushed up on my Ghidra to add to the open source interface for a Dash robot I
 
 Since [Making a Turtle Bot 1: Hacking a Mint Cleaner]({% post_url 2025-08-21-making-a-turtle-bot-pt1 %}), I've been keeping an eye out for other cheap robotic vacuums to play with. On a recent trip, I noticed a decent looking robot in the toy section for $15 <https://store.makewonder.com/products/dash>. A quick search showed the company was still in business and there was a repo that at least claimed to offer Python controls. I figured worse case, I could replace the controller and use it for its motors.
 
-If you just want to use the library I updated, see: <https://github.com/axlan/WonderPy>
+If you just want to use the library I updated for controlling the Dash in Python, see: <https://github.com/axlan/WonderPy>
 
 # Dash Robot Used as Intended
 
@@ -143,7 +143,7 @@ While they don't go into details as far as I can tell, the two ways I'd guess th
  - Spy on the BlueTooth packets sent when using the android app (For example: <https://www.instructables.com/Reverse-Engineering-Smart-Bluetooth-Low-Energy-Dev/>)
  - Use the original Python library on OSX and capture the binary data from various commands
 
-Since I didn't have a suitable OSX machine that option was out.
+Since I didn't have a suitable OSX machine, the second option was out.
 
 While capturing the Android BlueTooth packets sounded interesting (and might be the only way for some other devices), it would be a lot of tedious trial and error.
 
@@ -766,7 +766,7 @@ buffer_base[write_offset + 8] |= ((msg_hw_ptr->pose).dir & 0x0F);      // Bits [
 
 This is trivial to port to the Python library to add a more complete version of the missing functionality.
 
-As I continued to read through the original Python library, I realized that the expected behavior was to pack multiple commands into packets. This finally let me figure out that the `for` loop is just writing the command into the next packet with capacity. This gives the extra context for the pose serialization:
+As I continued to read through the original Python library, I realized that the expected behavior was to pack multiple commands into packets up to a max size. This finally let me figure out that the `for` loop is just writing the command into the next packet with capacity. This gives the extra context for the pose serialization:
 
 ```cpp
 #define POSE_CMD_BYTE 0x23
@@ -839,7 +839,9 @@ In doing this investigation I found quite a few commands that weren't actually r
 
 Decoding the sensor data coming from the bot was more straight-forward than encoding the commands. Rather then going through multiple conversion stages, the `_deserialize` function retrieves the bytes accicociated with each value, and calls the functions to scale them and write them to their corresponding JSON keys.
 
-The one sensor I had trouble with was the microphone. It's supposed to report the direction of detected sound along with its confidence. The reported direction seemed to work (its quite inaccurate which isn't too unexpected), but it never reported any level of confidence. This might just be a lack of decompiling skills or a mistake on my part, but it is also possible this interface changed at some point.
+The infrared distance sensors were a bit interesting. The bot directly reports a value referred to as "reflectance", but the library had a function for converting this to distance in cm. There's a class that builds a model based on a series of observations for each of the 3 sensors. They compiled in a series of test observations to initialize the model and that's what they used to do the conversion. While implementing this in Python would have been possible, it would probably be a lot easier to just make my own model based on my own bot and the environment I'm using it in.
+
+The other interesting sensor was the microphone. It's supposed to report the direction of detected sound along with its confidence. The reported direction seemed to work (its quite inaccurate which isn't too unexpected), but it never reported any level of confidence. This might just be a lack of decompiling skills or a mistake on my part, but it is also possible this interface changed at some point.
 
 # Conclusion
 
@@ -858,6 +860,6 @@ To implement my findings I made a fork the original <https://github.com/playi/Wo
  - Switching from its deprecated BLE library to <https://github.com/hbldh/bleak>
  - Removing the OSX library and replacing it with Python conversions for the commands/sensors I want to support.
 
-See <https://github.com/axlan/WonderPy>
+See: <https://github.com/axlan/WonderPy>
 
 It is still far from complete. Partly, because some of the features are complicated, but mostly just to not having infinite time.
