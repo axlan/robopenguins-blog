@@ -153,6 +153,13 @@ The file I needed to decompile is: <https://github.com/playi/WonderPy/blob/maste
 
 While I haven't done any serious decompiling in the past, I had used the NSA open source decompiler [Ghidra](https://github.com/NationalSecurityAgency/ghidra) for some capture the flag reverse engineering games. Decompiling dylibs is supported out of the box, so I imported the library and gave it a go. Fortunately, the function names were compiled into the library, so I had a decent amount of context to understand the call trees.
 
+I probably only know a fraction of Ghidra's functionality, and I'm not going to be going step by step through the menus. In general I only used a few features.
+ 1. The Symbol Tree - This is a list of the namespaces functions and other symbols in the binary. I would filter by the word (e.x. "pose") and look at the decompilation of the functions with relevant names.
+ 2. Search - I could search the binary for certain strings and see where they're used. This is especially helpful since I knew exact JSON key names to look for.
+ 3. In the decompilation window I would select variables and edit their names. I'd double click functions to go to their implementations.
+ 4. To find a functions caller, I'd right click and search for the places that reference it.
+ 5. The most advanced thing I'd do is edit data types. This let me specify the fields in a struct so Ghidra can figure out what members pointers are referencing.
+
 The first thing I did was find where the strings for the keys related to the commands were being used. I started with a command that was fully supported in the unofficial ports to check that the JSON was turning into the expected binary packets.
 
 ```cpp
@@ -830,6 +837,9 @@ for (i = 0; i < 3; i++) {
 
 Now the I understood the basic structure of the library, I took notes on the all of the commands and the process to encode them:
  - <https://github.com/axlan/WonderPy/blob/master/doc/reversing/ReversingDylib.md>
+
+Ghidra can be a little slow to navigate, so I used its Python API to dump the decompilation of functions that matched a regex:
+<https://gist.github.com/axlan/c38f7b01e54ab9f7cdefea51cd1dc9ed> . I included this output in case anyone wants to implement some of the commands I skipped.
 
 With the mapping of the JSON commands to the flags that get set to send the various command packets, it was fairly quick to go through the features I wanted to support and write the serialization in Python.
 
