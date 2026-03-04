@@ -84,6 +84,8 @@ At this point, adding features was straightforward:
 - The front, right, and left LEDs match the colors of the controller buttons to help the player understand how clockwise and counterclockwise turns correspond to the bot's relative position.
 - The light on top of the bot indicates if it's busy. When sending commands in real time, it will sigh if a new command is sent while executing the previous one.
 
+I went on a little side quest when I was trying to get the robot's sound effects working. To get the Dash to play sound, the command specifies a sound effects file name on the bot. A lot of the files in the original library were no longer working. I downloaded the APK and extracted the files with `apktool`. This would have been another avenue for reverse engineering the interface since it had the java implementation including debug information. It also had the robot's firmware with the actual audio files that got compiled in.
+
 # Making the NFC Card Reader
 
 The code for the reader can be found at:
