@@ -71,6 +71,8 @@ Once all the bugs were worked out, this provided a solid starting point for buil
 
 # Making the GUI and Adding Features
 
+One of the reasons I explored ROS in my previous turtle bot iteration was that it provides a very modular way of connecting a robot to control and visualization systems. Hypothetically, the controls and game board idea I had could all be implemented as ROS packages. In practice, however, I found that the complexity of ROS added significant overhead when using it as the glue for my project. My use case was so simple that most of what ROS brought to the table was overkill. With that in mind, I decided to implement the game in the way I found most expedient and not worry about building it out of modular components that could be reused in other projects.
+
 I went with PyGame for the GUI since it's simple and I'd used it before. I added another transform to go back and forth between robot coordinates, game map coordinates, and pixels on the PyGame map. To command the robot, I used the arrow keys reported by PyGame.
 
 The main challenge was setting up the threading strategy to handle the robot and GUI. I went from one big function to separating components more logically into classes.
