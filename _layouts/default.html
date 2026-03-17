@@ -117,6 +117,14 @@ ga('send', 'pageview');
                 <a class="nav-link" href="{{ site.baseurl }}/fatal_core_dump/">Fatal Core Dump Game</a>
                 </li>
 
+                {% if page.url == "/hackaday.html" %}
+                <li class="nav-item active">
+                {% else %}
+                <li class="nav-item">
+                {% endif %}
+                <a class="nav-link" href="{{ site.baseurl }}/hackaday.html">Hackaday</a>
+                </li>
+
                 {% if page.url == "/about.html" %}
                 <li class="nav-item active">
                 {% else %}
