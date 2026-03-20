@@ -9,6 +9,7 @@ permalink: /hackaday.html
 <p>Links to my projects that have been featured on <a href="https://hackaday.com/">Hackaday</a></p>
 
 <ul>
+<li><a href="https://hackaday.com/2026/03/19/real-robot-makes-debut-in-programming-game/">2026-03-19: Real Robot Makes Debut In Programming Game</a> (<a href="/_pages/hackaday/2026_03_19_real-robot-makes-debut-in-programming-game.html">archive</a>)</li>
 <li><a href="https://hackaday.com/2026/03/10/turning-a-gdb-coredump-debug-session-into-a-murder-mystery/">2026-03-10: Turning A GDB Coredump Debug Session Into A Murder Mystery</a> (<a href="/_pages/hackaday/2026_03_10_turning-a-gdb-coredump-debug-session-into-a-murder-mystery.html">archive</a>)</li>
 <li><a href="https://hackaday.com/2026/02/14/reverse-engineering-a-dash-robot-with-ghidra/">2026-02-14: Reverse Engineering A Dash Robot With Ghidra</a> (<a href="/_pages/hackaday/2026_02_14_reverse-engineering-a-dash-robot-with-ghidra.html">archive</a>)</li>
 <li><a href="https://hackaday.com/2024/08/08/a-smart-led-dice-box-thanks-to-the-internet-of-things/">2024-08-08: A Smart LED Dice Box Thanks To The Internet Of Things</a> (<a href="/_pages/hackaday/2024_08_08_a-smart-led-dice-box-thanks-to-the-internet-of-things.html">archive</a>)</li>
