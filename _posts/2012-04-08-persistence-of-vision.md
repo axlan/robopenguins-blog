@@ -8,7 +8,7 @@ categories:
   - Hardware
 image: 2020/clock.webp
 ---
-Final project for ECE 476 at Cornell, click [here](http://people.ece.cornell.edu/land/courses/ece4760/FinalProjects/s2009/ht227/index.html) for the project write up
+Final project for ECE 476 at Cornell, click [here](http://people.ece.cornell.edu/land/courses/ece4760/FinalProjects/s2009/ht227/index.html)([backup](../_pages/hackaday/land_courses_ece4760_FinalProjects_s2009_ht227_index.html)) for the project write up
 
 <img alt="" src="{{ site.image_host }}/2020/clock.webp" title="Display" class="aligncenter" width="400" height="367" />
 
