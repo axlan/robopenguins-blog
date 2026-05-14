@@ -15,4 +15,5 @@ if [[ "${COMMAND}" == "run" ]]; then
 elif [[ "${COMMAND}" == "upload" ]]; then
     docker run -v .:/site -w /site -it --rm -e JEKYLL_ENV=production jekyll bundle exec jekyll build
     aws s3 sync _site/ s3://www.robopenguins.com/ --delete --exclude="assets/wp-content/*" --exclude="fatal_core_dump/*"
+    #aws s3 cp  _site/dash-turtle-game/index.html s3://www.robopenguins.com/dash-turtle-game/index.html                           
 fi
