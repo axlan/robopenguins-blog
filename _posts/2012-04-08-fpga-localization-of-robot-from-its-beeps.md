@@ -8,7 +8,7 @@ categories:
   - Hardware
 image: 2020/CIMG0026.webp
 ---
-Final project for ECE 576 at Cornell, click [here](http://people.ece.cornell.edu/land/courses/ece5760/FinalProjects/f2009/jmd242_aps243/576JonAllisite/site/index.html) for the project write up
+Final project for ECE 576 at Cornell, click [here](http://people.ece.cornell.edu/land/courses/ece5760/FinalProjects/f2009/jmd242_aps243/576JonAllisite/site/index.html)([backup](../_pages/hackaday/land_courses_ece5760_FinalProjects_f2009_jmd242_aps243_576JonAllisite_site_index.html)) for the project write up
 
 <img alt="" src="{{ site.image_host }}/2020/CIMG0026.webp" title="Display" class="alignnone" width="394" height="782" />
 
