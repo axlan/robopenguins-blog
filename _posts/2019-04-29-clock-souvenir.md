@@ -25,4 +25,4 @@ I decided to go with a bit of a morbid "Time comes for us all" sort of theme, so
 
 The old man was a little heavy, and the figure initially tilted until I used a bit of hot glue. In the end it came together pretty nicely.
 
-<iframe src="https://giphy.com/embed/wZQ8DFaaUjfoAaNaVT" width="270" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/wZQ8DFaaUjfoAaNaVT">via GIPHY</a></p>
+<video src="{{ site.image_host }}/2019/VID_20190428_105738.mp4" width="500" controls></video>
