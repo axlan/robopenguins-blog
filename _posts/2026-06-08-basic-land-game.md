@@ -28,11 +28,15 @@ What made me interested in making it myself, is that I thought I could design th
 
 The game has a lot of rules variations, so look at <https://github.com/axlan/basic-land-game> for the rule set I ended up using.
 
+**Update**
+
+After I posted this, I was contacted by Scott who spent some time investigating the game for the MTG wiki: <https://mtg.wiki/page/Basic_land_game>. He also made a version of the game using a different ruleset: <https://yestcg.com/basic-land-game>.
+
 # The Process
 
 I started off using Claude Sonnet 4.6 for the high level design.
 
-I wanted Python for the backend and Claude suggested the FastAPI library with Phaser for the frontend. I had never used Phaser, but it seemed reasonable. 
+I wanted Python for the backend and Claude suggested the FastAPI library with Phaser for the frontend. I had never used Phaser, but it seemed reasonable.
 
 To get started I wanted to generate something very well defined, that was in my wheelhouse. So I had Claude generate a game board class that encapsulates the game state and the valid actions that each player could make. I did this by creating a prompt describing the game rules and state to track and asking for a Python class that's agnostic to the input and output that will be added separately.
 
@@ -42,7 +46,7 @@ Claude got the majority of the logic working on the first try, but there were a 
 
   - Bug where the plains effect wouldn't transition to the next state when used on islands. This let you draw infinite cards or lock up the game.
   - The revealed hand mechanic didn't work right since it would reset it at the end of the swamps effect. It also wouldn't show the cards returned by forest as revealed.
-  - It misunderstood the rule I described for forests and allowed grabbing from either graveyard. 
+  - It misunderstood the rule I described for forests and allowed grabbing from either graveyard.
   - It only allowed counters to be played against a land, it didn't allow countering counters.
 
 The code was quite messy. I cleaned up some unnecessary state variables but gave up after I fully absorbed that it was basically a reasonable approach. I did appreciate the unit tests it generated, since it made editing the code myself much less daunting.
@@ -63,14 +67,14 @@ Since I was waiting on the Claude quota to refresh, I tried the Google Antigravi
 
 However, since it kept the full project in context, the debugging process was much smoother than using the Claude website. I'm sure Claude code CLI would be similar, but there's no free tier.
 
-I had a working MVP, but I had used up the monthly free Antigravity credits. 
+I had a working MVP, but I had used up the monthly free Antigravity credits.
 
 I still had some features, so I tried ChatGPT, but found it completely useless. Even creating a project with the files uploaded, it would constantly loose context.
 
 I mostly went back to Claude, but I would have to start a new chat session for each change, since it seemed to fill up it's context window and confuse the previous changes it had already made.
 
 The feature that was most tedious was getting the display to support resizing for a phone display. Since this required keeping the full design in mind at once, it would end up with only some of the elements being updated. Claude was much better at adding/fixing features where the code was more isolated.
- 
+
 Each feature and fix became painful to use AI with, and I found myself doing more and more of the coding manually since it was easier than trying to capture the necessary context for the AI.
 
 When it came to making a single player mode, I wrote the whole thing myself since I really didn't want AI code to increase the projects complexity.
@@ -81,12 +85,12 @@ For generating code I understood, my feelings are mixed. I was able to get the i
 
 For code I'm unfamiliar with, I really got the slot machine feeling I've heard when people describe using AI. It was amazing when a good looking functional result popped out. However, since I couldn't clean things up, the AI would churn would reintroduce bugs, accumulating cruft, and not separate functionality logically. I have no idea how well architected it was and hit landmines constantly when adding additional features. I learned basically nothing about Phaser and am no better off for using it in the future.
 
-Having the strict token limit did help me have discipline on using AI efficiently. I think it ended up looking way nicer than if I had done it myself and probably took half the time it would without AI (writing frontend is slow going for me). 
+Having the strict token limit did help me have discipline on using AI efficiently. I think it ended up looking way nicer than if I had done it myself and probably took half the time it would without AI (writing frontend is slow going for me).
 
-This game was slightly pushing what can easily be made within the free tier, but now I've set my expectations for the current crop of models. 
+This game was slightly pushing what can easily be made within the free tier, but now I've set my expectations for the current crop of models.
 
-Using Google's antigravity felt much better than either free Copilot integration or the web chats. Even though they all had the full files for context, antigravity did a much better job at keeping everything in mind. This might just be showing me the value of a harness when using models. 
+Using Google's antigravity felt much better than either free Copilot integration or the web chats. Even though they all had the full files for context, antigravity did a much better job at keeping everything in mind. This might just be showing me the value of a harness when using models.
 
-This project is pretty different from most I do since there's nothing weird or novel. I've heard it said that people who are most gung ho about AI just want a final black box with out needing to care how it's made. This kind of project is an example of that for me. 
+This project is pretty different from most I do since there's nothing weird or novel. I've heard it said that people who are most gung ho about AI just want a final black box with out needing to care how it's made. This kind of project is an example of that for me.
 
 While I made this pretty quickly, it took longer than I was expecting. As usual the last 10% took 90% the time. For better or for worse the AI use encouraged scope creep, mostly to raise the bar on the games usability. This will only be relevant if anyone plays it, so we'll see.
